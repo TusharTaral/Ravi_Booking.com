@@ -15,13 +15,14 @@
             line-height: 32px;
             margin-bottom: 16px;
             display: block;
-            
+            margin-left:40px ;
             color: #333;
         }
-        img{
-            width: 10.8%;
+         li > div:nth-child(1)>img{
+            width: 210px;
             height: 180px;
-        }
+        
+        } 
         h3{
             font-size: 16px;
             font-weight: 700;
@@ -41,26 +42,44 @@
             margin-top: -15px;
         }
         li{
+            
             padding-right: 16px;
             display: list-item;
+
+
         
         }
-        ul{
-            list-style-type: none;
+        .carousel{
+            width: 1130px;
+            height: 100%;
         }
+        
+        .carousel-cell{
+            width:20%;
+            margin-right: 10px;
+            counter-increment: carousel-cell;
+        }
+        .carousel-cell:before {
+        display: block;
+        content: counter(carousel-cell);
+}
+      
     </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 </head>
 <body>
     <h2>Browse by property type</h2>
     <div>
-        <ul>
+        <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":1 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
             <li>
                 <div>
                     <img src="https://t-cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=" alt="hotels">
                 </div>
                 <div>
                     <h3>
-                        <a href="/hotel/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b" target="_blank">
+                        <a href="#" target="_blank">
                             Hotels
                         </a>               
                     </h3>
@@ -75,7 +94,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/apartments/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                             Apartments
                             </a>
                     </h3>
@@ -86,11 +105,11 @@
             </li>
             <li>
                 <div>
-                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg"" alt="Resorts">
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg" alt="Resorts">
                 </div>
                 <div>
                     <h3>
-                        <a href="/resorts/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank" >
+                        <a href="#" target="_blank" >
                             Resorts
                             </a>
                     </h3>
@@ -103,7 +122,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/villas/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                             Villas
                         </a>
                     </h3>
@@ -116,9 +135,9 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/chalet/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#"target="_blank">
                             Cabins
-                            </a>
+                        </a>
                     </h3>
                     <p>29,269 cabins</p>
                 </div>
@@ -129,7 +148,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/cottages/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                             Cottages
                         </a>
                     </h3>
@@ -142,7 +161,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/glamping/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                             Glamping
                             </a>
                     </h3>
@@ -155,7 +174,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/aparthotels/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank" >
+                        <a href="#">
                             Serviced Apartments
                         </a>
                     </h3>
@@ -168,7 +187,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/holiday-homes/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank" >
+                        <a href="#">
                          Vacation Homes
                         </a>
                     </h3>
@@ -181,7 +200,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/guest-house/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                         Guest houses
                         </a>
                     </h3>
@@ -194,7 +213,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/hostels/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                         Hostels
                         </a>
                     </h3>
@@ -207,7 +226,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/motels/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                         Motels
                         </a>
                     </h3>
@@ -220,7 +239,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/bed-and-breakfast/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#">
                         B&amp;Bs
                         </a>
                     </h3>
@@ -233,7 +252,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/ryokans/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;"  target="_blank" >
+                        <a href="#">
                         Ryokans
                         </a>
                     </h3>
@@ -246,7 +265,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/riad/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank" >
+                        <a href="#">
                         Riads
                         </a>
                     </h3>
@@ -259,7 +278,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/holiday-parks/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank" class="bui-card__title d-bh-promotion--theme-title">
+                        <a href="#" target="_blank" class="bui-card__title d-bh-promotion--theme-title">
                         Resort Villages
                         </a>
                     </h3>
@@ -272,7 +291,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/homestay/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Homestays
                         </a>
                     </h3>
@@ -285,7 +304,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/campings/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Campgrounds
                         </a>
                     </h3>
@@ -298,7 +317,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/country-houses/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Country Houses
                         </a>
                     </h3>
@@ -311,7 +330,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/farm-holidays/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Farm Stays
                         </a>
                     </h3>
@@ -324,7 +343,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/boats/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Boats
                         </a>
                     </h3>
@@ -337,7 +356,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/camp/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Luxury Tents
                         </a>
                     </h3>
@@ -350,7 +369,7 @@
                 </div>
                 <div>
                     <h3 class="bui-card__title">
-                        <a href="/self-catering/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Self-catering Accommodations
                         </a>
                     </h3>
@@ -363,7 +382,7 @@
                 </div>
                 <div>
                     <h3>
-                        <a href="/tiny-house/index.html?aid=304142;label=gen173rf-1FEgRjYXJzKIICOOgHSDNYA2hsiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBmAIiqAIDuALwzZyCBsACAdICJDY2OWJiNTlhLTc0N2EtNGM3NC05YzRiLThjZGYwYjU3ZjlhYtgCBuACAQ;sid=648c7473a53326b2fa42f17fef4f330b;from_booking_home_promotion=1&amp;" target="_blank">
+                        <a href="#" target="_blank">
                         Tiny houses
                         </a>
                     </h3>
@@ -374,7 +393,9 @@
         </ul>
         
     </div>
-
     
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </body>
 </html>
