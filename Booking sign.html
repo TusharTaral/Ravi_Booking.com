@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #signcont{
+                width:30%;
+                margin: auto;
+                border:solid black;
+            }
+            #signcont>div{
+                padding: 5px;
+
+            }
+            #signcont input:hover{
+                border: solid black;
+            } 
+            #signcont button{
+                background-color: #0071c2;
+                color: white;
+                width:91.5%;
+                height:48px;
+                border-color:  #0071c2;
+                box-shadow: 0;
+                
+                
+            }
+            #signcont button:hover{
+                background-color: #005c9d;
+              
+            }
+        </style>
+    </head>
+    <body>
+        <div id="signcont">
+            <div><h1>Sign in or create an account</h1></div>
+            <div><label style="font-size: 14px;">Email address</label></div>
+            <div><input style="border: 0.5px solid rgb(173, 173, 173); width:90%; height: 36px; border-radius: 2px;"/></div>
+            <div> <button style="font-size: 16px; border-radius: 2px;">Continue with email</button></div>
+            <div>
+                or use one of these options
+            </div>
+            
+            <br>
+            
+            <br>
+           
+            
+        </div>
+        <script>
+            async function flights(){
+               try{
+                var data=fetch("http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/FR/eur/en-US/uk/us/anytime/anytime?apikey=prtl6749387986743898559646983194")
+            
+                data=await data;
+                data=await data.json();
+                console.log(data);
+               } 
+               catch(e){
+                   console.log(e)
+               }
+            }
+            flights()
+        </script>
+    </body>
+</html>
