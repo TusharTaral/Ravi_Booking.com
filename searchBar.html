@@ -69,14 +69,18 @@ integrity="sha384-
         <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
         <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
         <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-calendar"></i></span>
-        <input type="search" class="t_search_lo" id="t_sear2" placeholder="check in - check out">
+        <input style="height: 45px;" type="date" class="t_search_lo" id="t_sear2" placeholder="check in - check out">
         <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
         <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
-        <button id="t_sear_btn">Search</button>  
+        <button id="t_sear_btn" onclick="citySearch()">Search</button>  
        
     </div>
     <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
     <script>
+        function citySearch() {
+        var data=document.querySelector("#t_sear1").value
+       // window.location.href=`${data}.html`
+}
 
     </script>
 </body>
