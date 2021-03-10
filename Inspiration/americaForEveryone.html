@@ -126,6 +126,283 @@
             .explore_buttons > button:hover {
                 background-color: #dbeffd;
             }
+            
+            /* ------------------------- Footer CSS ------------------------- */
+
+            #footer {
+                margin-top: 5em;
+                height: 20em;
+                text-align: center;
+                line-height: 10px;
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                display: flex;
+                margin: 0.4% 30.5% 0;
+            }
+            .footer_checkbox > input {
+                margin-top: -0.1em;
+            }
+            .subscription_form {
+                height: 3em;
+                margin: 2% 30% 0;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 70%;
+                height: 86%;
+                padding: 0 1.5%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 25%;
+                height: 95%;
+                font-size: 20px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom {
+                height: 20%;
+                padding: 1em 0;
+                background-color: #003580;
+            }
+            .footer_bottom > div:nth-child(1) {
+                padding: 6px 0 10px;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                margin: 0 0.5%;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 15px 10px;
+            }
+            #footer_lists {
+                margin: 0 12%;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                font-size: 14px;
+                line-height: 1.6em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote, .footer_copyright, .footer_priceline_title {
+                margin: 0 15%;
+                font-size: 12px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_priceline_title {
+                text-align: center;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin-right: 2.5em;
+            }
+
+            /* Footer Media queries */
+            @media only screen and (max-width: 800px) {
+                body {
+                    margin: 0;
+                }
+                #footer {
+                    width: 100%;
+                    height: 16em;
+                    text-align: center;
+                    line-height: 10px;
+                }
+                #footer > div:nth-child(1) {
+                    height: 60%;
+                    padding: 2% 0 0;
+                    color: white;
+                    background-color: #00224f;
+                }
+                #footer > div:nth-child(1) > div {
+                    font-size: 14px;
+                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                }
+                #footer > div:nth-child(1) h3 {
+                    color: #bdbdbd;
+                }
+                .footer_checkbox {
+                    width: 50%;
+                    font-size: 10px;
+                    display: flex;
+                }
+                .footer_checkbox > input {
+                    width: 0.8em;
+                    height: 0.8em;
+                }
+                .subscription_form {
+                    width: 50%;
+                    height: 2.5em;
+                    margin-left: 10em;
+                    display: flex;
+                }
+                .subscription_form > div {
+                    width: 60%;
+                    height: 86%;
+                }
+                .subscription_form > div > input {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 13px;
+                    border-radius: 4px;
+                    border: 1px solid black;
+                }
+                .subscription_form > button {
+                    width: 35%;
+                    height: 95%;
+                    margin-left: 0.25em;
+                    font-size: 13px;
+                    font-weight: 100;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: #0071c2;
+                }
+                .footer_bottom >div:nth-child(1) > a {
+                    border: 1px solid white;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                }
+                .footer_bottom > div:nth-child(1) > a:hover {
+                    background-color: #4a7ec780;
+                }
+                .footer_bottom > div:nth-child(3) > a {
+                    color: white;
+                    font-size: 8px;
+                    font-weight: bold;
+                    padding: 0;
+                }
+                #footer_lists {
+                    margin: 2% 0 0;
+                    display: flex;
+                }
+                #footer_lists > div {
+                    flex: 1;
+                }
+                #footer_lists > div > ul {
+                    list-style: none;
+                    padding-left: 10px;
+                    font-size: 8px;
+                    line-height: 1.8em;
+                }
+                #footer_lists a {
+                    text-decoration: none;
+                    color: #0071c2;
+                }
+                #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                    color: rgb(221, 103, 19);
+                }
+                .footer_quote {
+                    margin: 0 3%;
+                    font-size: 11px!important;
+                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                }
+                .footer_quote a {
+                    color: #0071c2;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                .footer_login {
+                    text-align: center;
+                }
+                .footer_login > a {
+                    text-decoration: none;
+                    color: #333;
+                    opacity: 80%;
+                    font-size: 14.5px;
+                    font-weight: 700;
+                }
+                .footer_copyright {
+                    font-size: 6px!important;
+                }
+                .footer_copyright p {
+                    margin-left: -18%;
+                }
+                .footer_priceline_title {
+                    text-align: center;
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .footer_priceline_title > div {
+                    font-size: 12px;
+                }
+                .footer_priceline_images {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.5em;
+                }
+                .footer_priceline_images > div {
+                    margin: 0 0 0 3%;
+                }
+                .footer_priceline_images img {
+                    width: 70%;
+                }
+                .footer_quote+p, .footer_login+p {
+                    display: none;
+                }
+            }
         </style>
     </head>
     <body>
@@ -267,6 +544,143 @@
                 <button>Destinations</button>
                 <button>Family Travel</button>
                 <button>Future of travel</button>
+            </div>
+            <div id="footer">
+                <div>
+                    <div>
+                        <h2>Save time, save money!</h2>
+                        <h3>Sign up and we'll send the best deals to you</h3>
+                    </div>
+                    <div class="subscription_form">
+                        <div>
+                            <input type="email" placeholder="Your email">
+                        </div>
+                        <button>Subscribe</button>
+                    </div>
+                    <label class="footer_checkbox">
+                        <input type="checkbox">
+                        Send me a link to get the FREE Booking.com app!
+                    </label>
+                </div>
+                <div class="footer_bottom">
+                    <div>
+                        <a href="#">List your property</a>
+                    </div>
+                    <div style="height: 0.01em; background:white; margin: 0.8em 0;"></div>
+                    <div>
+                        <a href="#">Mobile version</a>
+                        <a href="#">Your account</a>
+                        <a href="#">Make changes online to your booking</a>
+                        <a href="#" title='Your Reference ID is "C5DA764"'>Contact Customer Service</a>
+                        <a href="#" title="Become an affiliate">Become an affiliate</a>
+                        <a href="#">Booking.com for Business</a>
+                    </div>
+                </div>
+            </div>
+            <div id="footer_lists">
+                <div>
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Regions</a></li>
+                        <li><a href="#">Cities</a></li>
+                        <li><a href="#">Districts</a></li>
+                        <li><a href="#">Airports</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Places of interest</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Homes</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Resorts</a></li>
+                        <li><a href="#">Villas</a></li>
+                        <li><a href="#">Hostels</a></li>
+                        <li><a href="#">B&Bs</a></li>
+                        <li><a href="#">Guest houses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Unique places to stay</a></li>
+                        <li><a href="#">All destinations</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Upacked: Travel articles</a></li>
+                        <li><a href="#">Travel communities</a></li>
+                        <li><a href="#">Seasonal and holiday deals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Car rental</a></li>
+                        <li><a href="#">Flight finder</a></li>
+                        <li><a href="#">Restaurant reservations</a></li>
+                        <li><a href="#">Booking.com for Travel Agents</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+                        <li><a href="#">About Booking.com</a></li>
+                        <li><a href="#">Contact Customer Service</a></li>
+                        <li><a href="#">Partner help</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Press center</a></li>
+                        <li><a href="#">Safety Resource Center</a></li>
+                        <li><a href="#">Investor relations</a></li>
+                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="#">Partner dispute</a></li>
+                        <li><a href="#">Privacy and cookie statement</a></li>
+                        <li><a href="#">Corporate contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_quote">
+                <div>
+                    <p>
+                        Whoever you are, whatever you're looking for, we have the perfect place for you. Our 28,085,332 listings
+                        include 6,457,264 listings of homes, apartments, and other unique places to stay,
+                        and are located in 153,842 destinations 
+                        in 225 countries and territories. 
+                        Booking.com B.V. is based in Amsterdam, the Netherlands and is supported internationally by <a href="#">198 offices in 70 countries.</a>
+                    </p>
+                </div>
+            </div>
+            <p>&#8203</p>
+            <div class="footer_login">
+                <a href="">Extranet login</a>
+            </div>
+            <p>&#8203</p>
+            <div class="footer_copyright">
+                <div>
+                    <p>Copyright &#169 1996-2021 Booking.com&#8482. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="footer_priceline_title">
+                <div>
+                    <p>Booking.com is part of Booking Holidings Inc., the world leader in online travel and related services.</p>
+                </div>
+            </div>
+            <div class="footer_priceline_images">
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="">
+                </div>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="">
+                </div>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="">
+                </div>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="">
+                </div>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="">
+                </div>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="">
+                </div>
             </div>
     </body>
 </html>
