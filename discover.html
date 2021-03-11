@@ -84,7 +84,7 @@
             overflow: hidden;
             height: 17px;
             font-size: 16px;
-            background-Color: rgba(0, 0, 0, 0.5);
+            background-Color: rgba(0, 0, 0, 0.6);
         }
 
         #t_usa_hov1:hover,
@@ -171,8 +171,46 @@
     </div>
     <script>
         function countryBtn1() {
-            var reset=document.querySelector('#t_dis_usa')
-            reset.reset()
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg')"
+            country_name1.textContent = ' America'
+            usa_text1.textContent = 'You will love relaxation, restaurants and shopping during your next trip to United States of America!'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU')"
+            country_name2.textContent = 'Italy'
+            usa_text2.textContent = 'You will love old town,  scenery and food during your next trip to Italy!'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU')"
+            country_name3.textContent = 'France'
+            usa_text3.textContent = 'Put tranquillity,  scenery and old town on your to-do list for your next trip to France!'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU')"
+            country_name4.textContent = 'Spain'
+            usa_text4.textContent = 'If tranquillity,   old town and food are  your thing, don’t miss out  on Spain!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU')"
+            country_name5.textContent = 'Germany'
+            usa_text5.textContent = 'Don’t miss out on Germany! Top destination for old town, walking and city walks. '
+
         }
         function countryBtn2() {
             var usa_img1 = document.querySelector('#t_dis_usa1')
