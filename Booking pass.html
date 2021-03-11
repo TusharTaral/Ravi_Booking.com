@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #signcont{
+               
+                max-width:410px;
+                margin: auto;
+                /* border:solid black; */
+                margin-top: 60px;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #signcont h1{
+               
+                font-size: 24px;
+            }
+            #signcont>div{
+                padding: 5px;
+
+            }
+            #signcont>div input{
+                border: 0.5px solid rgb(173, 173, 173);  
+                width:90%; 
+                height: 36px;
+                border-radius: 2px;  
+            } 
+            #signcont>div input:hover{
+                border: 1.25px solid #0071c2;
+            }
+            /* #signcont>div>div{
+                
+            } */
+            #signcont button{
+                background-color: #0071c2;
+                color: white;
+                width:91.5%;
+                height:48px;
+                border-color:  #0071c2;
+                cursor: pointer; 
+                
+            }
+            #signcont button:hover{
+                background-color: #005c9d;
+              
+            }
+            #signcont img{
+                
+                width:75px;
+                border-color: 1px solid gray;
+                cursor: pointer;
+            }
+            #signcont p{
+                font-size: 14px;
+            }
+            #signLogos{
+                display: flex;
+                
+            }
+            #signLogos>div{
+                margin-right: 40px;
+                border:0.5px solid rgb(185, 185, 185);
+                margin: auto;
+            }
+            .signTextCentre{
+                text-align: center;
+                font-size: 13px;
+            }
+            .signTextFont{
+                font-size: 16px;
+            }
+            a{
+                text-decoration: none;
+            }
+            #signLogos>div:hover{
+                border:0.5px solid #0071c2;
+            }
+            @media (max-width:615px){
+                #signLogos{
+                    display: flex;
+                    flex-wrap: wrap;
+                   
+                }
+                #signLogos>div{
+                    margin-bottom:10px;
+                }
+
+            }
+            #signNav{
+                background-color: #004586;
+                width:100%;
+                height: 11vh;
+                position: fixed;
+                top:0;
+                left:0;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                font-size: 600px;
+            }
+            #signNav a{
+                font-weight: 700;
+            }
+            #signNav>div {
+                position: fixed;
+                top: 20px;
+                left:30px;
+                font-size: 18px;
+            
+            }
+            #signNav img{
+                width:40px;
+                position: fixed;
+                right:20px;
+                top:15px;
+                cursor: pointer;
+            }
+            /* #signNav img:hover{
+                cursor: pointer;
+            } */
+            #signcont strong{
+                font-size: 14px;
+                margin-left: 6px;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="signNav">
+            <div> <a style="color:white" href="#">Booking<a style="color:#0280da" href="#">.com</a></a></div>
+            <div><img  src="./reasons-to-avoid-hamburger-icon-368x246.jpg"></div>
+        </nav>
+        <div id="signcont">
+            <div><h1>Create password</h1></div>
+            <div><label style="font-size: 14px;">Use a minimum of 10 characters, including uppercasee letters, lowercase letters and numbers.</label></div>
+            <strong>Password</strong>
+           <div> <div><input type="password" /></div></div>
+            <br>
+           <strong>Confirm password</strong>
+           <div> <div><input type="password" /></div></div>
+           <br>
+            <div> <button style="font-size: 16px; border-radius: 2px;">Create account</button></div>
+           <br>
+           <hr></hr>
+           
+           <p>By signing in or creating an account, you agree with our <a href="#">Terms & conditions</a> and  <a href="#">Privacy statement</a></p>
+            <hr>
+            <div class="signTextCentre">All rights resrved.</div>
+            <div class="signTextCentre" >Copyright (2006-2021) - Booking.com</div>
+        </div>
+        <script>
+            // async function flights(){
+            //    try{
+            //     var data=fetch("http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/FR/eur/en-US/uk/us/anytime/anytime?apikey=prtl6749387986743898559646983194")
+            
+            //     data=await data;
+            //     data=await data.json();
+            //     console.log(data);
+            //    } 
+            //    catch(e){
+            //        console.log(e)
+            //    }
+            // }
+            // flights()
+                var ip=document.getElementsByTagName("input");
+                var btn=document.querySelector("button");
+                btn.addEventListener("click",sign);
+                function sign(){
+                    
+                    localStorage.setItem("Email",ip);
+                    window.location.href="./Booking pass.html";
+                }
+        </script>
+    </body>
+</html>
