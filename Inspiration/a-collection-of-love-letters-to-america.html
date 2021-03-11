@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A collection of love letters to America | Booking.com</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                font-family: "BlinkMacSystemFont",-apple-system,"Segoe UI","Roboto","Helvetica","Arial",sans-serif;
+            }
+            .landImage {
+                height: 25em;
+                background-image: url('https://t-cf.bstatic.com/xdata/images/xphoto/2048x1536/110465249.webp?k=4429b31459fed3b7551f5a4d4912d8afe1dc4e2e388cd34a3364c906db94afac&o=');
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+            .articles {
+                width: 45%;
+                margin: 0 27.5%;
+            }
+            .articles > div:nth-child(1) {
+                word-spacing: 0.5em;
+                margin-top: 3em;
+                font-size: 13px;
+            }
+            .articles > div:nth-child(1) a {
+                text-decoration: none;  
+            }
+            .article_content > h1 {
+                font-size: 50px;
+                margin: 4px 0;
+            }
+            .article_content > a {
+                font-size: 12px;
+                padding: 0.5%;
+                border-radius: 3px;
+                font-weight:500;
+                text-decoration: none;
+                color: black;
+                border: 1px solid black;
+            }
+            .article_content > p {
+                line-height: 1.5em;
+            }
+            .article_content > h3 {
+                font-size: 25px;
+                margin-bottom: 0.2em;
+            }
+            .article_icon {
+                width: 100%;
+                height: 1.25em;
+                margin: 1.5em 0 3em;
+                opacity: 80%;
+                display: flex;
+                justify-content: center;
+            }
+            .article_social_icon {
+                width: 1.25em; 
+                height: 100%;
+                margin: 0 0.5em;
+                background-size: cover; 
+                background-repeat: no-repeat;
+            }
+            #search_articles {
+                height: 18em;
+                background-color: whitesmoke;
+            }
+            #search_articles > div:nth-child(1) {
+                padding-top: 1.5em;
+                font-size: 18px;
+                text-align: center;
+            }
+            .search_bar {
+                width: 45em;
+                height: 2.5em;
+                margin: 0 26%;
+                padding: 0.5%;
+                border-radius: 5px;
+                display: flex;
+                background: white;
+                justify-content: center;
+                box-shadow: 0.1px 0.1px 10px rgb(189, 189, 189);
+            }
+            #search_articles > .search_bar > div {
+                width: 1.1em;
+                height: 1.1em;
+                margin: 0.8em 0.6em 0.6em 0;
+            }
+            .search_bar > input {
+                width: 30em;
+                padding: 1% 2%;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 2px;
+                border: none;
+            }
+            .search_bar > button {
+                width: 15em;
+                border-radius: 2px;
+                color: white;
+                background-color: #0071c2;
+                border: 1px solid #0071c2;
+            }
+            .search_bar > button:hover {
+                background-color: #003580;
+            }
+            #search_articles > div:nth-child(3) {
+                text-align: center;
+            }
+            .explore_buttons {
+                display: flex;
+                justify-content: center;
+            }
+            .explore_buttons > button {
+                height: 3em;
+                margin: 0 0.5em;
+                padding: 0 0.5em;
+                background-color: white;
+                color: #0071c2;
+                border: 1px solid #0071c2;
+            }
+            .explore_buttons > button:hover {
+                background-color: #dbeffd;
+            }
+            /* ------------------------------- Footer CSS ------------------------- */
+            
+            #footer {
+                margin-top: 3em;
+                height: 20em;
+                text-align: center;
+                line-height: 10px;
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                display: flex;
+                margin: 0.4% 30.5% 0;
+            }
+            .footer_checkbox > input {
+                margin-top: -0.1em;
+            }
+            .subscription_form {
+                height: 3em;
+                margin: 2% 30% 0;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 70%;
+                height: 86%;
+                padding: 0 1.5%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 25%;
+                height: 95%;
+                font-size: 20px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom {
+                height: 20%;
+                padding: 1em 0;
+                background-color: #003580;
+            }
+            .footer_bottom > div:nth-child(1) {
+                padding: 6px 0 10px;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                margin: 0 0.5%;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 15px 10px;
+            }
+            #footer_lists {
+                margin: 0 12%;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                font-size: 14px;
+                line-height: 1.6em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote, .footer_copyright, .footer_priceline_title {
+                margin: 0 15%;
+                font-size: 12px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_priceline_title {
+                text-align: center;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin-right: 2.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="landImage"></div>
+        <div class="articles">
+            <div>
+                <p> <a href="">Articles</a> > <a href="">Destination</a> > <a href="">A collection of letters to America</a></p>
+            </div>
+            <div class="article_content">
+                <h1>A collection of love letters to America</h1>
+                <a href="">Destinations</a>
+                <p>
+                    <span>If there’s one thing we know for sure, it’s that America’s love for travel hasn’t ended. In fact, it’s the absence of travel that is only making our hearts grow fonder. 
+                    As an ode to all the cities that were ‘love at first visit’, we’re sharing some of the sweetest love letters to <a href="">America</a>, written by our lovesick travelers.</span>
+                </p>
+                <p>You can read more #LoveLettersToAmerica and share your own on our <a href="">social channels</a>.</p>
+                <p>&#8203</p>
+                <h3>Dear New York</h3>
+                <div class="article_image">
+                    <img src="https://bstatic.com/xdata/images/xphoto/1182x887/110471401.jpg?k=3278703892378d6b84bfcc145147890547b6341450c3097aadbf30c09a8f8e9f&o=?size=S" alt="" width="100%">
+                </div>
+                <p>Dear <a href="">New York</a>,</p>
+                <p>Where do I begin? After I didn’t get into medical school the first time I applied, you took me in. You taught me that if I truly wanted to realize a dream...I would have to wake up to work for it....and now here we are.</p>
+                <p>From the best pizza on the planet to being one of the most culturally diverse places on earth, I love you. So this Valentine’s Day, when <a href="">Booking.com</a>
+                    asked me what city I would want to show some love to, it was New York or nowhere. <a href="">NYC</a>  is an absolute must if you haven't been and I can't wait until you all can travel to see it again.
+                </p>
+                <p>So until then..... Keep your masks on...get vaccinated....and soon enough we'll all be traveling to our favorite destinations.</p>
+                <p>Love, Dr. Elvis(<a href="">doctor.elvis.francois</a>).</p>
+                <p>&#8203</p>
+                <h3>Dear LA</h3>
+                <div class="aricle_image">
+                    <img src="https://bstatic.com/xdata/images/xphoto/1182x887/110471409.jpg?k=86f6386d4b5726a636fe3d3a44219e31744609a7ea3b500006a4cc3e45ec68fa&o=?size=S" alt="" width="100%">
+                </div>
+                <p>Dear <a href="">LA</a>,</p>
+                <p>We were all destined to at least be curious and a bit intrigued with a name like “La La Land,” or “The City of Angels,” or the real ringer, “The City of Dreamers.” </p>
+                <p>Those of us that have taken the time to truly get to know you, appreciate your nuances and understand that you are more than your best attributes. We also understand that you are more than your flaws – of which, sure you have a few, but they are nonetheless part of your charm.</p>
+                <p>You’ve never strived for perfection, you’ve strived only to be unlike any other. Your strengths and flaws combined are what give us our backbone, our scrappy meets glamorous attitude, and our passion for creation and community like nowhere else on earth.</p>
+                <p>Travel might look different for the moment but I am grateful for every single sweet memory of our time together. You’re an important part of my story and the same for so many others. </p>
+                <p>Love, Caroline(<a href="">loveandloathingla</a>).</p>
+                <p>&#8203</p>
+                <h3>Dear San Antonio</h3>
+                <div>
+                    <img src="https://bstatic.com/xdata/images/xphoto/1182x887/110474289.jpg?k=3cc9c5c38760f4cc9b31f2b736a8f01d86d63f74f0ae93e3304170535c0201c5&o=?size=S" alt="" width="100%">
+                </div>
+                <p>Dear <a href="">San Antonio</a>,</p>
+                <p>It’s around this time when I start gearing up for Fiesta, so when <a href="">Booking.com</a> asked me to think of a travel spot to write a special love letter for Valentine’s Day, I had just the place. </p>
+                <p>I get so excited for ornate parades, multiple days of celebrations, and all the colors! When the time is right, I hope you’ll consider visiting San Antonio during this special time of year - it’s a blend of 
+                    San Antonio Mexican-American culture that I hope everyone gets to experience, not to mention, a festival that does so much good for our community! I can’t wait to wear all my medals, grab a chicken on a stick, 
+                    and dance to the music with flower corns in my hair! Even if you don’t happen this year, I’ll still make sure to spread some Fiesta cheer!</p>
+                <p>Love, Jessica Serna(<a href="">@mycurlyadventures</a>).</p>
+                <p>&#8203</p>
+                <h3>Dear Atlanta</h3>
+                <div class="article_image">
+                    <img src="https://bstatic.com/xdata/images/xphoto/1182x887/110471407.jpg?k=989602dbbe5d308d26b90834fc14c07d7062973bd5869f329a2b49bbc72fc690&o=?size=S" alt="" width="100%">
+                </div>
+                <p>Dear <a href="">ATL</a>,</p>
+                <p>I miss you. I miss being able to freely roam your cultural streets without a care in the world. To hug a loved one tight while digesting the newest exhibit at the High. Catching up with friends over tapas and cocktails at day parties. 
+                Meet ups at CurlFest and dancing all day and night at summer music festivals. There’s no place like you, ATL. I’m excited about the day where travel resumes, and others can enjoy and experience this city as much as I have. 10 years of memories down and more to come soon. </p>
+                <p>Love, Mckenzie Renae(<a href="">@mckenzie renae</a>).</p>
+                <p>&#8203</p>
+                <h3>Dear Lake Tahoe</h3>
+                <div class="article_image">
+                    <img src="https://bstatic.com/xdata/images/xphoto/1182x887/110482193.jpg?k=d1d1202f3b762137790baa5d6a08342935cc39997d8c9aac617e1512c53f4871&o=?size=S" alt="" width="100%">
+                </div>
+                <p>Dear<a href="">Lake Tahoe</a>,</p>
+                <p>In honor of Valentine’s Day <a href="">Booking.com</a> invited me to pick my favorite travel destination to pen a love letter, and to say you are my favorite destination is an understatement. It was love at first sight, your magnificence leaves me in awe, from your shining pristine <a href="">lake</a>
+                to the peaceful sonw-capped mountains.</p>
+                <p>We got married on your shores 14 years ago (ah! <a href="">Incline Village</a>, how I will always stay inclined towards you!) and return with the family to show off the unparalleled beauty you hold. I cannot wait to get back and soak in the crisp, fresh air, the aromas of pine and the crystal clear waters and the shining mountain caps!</p>
+                <p>Love, Maneet Chauhan (<a href="">@maneetchauhan</a>)</p>
+                <hr style="opacity: 40%;">
+                <div class="article_icon">
+                    <div class="article_social_icon">
+                        <img src="https://www.flaticon.com/svg/vstatic/svg/25/25660.svg?token=exp=1615300368~hmac=5c4addc508e4df1ac2313c264c0296a6" alt="twitter icon" width="100%">
+                    </div>
+                    <div class="article_social_icon">
+                        <img src="https://www.flaticon.com/svg/vstatic/svg/1051/1051309.svg?token=exp=1615300973~hmac=b7e33a1ce2f27e5785ab63936ce16790" alt="facebook icon" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="search_articles">
+            <div>
+                <h3>Search and discover more articles</h3>
+            </div>
+            <div class="search_bar">
+                <div>
+                    <div>
+                        <img src="https://www.flaticon.com/svg/vstatic/svg/149/149309.svg?token=exp=1615302429~hmac=04fd279bc7df3438a754f03646ae8236" alt="search icon" width="100%">
+                    </div>
+                </div>
+                <input type="search" class="search_input" placeholder="Try a destination, a category, etc.">
+                <button>Search</button>
+            </div>
+            <div>
+                <h4>Explore travel categories</h4>
+            </div>
+            <div class="explore_buttons">
+                <button>Eat & Drink</button>
+                <button>Sports & Fitness</button>
+                <button>Travel Tips</button>
+                <button>Beach</button>
+                <button>Nature</button>
+                <button>Destinations</button>
+                <button>Family Travel</button>
+                <button>Future of travel</button>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+                <div>
+                    <h2>Save time, save money!</h2>
+                    <h3>Sign up and we'll send the best deals to you</h3>
+                </div>
+                <div class="subscription_form">
+                    <div>
+                        <input type="email" placeholder="Your email">
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+                <label class="footer_checkbox">
+                    <input type="checkbox">
+                    Send me a link to get the FREE Booking.com app!
+                </label>
+            </div>
+            <div class="footer_bottom">
+                <div>
+                    <a href="#">List your property</a>
+                </div>
+                <div style="height: 0.01em; background:white; margin: 0.8em 0;"></div>
+                <div>
+                    <a href="#">Mobile version</a>
+                    <a href="#">Your account</a>
+                    <a href="#">Make changes online to your booking</a>
+                    <a href="#" title='Your Reference ID is "C5DA764"'>Contact Customer Service</a>
+                    <a href="#" title="Become an affiliate">Become an affiliate</a>
+                    <a href="#">Booking.com for Business</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer_lists">
+            <div>
+                <ul>
+                    <li><a href="#">Countries</a></li>
+                    <li><a href="#">Regions</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><a href="#">Districts</a></li>
+                    <li><a href="#">Airports</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Places of interest</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Homes</a></li>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Resorts</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Hostels</a></li>
+                    <li><a href="#">B&Bs</a></li>
+                    <li><a href="#">Guest houses</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Unique places to stay</a></li>
+                    <li><a href="#">All destinations</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Upacked: Travel articles</a></li>
+                    <li><a href="#">Travel communities</a></li>
+                    <li><a href="#">Seasonal and holiday deals</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Car rental</a></li>
+                    <li><a href="#">Flight finder</a></li>
+                    <li><a href="#">Restaurant reservations</a></li>
+                    <li><a href="#">Booking.com for Travel Agents</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+                    <li><a href="#">About Booking.com</a></li>
+                    <li><a href="#">Contact Customer Service</a></li>
+                    <li><a href="#">Partner help</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press center</a></li>
+                    <li><a href="#">Safety Resource Center</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Partner dispute</a></li>
+                    <li><a href="#">Privacy and cookie statement</a></li>
+                    <li><a href="#">Corporate contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_quote">
+            <div>
+                <p>
+                    Whoever you are, whatever you're looking for, we have the perfect place for you. Our 28,085,332 listings
+                    include 6,457,264 listings of homes, apartments, and other unique places to stay,
+                    and are located in 153,842 destinations 
+                    in 225 countries and territories. 
+                    Booking.com B.V. is based in Amsterdam, the Netherlands and is supported internationally by <a href="#">198 offices in 70 countries.</a>
+                </p>
+            </div>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_login">
+            <a href="">Extranet login</a>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_copyright">
+            <div>
+                <p>Copyright &#169 1996-2021 Booking.com&#8482. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_title">
+            <div>
+                <p>Booking.com is part of Booking Holidings Inc., the world leader in online travel and related services.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_images">
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="">
+            </div>
+        </div>
+    </body>
+</html>

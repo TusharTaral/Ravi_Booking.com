@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+    integrity="sha384- 
+     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+      crossorigin="anonymous">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+body{
+    background-color: whitesmoke;
+}
+        #t_nav{   
+            position: absolute;         
+            width: 100vw;
+            height: 135px;
+            background-color: #0f3079;
+            margin-top: -20px;
+            
+        }
+        #t_book,#t_com{
+            font-size: x-large;
+            float: left;
+            margin-top: 35px;
+        }
+        #t_book{
+            color: white;             
+            margin-left: 100px;          
+        }
+        #t_com{
+            color: rgb(79, 149, 230);            
+        }
+        #t_stay{            
+         display: flex;
+        padding-left: 85px;
+         width: 100vw;
+         height: 30px;
+        }
+        #t_stay>a>p,#t_ind>a>p{
+            color: white;
+            float: left;
+            margin: 10px 20px;
+        }
+        #t_ind{
+            display: flex;            
+            padding-left: 500px;
+            margin-top: 20px;
+        }
+        #t_ind>a>p{
+     
+        }
+        #t_btn1{
+            color: white;
+            background-color: unset;
+            border: 1px solid white;
+            height: 33px;
+        }
+        #t_btn2{
+            height: 33px;
+            color: rgb(17, 117, 184);
+        }
+        #t_btn{
+            background-color: unset;
+            color: white;
+            border: 2px solid rgb(37, 96, 185);
+            height: 50px;
+        }
+
+
+
+
+
+        #ss{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    background: #fff;
+    color: #333;
+    height: 52px;
+    border: 0;
+    border-radius: 2px;
+    display: table;
+    padding: 0 16px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.t_search_lo{
+    height: 52px;
+    border: 4px solid rgb(247, 171, 7);    
+    outline: none;
+    margin:-5px;
+    padding: 0px 40px;
+    font-size: 15px;
+}
+#t_sear_btn{
+    font-size: 15px;
+    height: 52px;
+    border: 4px solid rgb(247, 171, 7);
+    margin:0px;
+    outline: none;
+    background-color: rgb(12, 105, 245);
+    color: white;
+    width: 100px;
+}
+#t_searchBar{
+   
+    margin: 50px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+#t_sear_che{
+    
+    margin-top: -140px;
+    margin-left: 100px;
+    padding-left: 10px;
+    height: 20px;
+    width: 25px;
+   
+}
+#t_sear2{
+    width: 100px;
+}
+
+
+
+
+
+            .heading {
+                font-size: 24px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #connect_travelers {
+                height: 30em;
+                margin: 0 8%;
+            }
+            .travelers_block {
+                display: flex;
+            }
+            .travelers_block > a{
+                width: 17em;
+                height: 24em;
+                margin-right: 1.5%;
+                line-height: 20%;
+                color: #000;
+                text-decoration: none;
+            }
+            .travel_community > h4 {
+                margin-top: 1.5em;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .travel_community > p {
+                color: #6b6b6b;
+            }
+
+
+            body {
+                margin: 0;
+                font-family: 'IBM Plex Sans', sans-serif;
+            }
+            #inspiration_trip {
+                height: 45em;
+                margin: 0 8%;
+            }
+            #inspiration_trip > h1 {
+                font-size: 28px;
+            }
+            .inspiration_blocks {
+                width: 100%;
+                height: 45.5%;
+                display: flex;
+            }
+            .inspiration_article {
+                width: 100%;
+                height: 45%;
+                margin-top: 1em;
+                display: flex;
+            }
+            .inspiration_blocks > a, .inspiration_article > a {
+                flex: 1;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                overflow: hidden;
+            }
+            .inspiration_blocks > a:nth-child(2) {
+                margin: 0 1.5%;
+            }
+            .inspiration_blocks > a  > div, .inspiration_article > a > div{
+                height: 100%;
+                border-radius: 4px;
+                background-position: 50% 50%;
+                position: relative;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .inspiration_blocks > a  > div > div, .inspiration_article > a > div > div {
+                width: 92%;
+                bottom: 0;
+                font-weight: bold;
+                position: absolute;
+                vertical-align: bottom;
+            }
+            .inspiration_text {
+                line-height: 20px;
+                border-radius: 4px;
+                padding: 10% 4% 0 4%;
+                background-image: linear-gradient(180deg,rgba(0,0,0,0) 12%,#000 99%);
+            }
+            .inspiration_article > a:nth-child(1) {
+                margin: 0 1.5% 0 0;
+            }
+
+
+
+
+        body {
+                margin: 0;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer {
+                height: 20em;
+                text-align: center;
+                line-height: 10px;
+                margin-left: -100px;
+                
+                
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                display: flex;
+                margin: 0.4% 30.5% 0;
+            }
+            .footer_checkbox > input {
+                margin-top: -0.1em;
+            }
+            .subscription_form {
+                height: 3em;
+                margin: 2% 30% 0;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 70%;
+                height: 86%;
+                padding: 0 1.5%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 25%;
+                height: 95%;
+                font-size: 20px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom {
+                height: 20%;
+                padding: 1em 0;
+                background-color: #003580;
+            }
+            .footer_bottom > div:nth-child(1) {
+                padding: 6px 0 10px;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                margin: 0 0.5%;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 15px 10px;
+            }
+            #footer_lists {
+                margin: 0 12%;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                font-size: 14px;
+                line-height: 1.6em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote, .footer_copyright, .footer_priceline_title {
+                margin: 0 15%;
+                font-size: 12px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_priceline_title {
+                text-align: center;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin-right: 2.5em;
+            }
+
+            /* Footer Media queries */
+            @media only screen and (max-width: 800px) {
+                body {
+                    margin: 0;
+                }
+                #footer {
+                    width: 100%;
+                    height: 16em;
+                    text-align: center;
+                    line-height: 10px;
+                    margin-top: 200px;
+                }
+                #footer > div:nth-child(1) {
+                    height: 60%;
+                    padding: 2% 0 0;
+                    color: white;
+                    background-color: #00224f;
+                }
+                #footer > div:nth-child(1) > div {
+                    font-size: 14px;
+                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                }
+                #footer > div:nth-child(1) h3 {
+                    color: #bdbdbd;
+                }
+                .footer_checkbox {
+                    width: 50%;
+                    font-size: 10px;
+                    display: flex;
+                }
+                .footer_checkbox > input {
+                    width: 0.8em;
+                    height: 0.8em;
+                }
+                .subscription_form {
+                    width: 50%;
+                    height: 2.5em;
+                    margin-left: 10em;
+                    display: flex;
+                }
+                .subscription_form > div {
+                    width: 60%;
+                    height: 86%;
+                }
+                .subscription_form > div > input {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 13px;
+                    border-radius: 4px;
+                    border: 1px solid black;
+                }
+                .subscription_form > button {
+                    width: 35%;
+                    height: 95%;
+                    margin-left: 0.25em;
+                    font-size: 13px;
+                    font-weight: 100;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: #0071c2;
+                }
+                .footer_bottom >div:nth-child(1) > a {
+                    border: 1px solid white;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                }
+                .footer_bottom > div:nth-child(1) > a:hover {
+                    background-color: #4a7ec780;
+                }
+                .footer_bottom > div:nth-child(3) > a {
+                    color: white;
+                    font-size: 8px;
+                    font-weight: bold;
+                    padding: 0;
+                }
+                #footer_lists {
+                    margin: 2% 0 0;
+                    display: flex;
+                }
+                #footer_lists > div {
+                    flex: 1;
+                }
+                #footer_lists > div > ul {
+                    list-style: none;
+                    padding-left: 10px;
+                    font-size: 8px;
+                    line-height: 1.8em;
+                }
+                #footer_lists a {
+                    text-decoration: none;
+                    color: #0071c2;
+                }
+                #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                    color: rgb(221, 103, 19);
+                }
+                .footer_quote {
+                    margin: 0 3%;
+                    font-size: 11px!important;
+                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                }
+                .footer_quote a {
+                    color: #0071c2;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                .footer_login {
+                    text-align: center;
+                }
+                .footer_login > a {
+                    text-decoration: none;
+                    color: #333;
+                    opacity: 80%;
+                    font-size: 14.5px;
+                    font-weight: 700;
+                }
+                .footer_copyright {
+                    font-size: 6px!important;
+                }
+                .footer_copyright p {
+                    margin-left: -18%;
+                }
+                .footer_priceline_title {
+                    text-align: center;
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .footer_priceline_title > div {
+                    font-size: 12px;
+                }
+                .footer_priceline_images {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.5em;
+                }
+                .footer_priceline_images > div {
+                    margin: 0 0 0 3%;
+                }
+                .footer_priceline_images img {
+                    width: 70%;
+                }
+                .footer_quote+p, .footer_login+p {
+                    display: none;
+                }
+            }
+
+
+       
+
+            .heading{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 16px;
+            display: block;
+            margin-left: 250px;
+            color: #333;
+        }
+         li > div:nth-child(1)>img{
+            width: 210px;
+            height: 180px;
+        
+        } 
+        li>div:nth-child(2)>h3{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        a{
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+        }
+        li>div:nth-child(2)>p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6b6b6b;
+            display: block;
+            margin-top: -15px;
+        }
+        li{
+            
+            padding-right: 16px;
+            display: list-item;
+
+
+        
+        }
+        .carousel{
+            width: 1130px;
+            height: 100%;
+        }
+        #exploreheading{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 16px;
+        display: block;
+        margin-left:40px ;
+        color: #333;
+    }
+    a>div:nth-child(1)> img{
+        width: 210px;
+        height: 210px;
+    
+    } 
+    li>a>div:nth-child(2)>h3{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    #exploreheading+h3{
+        color:#6b6b6b;
+        margin-left:40px ;
+        font-weight: lighter;
+        margin-top: -10px;
+
+    }
+    li>a{
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+    }
+    li>a>div:nth-child(2)>p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #6b6b6b;
+        display: block;
+        margin-top: -15px;
+    }
+   li{
+        
+        padding-right: 16px;
+        display: list-item;
+
+
+    
+    }
+    .carousel{
+        width: 1130px;
+        height: 100%;
+    }
+    
+    #ExploreIndia{
+            margin-left:50px;
+        
+    }
+
+
+
+
+
+    #lastsection{
+            margin-left: 80px;
+        }
+        li{
+            padding-right: 16px;
+            display: list-item;
+        }
+        .outerblock{
+            position: relative;
+            
+            
+        }
+        .card_header{
+            position: absolute;
+            margin-top: -80px;
+            margin-left: 20px;
+           
+            
+        }
+        .outerblock>a> img{
+            width: 260px;
+        }
+       
+        .card_header >p{
+            margin-top: -15px;
+        }
+        .card_title{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: white;
+        }
+        .card_subtitle{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: white;
+            margin-top: 60px;
+        
+        }
+        .links{
+            text-decoration: underline;
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+     a:link{
+            color: #0071c2;
+           
+        }
+        .carousel{
+        width: 1100px;
+        height: 100%;
+        }
+    
+        
+
+
+
+
+
+
+  
+
+
+    body {
+            margin: 0;
+        }
+
+        #t_dis {
+            float: left;
+            width: 100vw;
+        }
+
+        #t_dis_btn {
+            float: right;
+            width: 100vw;
+            text-align: right;
+            margin-right: 100px;
+        }
+
+        #t_dis_btn0 {
+            background-color: grey;
+            color: white;
+            border: unset;
+            margin: 5px;
+            height: 25px;
+            width: 25px;
+        }
+
+        #t_dis_btn0:hover {
+            background-color: rgb(0, 0, 255);
+        }
+
+        #t_dis_usa1 {
+            background-image: url("https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg");
+        }
+
+        #t_dis_usa2 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU");
+        }
+
+        #t_dis_usa3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU");
+        }
+
+        #t_dis_usa4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU");
+        }
+
+        #t_dis_usa5 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU");
+        }
+
+        #t_dis_usa1,
+        #t_dis_usa2,
+        #t_dis_usa3,
+        #t_dis_usa4,
+        #t_dis_usa5 {
+            float: left;
+            height: 130px;
+            width: 200px;
+            background-size: 100% 100%;
+
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        #t_dis_usa1+p,
+        #t_dis_usa2+p,
+        #t_dis_usa3+p,
+        #t_dis_usa4+p,
+        #t_dis_usa5+p {
+            float: left;
+            clear: both;
+        }
+
+        #t_usa_hov1,
+        #t_usa_hov2,
+        #t_usa_hov3,
+        #t_usa_hov4,
+        #t_usa_hov5 {
+            padding: 4px;
+            overflow: hidden;
+            height: 17px;
+            font-size: 16px;
+            background-Color: rgba(0, 0, 0, 0.6);
+        }
+
+        #t_usa_hov1:hover,
+        #t_usa_hov2:hover,
+        #t_usa_hov3:hover,
+        #t_usa_hov4:hover,
+        #t_usa_hov5:hover {
+            height: 95%;
+        }
+
+        #t_dis_usa {
+            float: left;
+            margin: 20px;
+        }
+
+        #t_country_name {
+            color: rgb(8, 110, 194);
+        }
+
+        #t_country_name:hover {
+            color: rgb(212, 176, 12);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="t_nav">
+        <p  id ="t_book">Booking</p><p id="t_com">.com</p>
+
+        <div id="t_ind">
+            <a href=""><p><button id="t_btn">INR</button></p></a>
+            <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
+            <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
+            <a href=""><p><button id="t_btn1">List your property</button></p></a>
+            <a href=""><p><button id="t_btn2">Register</button></p></a>
+            <a href=""><p><button id="t_btn2">Sing in</button></p></a>
+
+        </div>
+        <div id="t_stay">
+            <a href=""><p> <i class="fa fa-hotel"> Stays </i></p></a>
+            <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
+            <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
+            <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
+            <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
+            <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+           
+        </div>
+       
+    </div>
+
+
+<div style='height: 100px;'></div>
+
+    <div id="t_searchBar">
+        <h1>Find deals on hotels, homes, and much more...</h1>
+        <p>From cozy country homes to funky city apartments</p>
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
+        <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
+        <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
+        <button id="t_sear_btn" onclick="citySearch()">Search</button>  
+       
+    </div>
+    <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
+   
+
+
+
+
+    <div id="connect_travelers">
+        <h2 class="heading">Connect with other travelers</h2>
+        <div class="travelers_block">
+            <a href="#">
+                <div class="travel_community_img">
+                    <img src="https://t-cf.bstatic.com/static/img/communities/cover-photo/300x300/india/a047bf294ce2d2e145fdcdd3097b9a7f4e6df229.jpg" alt="" width="100%" height="100%">
+                </div>
+                <div class="travel_community">
+                    <h4>India</h4>
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="travel_community_img">
+                    <img src="https://t-cf.bstatic.com/static/img/communities/cover-photo/300x300/travel-discussions/35a717b9feba5c8f800e2a8949dfa5014e4e79b4.jpg" alt="" width="100%">
+                </div>
+                <div class="travel_community">
+                    <h4>Travel Talk</h4>
+                    <p>General discussion</p>
+                    <p>559,436 travelers</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="travel_community_img">
+                    <img src="https://t-cf.bstatic.com/static/img/communities/communities-index/photo-300x300/b2d5ae20ed65039fe73edbeea8b34ccfddbd63b4.png" alt="" width="100%">
+                </div>
+                <div class="travel_community">
+                    <h4>More communities</h4>
+                    <p>View all</p>
+                    <p>10,103,767 travelers</p>
+                </div>
+            </a>
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+    <h2 class="heading">Browse by property type</h2>
+    <div style=" margin-left:70px;">
+        <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":1 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=" alt="hotels">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Hotels
+                        </a>               
+                    </h3>
+                    <p>761,538 hotels</p>
+                </div>
+                
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-apartments_300/9f60235dc09a3ac3f0a93adbc901c61ecd1ce72e.jpg" alt="Apartments">
+    
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Apartments
+                            </a>
+                    </h3>
+                    <p>693,357 apartments</p>
+    
+                </div>
+                
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg" alt="Resorts">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Resorts
+                            </a>
+                    </h3>
+                    <p>18,041 resorts</p> 
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-villas_300/dd0d7f8202676306a661aa4f0cf1ffab31286211.jpg" alt="Villas">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Villas
+                        </a>
+                    </h3>
+                    <p>366,120 villas</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-chalet_300/8ee014fcc493cb3334e25893a1dee8c6d36ed0ba.jpg" alt="Cabins">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Cabins
+                        </a>
+                    </h3>
+                    <p>29,269 cabins</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_cottages/5e1fd9cd716f4825c6c7eac5abe692c52cc64516.jpg" alt="Cottages">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Cottages
+                        </a>
+                    </h3>
+                    <p>128,548 cottages</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_glamping/6e181b9e942c160f4605239be7ddc1728cbcc4c8.jpg" alt="Glamping">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Glamping
+                            </a>
+                    </h3>
+                    <p>9,337 Glamping Sites</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_aparthotel/10e092f390b128dcff92727912299eef7824b751.jpg" alt="Serviced Apartments">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                            Serviced Apartments
+                        </a>
+                    </h3>
+                        <p>31,157 serviced apartments</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-holidayhomes_300/604c7484d34a9e8791c2d5a0e2df4bc8c803dc7c.jpg" alt="Vacation homes" >
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                         Vacation Homes
+                        </a>
+                    </h3>
+                    <p class="bui-card__subtitle">366,120 vacation homes</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_guest_house/70618d86d515349ce56296a56d2eaaf283fd1542.jpg" alt="Guest houses">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Guest houses
+                        </a>
+                    </h3>
+                    <p>102,676 guest houses</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_hostels/cd5489c0d29025a9ca9daa602ac1581ba042bc69.jpg" alt="Hostels">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Hostels
+                        </a>
+                    </h3>
+                    <p>18,099 hostels</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_motels/9673cd1b55cbc1e1cdaeae09d87d16aa9d84d5f7.jpg" alt="Motels">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Motels
+                        </a>
+                    </h3>
+                    <p>13,910 motels</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_bed_and_breakfast/a6a4a3f904284337c187771d94a4bb6169b168d7.jpg" alt="B&Bs">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        B&amp;Bs
+                        </a>
+                    </h3>
+                    <p>186,043 B&amp;Bs</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_ryokans/e4f002b9907a13a55b4e10b85fdd5d8ea436eb2d.jpg" alt="Ryokans">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Ryokans
+                        </a>
+                    </h3>
+                    <p>2,355 ryokans</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_riad/ec1ea267f18d830b68ca76a666734f8e93a1853d.jpg" alt="Riads">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Riads
+                        </a>
+                    </h3>
+                    <p>957 riads</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_holidaypark/891162048c0a9c104752ed3c4462f2c230e2fabc.jpg" alt="Resort villages">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Resort Villages
+                        </a>
+                    </h3>
+                    <p>6,239 resort villages</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_home_stay/9499c7a4ab5a599218da6d49422dae03384013e3.jpg" alt="Homestays">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#" target="_blank">
+                        Homestays
+                        </a>
+                    </h3>
+                    <p>134,303 homestays</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_campsite/6d40bef46964b8841a84cd88793fc8f0fa6663d9.jpg" alt="Campgrounds">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Campgrounds
+                        </a>
+                    </h3>
+                    <p>7,774 campgrounds</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_country_house/6ffa05069b50124c993f00c998f1dfc66999c93f.jpg" alt="Country Houses">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Country Houses
+                        </a>
+                    </h3>
+                    <p>11,479 country houses</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_farmhouses/9aeedf4b943c722367e5e901681463bf543c5afd.jpg" alt="Farm stays">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Farm Stays
+                        </a>
+                    </h3>
+                    <p>9,202 farm stays</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_boats/5b974434f444153092a0249af70b3678c2e22e7c.jpg" alt="Boats">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Boats
+                        </a>
+                    </h3>
+                    <p>1,351 boats</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_tented_camp/adf0677a5fd80032dc577fad07ad528312dfcadf.jpg" alt="Luxury tents">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Luxury Tents
+                        </a>
+                    </h3>
+                    <p>2,903 luxury tents</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_self-catering/7a0939f5a5338faf255840e895953a522335434a.jpg" alt="self-cateringaccomodations">
+                </div>
+                <div>
+                    <h3 class="bui-card__title">
+                        <a href="#">
+                        Self-catering Accommodations
+                        </a>
+                    </h3>
+                    <p class="bui-card__subtitle">586,615 Self-catering Properties</p>
+                </div>    
+            </li>
+            <li>
+                <div>
+                    <img src="https://t-cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_tiny_house/953faca2af408d667f469ecd3d2b4f1687d7b07f.jpg" alt="tinyhouses">
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">
+                        Tiny houses
+                        </a>
+                    </h3>
+                    <p>346 tiny houses</p>
+                </div>
+            </li>
+            
+        </ul>
+        
+    </div>
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+    <div id="inspiration_trip">
+        <h1>Get inspiration for your next trip</h1>
+        <div class="inspiration_blocks">
+            <a href="./loveLetters.html" style="color: white;">
+                <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/110465249.webp?k=4429b31459fed3b7551f5a4d4912d8afe1dc4e2e388cd34a3364c906db94afac&o=);">
+                    <div class="inspiration_text">
+                        <h2>A collection of love letters to America</h2>
+                        <h4>To all the U.S cities that have a special place in our hearts.</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="./americaForEveryone.html" style="color: white;">
+                <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/104028063.webp?k=c22f340e36295722da6b9f0d75ce4a649e39eb220d17aec38df30f5a36ae2684&o=);">
+                    <div class="inspiration_text">
+                        <h2>America is for everyone</h2>
+                        <h4>Rediscover cultures and places that unites us as a nation.</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/103113147.webp?k=392327c1263e57441c9764b5f81ea1548fb34b2d1fef8700028e93bf55294e94&o=);">
+                    <div class="inspiration_text">
+                        <h2>Vital value: Maximizing travel for less</h2>
+                        <h4>Travelers will prioritize value, booking transparency, and flexibility.</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="inspiration_article">
+            <a href="">
+                <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/103683894.webp?k=0f7c6d8821fd4621924266100f88bf9dc52401749db5ee24c31b37f760258276&o=);">
+                    <div class="inspiration_text">
+                        <h2>Bye bye 9-to-5: Work from wherever you want</h2>
+                        <h4>Long-term remote working is making it possible to travel and set up an office anywhere.</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/103668542.webp?k=77a8bd47a1c7252df15ef50922bf87e98cb56521c89783da5d855c2b63c2913e&o=);">
+                    <div class="inspiration_text">
+                        <h2>Spontechnaity: How tech will drive travel</h2>
+                        <h4>Travelers are using technology to regain confidence and help them travel safely.</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="ExploreIndia">
+        <h2 id="exploreheading">Explore India</h2>
+        <h3>These popular destinations have a lot to offer</h3>
+        <div>
+            <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":1 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;" id="ul">
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/region/square250/49646.webp?k=b7f38878b9164ee38e0b99c4d4646dbea76b7bf4add8464b1aa75e4c9d0efc6e&o=" alt="Goa">
+                        </div>
+                        <div>
+                            <h3>
+                                Goa
+                            </h3>
+                            <p>5,250 properties</p>
+                        </div>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#"> 
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/region/square250/68606.webp?k=4b43b9128b79beaab4ca2e8c038ddf5709b0b90608afbca222cfbe08fabda7d2&o="
+                            alt="North Goa">
+                        </div>
+                        <div>
+                            <h3>
+                                    North Goa
+                            </h3>
+                            <p>3,899 properties</p>
+            
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684765.webp?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o="alt="New Delhi">
+                        </div>
+                        <div>
+                            <h3>
+                                    New Delhi
+                            </h3>
+                            <p>2,909 properties</p> 
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684657.webp?k=66dc5035b43e9bb86b756e381e4fec2558064af4a63a8af17836725a854c03ee&o=" alt="Jaipur">
+                        </div>
+                        <div>
+                            <h3>
+                                    Jaipur
+                            </h3>
+                            <p>1,559 properties</p>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/971346.webp?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o=" alt="Mumbai">
+                        </div>
+                        <div>
+                            <h3>
+                                    Mumbai
+                            </h3>
+                            <p>1,673 properties</p>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/region/square250/69967.webp?k=2e683234884f1caa334734e2ee99dd2036f55c3c413f65702d965eca167619a4&o=" alt="South Goa">
+                        </div>
+                        <div>
+                            <h3>
+                                South Goa
+                            </h3>
+                            <p>1,383 properties</p>
+                        </div>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#"> 
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684534.webp?k=d1fe86c22f2433f4e2dda14ddcbe80feb024b0fb30305e5684a1241fba5d4cff&o="
+                            alt="Bangalore">
+                        </div>
+                        <div>
+                            <h3>
+                                    Bangalore
+                            </h3>
+                            <p>2,055 properties</p>
+            
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684682.webp?k=30cf9de93f2a0f87eed7d2d0d9b3e6eccd5dcf3a4b68b4e0151c0800ddc84af7&o="alt="New Lonavala">
+                        </div>
+                        <div>
+                            <h3>
+                                    Lonavala
+                            </h3>
+                            <p>753 properties</p> 
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img  src="https://t-cf.bstatic.com/xdata/images/city/square250/684938.webp?k=9d07ff707ce59768769b5e9a5381a4c705d921209dafd8fd0e2f1a6acdf0c68a&o=" alt="Udaipur">
+                        </div>
+                        <div>
+                            <h3>
+                                    Udaipur
+                            </h3>
+                            <p>825 properties</p>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684615.webp?k=c842e0a2bf64c6b425f683b2025585e4e073562cd308beb5e0b5c89bab170846&o=" alt="Calangute">
+                        </div>
+                        <div>
+                            <h3>
+                                    Calangute
+                            </h3>
+                            <p>705 properties</p>
+                        </div>
+                    </a>
+                    
+                </li>
+        
+    </div>
+
+     
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+
+
+
+    <div id="lastsection" style="margin-left: 10px;">
+        <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":2 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
+            <li>
+                 <div class="outerblock">
+                     <a href="#"> 
+                         <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/684746.webp?k=3860c1a52d785b4d58bb955497e4c4d407b6e63120e746c63ea1b2ab64d0790e&o=" alt="Hotels in mysore, India">
+                         <header class="card_header">
+                             <h3 class="card_title">Mysore</h3>
+                             <p class="card_subtitle">India</p>
+                         </header>
+                     </a>
+                 </div>
+                 <div class="card_subtitle">
+                     <p class="links">
+                         <a href="#">
+                             62 holiday rentals
+                         </a>
+                         <span>,</span>
+                         <a href="#">
+                             25 homestays,
+                         </a>
+                         <span>,</span>
+                         <a href="#">
+                             25 B&Bs,
+                         </a>
+                         <br>
+                         <a href="#">
+                             18 apartments,
+                         </a>
+                         <span>,</span>
+                         <a href="#"> 14 guest houses</a>
+                     </p>
+                 </div>
+            </li>
+            <li>
+             <div class="outerblock">
+                 <a href="#"> 
+                     <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/684658.webp?k=b42ff2f23ab29a6e0f0a20962a9e411fe58db625b3d560ddf914e030b322d079&o=" alt="Hotels in Hyderabad, India">
+                     <header class="card_header">
+                         <h3 class="card_title">Hyderabad</h3>
+                         <p class="card_subtitle">India</p>
+                     </header>
+                 </a>
+             </div>
+             <div class="card_subtitle">
+                 <p class="links">
+                     <a href="#">
+                         103 holiday rentals
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         53 apartments,
+                     </a>
+                     <br>
+                     <a href="#">
+                         33 homestays,
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         42 B&Bs,
+                     </a>
+                     
+                     
+                     <span>,</span>
+                     <a href="#"> 31 guest houses</a>
+                 </p>
+             </div>
+            </li>
+            <li>
+             <div class="outerblock">
+                 <a href="#"> 
+                     <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/619693.webp?k=f8b4867c83350e9d4bf107ee636b7f5a9338c58b24465c5bbc0f772e562217aa&o=" alt="Hotels in Singapore, Singapore">
+                     <header class="card_header">
+                         <h3 class="card_title">Singapore</h3>
+                         <p class="card_subtitle">Singapore</p>
+                     </header>
+                 </a>
+             </div>
+             <div class="card_subtitle">
+                 <p class="links">
+                     <a href="#">
+                         102 holiday rentals
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         102 apartments,
+                     </a>
+                     <br>
+                     <a href="#">
+                         46 serviced apartments
+                     </a>
+                     <a href="#">
+                         45 hostels,
+                     </a>
+                     <span>,</span>
+                     <br>
+                     <a href="#">
+                         24 capsule hotels
+                     </a>
+                 </p>
+             </div>
+            </li>
+            <li>
+             <div class="outerblock">
+                 <a href="#"> 
+                     <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/684623.webp?k=76489e41de33d0c05ecc7254fc17d9537e6a350d8384c863b109411570c1ac07&o=" alt="Hotels in Calangute, India">
+                     <header class="card_header">
+                         <h3 class="card_title">Calangute</h3>
+                         <p class="card_subtitle">India</p>
+                     </header>
+                 </a>
+             </div>
+             <div class="card_subtitle">
+                 <p class="links">
+                     <a href="#">
+                         204 holiday rentals
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         81 B&Bs
+                     </a>
+                     <br>
+                     <a href="#">
+                         80apartmets
+                     </a>
+                     
+                     <a href="#">
+                         33 homestays,
+                     </a>
+                     <span>,</span>
+                     <br>
+                     <a href="#"> 69 guest houses</a>
+                 </p>
+             </div>
+            </li>
+            <li>
+             <div class="outerblock">
+                 <a href="#"> 
+                     <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/684924.webp?k=65e55b2a5720dad2599847e3471c6bf6879947fc4489badc8c04639bdc31674c&o=" alt="Hotels in Ooty, India">
+                     <header class="card_header">
+                         <h3 class="card_title">Ooty</h3>
+                         <p class="card_subtitle">India</p>
+                     </header>
+                 </a>
+             </div>
+             <div class="card_subtitle">
+                 <p class="links">
+                     <a href="#">
+                         123 holiday rentals
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         33 homestays,
+                     </a>
+                     <br>
+                     <a href="#">
+                         81 B&Bs
+                     </a>
+                     <a href="#">
+                         30 resorts
+                     </a>
+                     
+                     
+                     <span>,</span>
+                     <a href="#"> 29 cottages</a>
+                 </p>
+             </div>
+            </li>
+            <li>
+             <div class="outerblock">
+                 <a href="#"> 
+                     <img src="https://t-cf.bstatic.com/xdata/images/city/400x300/684579.webp?k=8155a35fdb2f917b061495be32a82a07b95f3bedd9070fcd80b20607cff1f75d&o=" alt="Hotels in Cochin, India">
+                     <header class="card_header">
+                         <h3 class="card_title">Cochin</h3>
+                         <p class="card_subtitle">India</p>
+                     </header>
+                 </a>
+             </div>
+             <div class="card_subtitle">
+                 <p class="links">
+                     <a href="#">
+                         191 holiday rentals
+                     </a>
+                     <span>,</span>
+                     <a href="#">
+                         114 homestays,
+                     </a>
+                     <br>
+                     <a href="#">
+                         81 B&Bs
+                     </a>
+                     <a href="#">
+                         56 guest houses
+                     </a>
+                     <a href="#">
+                         42 apartments
+                     </a>
+                 </p>
+             </div>
+            </li>
+         </ul>
+     
+    </div>
+   
+    <!-- <a href="https://www.booking.com/destination.en-gb.html?aid=304142;label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Ap7QnoIGwAIB0gIkMzJiM2UyMmEtYjU5My00NjQ3LWJhNTctMDU1MjI5NGNkYWYy2AIE4AIB;sid=648c7473a53326b2fa42f17fef4f330b;srpvid=61bd4734307500a3&" style="margin-left: 1340px;">More destinations>></a> -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+
+
+
+
+    
+    <div>
+        <h2 id="t_dis" style="margin-left: 100px;">Discover</h2>
+        <div id="t_dis_btn">
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn1()">1</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn2()">2</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn3()">3</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn4()">4</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn5()">5</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn6()">6</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn7()">7</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn4()">8</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn3()">9</button>
+            <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn6()">10</button>
+
+        </div>
+        <div id="t_dis_usa" style="margin-left: 50px;">
+            <div id="t_dis_usa1">
+                <div id="t_usa_hov1">You'll love relaxation,<br>
+                    restaurants and shopping<br>during your next trip to United<br>States of America!</div>
+
+            </div>
+            <p id="t_country_name1">United State Of America</p>
+        </div>
+        <div id="t_dis_usa">
+            <div id="t_dis_usa2">
+                <div id="t_usa_hov2">You'll love old town,<br>
+                    scenery and food during<br>your next trip to Italy!</div>
+
+            </div>
+            <p id="t_country_name2">Italy</p>
+        </div>
+        <div id="t_dis_usa">
+            <div id="t_dis_usa3">
+                <div id="t_usa_hov3"> Put tranquillity,<br>
+                    scenery and old town on<br>your to-do list for your next<br>trip to France! </div>
+
+            </div>
+            <p id="t_country_name3">France</p>
+        </div>
+        <div id="t_dis_usa">
+            <div id="t_dis_usa4">
+                <div id="t_usa_hov4">If tranquillity,<br>
+                    old town and food are<br> your thing, don’t miss out<br> on Spain!</div>
+
+            </div>
+            <p id="t_country_name4">Spain</p>
+        </div>
+        <div id="t_dis_usa">
+            <div id="t_dis_usa5">
+                <div id="t_usa_hov5"> Don’t miss out on Germany!<br>
+                    Top destination for old<br>town, walking and city walks. </div>
+
+            </div>
+            <p id="t_country_name5">Germany</p>
+        </div>
+
+    </div>
+
+
+
+
+
+<div style="height: 500px;"></div>
+
+
+    <div id="footer">
+        <div>
+            <div>
+                <h2>Save time, save money!</h2>
+                <h3>Sign up and we'll send the best deals to you</h3>
+            </div>
+            <div class="subscription_form">
+                <div>
+                    <input type="email" placeholder="Your email">
+                </div>
+                <button>Subscribe</button>
+            </div>
+            <label class="footer_checkbox">
+                <input type="checkbox">
+                Send me a link to get the FREE Booking.com app!
+            </label>
+        </div>
+        <div class="footer_bottom">
+            <div>
+                <a href="#">List your property</a>
+            </div>
+            <div style="height: 0.01em; background:white; margin: 0.8em 0;"></div>
+            <div>
+                <a href="#">Mobile version</a>
+                <a href="#">Your account</a>
+                <a href="#">Make changes online to your booking</a>
+                <a href="#" title='Your Reference ID is "C5DA764"'>Contact Customer Service</a>
+                <a href="#" title="Become an affiliate">Become an affiliate</a>
+                <a href="#">Booking.com for Business</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer_lists">
+        <div>
+            <ul>
+                <li><a href="#">Countries</a></li>
+                <li><a href="#">Regions</a></li>
+                <li><a href="#">Cities</a></li>
+                <li><a href="#">Districts</a></li>
+                <li><a href="#">Airports</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Places of interest</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Homes</a></li>
+                <li><a href="#">Apartments</a></li>
+                <li><a href="#">Resorts</a></li>
+                <li><a href="#">Villas</a></li>
+                <li><a href="#">Hostels</a></li>
+                <li><a href="#">B&Bs</a></li>
+                <li><a href="#">Guest houses</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Unique places to stay</a></li>
+                <li><a href="#">All destinations</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Upacked: Travel articles</a></li>
+                <li><a href="#">Travel communities</a></li>
+                <li><a href="#">Seasonal and holiday deals</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Car rental</a></li>
+                <li><a href="#">Flight finder</a></li>
+                <li><a href="#">Restaurant reservations</a></li>
+                <li><a href="#">Booking.com for Travel Agents</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+                <li><a href="#">About Booking.com</a></li>
+                <li><a href="#">Contact Customer Service</a></li>
+                <li><a href="#">Partner help</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Press center</a></li>
+                <li><a href="#">Safety Resource Center</a></li>
+                <li><a href="#">Investor relations</a></li>
+                <li><a href="#">Terms & conditions</a></li>
+                <li><a href="#">Partner dispute</a></li>
+                <li><a href="#">Privacy and cookie statement</a></li>
+                <li><a href="#">Corporate contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_quote">
+        <div>
+            <p>
+                Whoever you are, whatever you're looking for, we have the perfect place for you. Our 28,085,332 listings
+                include 6,457,264 listings of homes, apartments, and other unique places to stay,
+                and are located in 153,842 destinations 
+                in 225 countries and territories. 
+                Booking.com B.V. is based in Amsterdam, the Netherlands and is supported internationally by <a href="#">198 offices in 70 countries.</a>
+            </p>
+        </div>
+    </div>
+    <p>&#8203</p>
+    <div class="footer_login">
+        <a href="">Extranet login</a>
+    </div>
+    <p>&#8203</p>
+    <div class="footer_copyright">
+        <div>
+            <p>Copyright &#169 1996-2021 Booking.com&#8482. All rights reserved.</p>
+        </div>
+    </div>
+    <div class="footer_priceline_title">
+        <div>
+            <p>Booking.com is part of Booking Holidings Inc., the world leader in online travel and related services.</p>
+        </div>
+    </div>
+    <div class="footer_priceline_images">
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="">
+        </div>
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="">
+        </div>
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="">
+        </div>
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="">
+        </div>
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="">
+        </div>
+        <div>
+            <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        
+        function citySearch() {
+        var data=document.querySelector("#t_sear1").value
+        window.location.href=`${data}.html`
+}
+
+
+function countryBtn1() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg')"
+            country_name1.textContent = ' America'
+            usa_text1.textContent = 'You will love relaxation, restaurants and shopping during your next trip to United States of America!'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU')"
+            country_name2.textContent = 'Italy'
+            usa_text2.textContent = 'You will love old town,  scenery and food during your next trip to Italy!'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU')"
+            country_name3.textContent = 'France'
+            usa_text3.textContent = 'Put tranquillity,  scenery and old town on your to-do list for your next trip to France!'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU')"
+            country_name4.textContent = 'Spain'
+            usa_text4.textContent = 'If tranquillity,   old town and food are  your thing, don’t miss out  on Spain!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU')"
+            country_name5.textContent = 'Germany'
+            usa_text5.textContent = 'Don’t miss out on Germany! Top destination for old town, walking and city walks. '
+
+        }
+        function countryBtn2() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://static.toiimg.com/photo/80742236.cms')"
+            country_name1.textContent = 'United Kingdom'
+            usa_text1.textContent = 'Try United Kingdom for your next trip! Enjoy shopping, scenery and sightseeing while you’re there!'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjR4Ch6OaqUB0JEt_9ppnyMtR31VwWzD4U3Q&usqp=CAU')"
+            country_name2.textContent = 'Russia'
+            usa_text2.textContent = 'Russia is highly rated by travelers for city walks, sightseeing and architecture.'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDpVORTuEF-7_5GvnQPFSw3q3eOW-2JSGfw&usqp=CAU')"
+            country_name3.textContent = 'Croatia'
+            usa_text3.textContent = 'Croatia is highly rated by travelers for oceanside, relaxation and old town.'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2GwCyyMxdEV03lgVeEUZvJo5bBBwJQqTiQg&usqp=CAU')"
+            country_name4.textContent = 'Brazil'
+            usa_text4.textContent = 'Put tranquillity, nature and beaches on your to-do list for your next trip to Brazil!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CRvWlhClFp6KidDqmyuLWTzCQAFYx2Fl4A&usqp=CAU')"
+            country_name5.textContent = ' India'
+            usa_text5.textContent = 'Relaxation, sightseeing and temples are just a few reasons why travelers enjoy India.'
+
+        }
+
+        function countryBtn3() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvTGSUZxFJsD5MQNi55VlpY_OvkKe54pXpVw&usqp=CAU')"
+            country_name1.textContent = 'Greece'
+            usa_text1.textContent = 'Relaxation, beaches and food are just a few reasons why travelers enjoy Greece.'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRtrBIXkbXT3Yl9QZWU7OSra6Ido9PLnUiEA&usqp=CAU')"
+            country_name2.textContent = 'Poland'
+            usa_text2.textContent = 'If old town, walking and city walks are your thing, don’t miss out on Poland!'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD3Kg6pDOGJrNjvqDP4qrO4p02jAEuMiyAUw&usqp=CAU')"
+            country_name3.textContent = 'Japan'
+            usa_text3.textContent = 'Don’t miss out on Japan! Top destination for food, sightseeing and scenery.'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQevwcl2CVwmn7WKWQu8UKVauXw7LswphvAA&usqp=CAU')"
+            country_name4.textContent = 'South Africa'
+            usa_text4.textContent = 'You will love relaxation, scenery and nature during your next trip to South Africa!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/21/12/lisbon-skyline.jpg?width=1200')"
+            country_name5.textContent = 'Portugal'
+            usa_text5.textContent = 'If old town, tranquillity and scenery are your thing, don’t miss out on Portugal!'
+
+        }
+
+        function countryBtn4() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgC2D1nfF5fM9gc1gr-eRwBUPYZOqpW8kJvg&usqp=CAU')"
+            country_name1.textContent = 'Australia'
+            usa_text1.textContent = 'You will love relaxation, scenery and beaches during your next trip to Australia!'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcKQTz7bOXbBzs4SPsQlmExiQ6CEcZgplUwA&usqp=CAU')"
+            country_name2.textContent = 'Austria'
+            usa_text2.textContent = 'Put nature, mountains and scenery on your to-do list for your next trip to Austria!'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySY6LMvhr01rGVmkYUFpeq6nGbBwA8LRDUg&usqp=CAU')"
+            country_name3.textContent = 'Thailand'
+            usa_text3.textContent = 'Travelers choose Thailand for relaxation, food and beaches.'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAsjAtbUISw9GUz53Joi9hE-85ftVbexYauQ&usqp=CAU')"
+            country_name4.textContent = 'China'
+            usa_text4.textContent = 'China – the ideal getaway for food, sightseeing and culture!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://gotra.sgp1.cdn.digitaloceanspaces.com/web-upload/1591672895-09-06-2020-WDKFRfmVrwxqi6Thp9a4IJLkXuPolQc8.jpg')"
+            country_name5.textContent = 'Indonesia'
+            usa_text5.textContent = 'Put relaxation, food and beaches on your to-do list for your next trip to Indonesia!'
+
+        }
+
+        function countryBtn5() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBi1_NY_b22mgCQOjmOemMFmNbUrxXnGG9tA&usqp=CAU')"
+            country_name1.textContent = 'Argentina'
+            usa_text1.textContent = 'Argentina – the ideal getaway for tranquillity, scenery and nature!'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPiHzq6Jc8ldVE8PFgGT0PzXy72fQPNoCBtg&usqp=CAU')"
+            country_name2.textContent = 'Mexico'
+            usa_text2.textContent = 'Mexico is a great choice for travelers interested in food, friendly locals and tranquillity.'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDpVORTuEF-7_5GvnQPFSw3q3eOW-2JSGfw&usqp=CAU')"
+            country_name3.textContent = 'Canada'
+            usa_text3.textContent = 'Put scenery, nature and restaurants on your to-do list for your next trip to Canada!'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxZ3mro5UnJQ9EXZGaFR_b7EG8ZOHIrDrMiQ&usqp=CAU')"
+            country_name4.textContent = 'Vietnam'
+            usa_text4.textContent = 'Vietnam – the ideal getaway for food, friendly locals and local food!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://www.euractiv.com/wp-content/uploads/sites/2/2020/04/Georgia-flags-800x450.jpg')"
+            country_name5.textContent = 'Georgia'
+            usa_text5.textContent = 'Georgia is a great choice for travelers interested in friendly locals, nature and local food.'
+
+        }
+
+        function countryBtn6() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/b2/9a.jpg')"
+            country_name1.textContent = 'Romania'
+            usa_text1.textContent = 'Don’t miss out on Romania! Top destination for relaxation, old town and scenery.'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThz_We-P6GRZxExwgqUI_6CdcKekU-ycpvdA&usqp=CAU')"
+            country_name2.textContent = 'Netherlands'
+            usa_text2.textContent = 'Walking, city walks and cycling are just a few reasons why you’ll love Netherlands.'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('http://ttgasia.2017.ttgasia.com/wp-content/uploads/sites/2/2020/05/Petronas-Twin-Towers-in-Kuala-Lumpur.jpg')"
+            country_name3.textContent = 'Malaysia'
+            usa_text3.textContent = 'Malaysia – the ideal getaway for relaxation, food and shopping!'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://www.eureporter.co/wp-content/uploads/2020/09/Ukraine.jpg')"
+            country_name4.textContent = 'Ukraine '
+            usa_text4.textContent = 'Ukraine – the ideal getaway for city walks, architecture and old town!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXt7vDx29hiqrgcZJTqorc_CF4AggYUQYHdw&usqp=CAU')"
+            country_name5.textContent = ' Czech Republic'
+            usa_text5.textContent = 'Old Town, city walks and architecture are just a few reasons why travelers enjoy Czech Republic.'
+
+        }
+
+        function countryBtn7() {
+            var usa_img1 = document.querySelector('#t_dis_usa1')
+            var country_name1 = document.querySelector('#t_country_name1')
+            var usa_text1 = document.querySelector('#t_usa_hov1')
+
+            usa_img1.style.backgroundImage = "url('https://cdn.fodors.com/ee/files/slideshows/11675/switzerland-hero.jpg')"
+            country_name1.textContent = 'Romania'
+            usa_text1.textContent = 'Don’t miss out on Romania! Top destination for relaxation, old town and scenery.'
+
+            var usa_img2 = document.querySelector('#t_dis_usa2')
+            var country_name2 = document.querySelector('#t_country_name2')
+            var usa_text2 = document.querySelector('#t_usa_hov2')
+
+            usa_img2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThz_We-P6GRZxExwgqUI_6CdcKekU-ycpvdA&usqp=CAU')"
+            country_name2.textContent = 'Netherlands'
+            usa_text2.textContent = 'Walking, city walks and cycling are just a few reasons why you’ll love Netherlands.'
+
+            var usa_img3 = document.querySelector('#t_dis_usa3')
+            var country_name3 = document.querySelector('#t_country_name3')
+            var usa_text3 = document.querySelector('#t_usa_hov3')
+
+            usa_img3.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNcwE3WWEEUItNOmIbgFbRSx2Lq4b8mB0ow&usqp=CAU')"
+            country_name3.textContent = 'Colombia'
+            usa_text3.textContent = 'Colombia – the ideal getaway for relaxation, food and shopping!'
+
+            var usa_img4 = document.querySelector('#t_dis_usa4')
+            var country_name4 = document.querySelector('#t_country_name4')
+            var usa_text4 = document.querySelector('#t_usa_hov4')
+
+            usa_img4.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDhN8k6muJrTLvc3jPgQugPcVGZ_i9mCorg&usqp=CAU')"
+            country_name4.textContent = 'Hungary '
+            usa_text4.textContent = 'Hungary– the ideal getaway for city walks, architecture and old town!'
+
+            var usa_img5 = document.querySelector('#t_dis_usa5')
+            var country_name5 = document.querySelector('#t_country_name5')
+            var usa_text5 = document.querySelector('#t_usa_hov5')
+
+            usa_img5.style.backgroundImage = "url('https://biggreenpurse.com/wp-content/uploads/2020/11/Turkey-2.jpg')"
+            country_name5.textContent = 'Turkey'
+            usa_text5.textContent = 'Old Town, city walks and architecture are just a few reasons why travelers enjoy Turkey.'
+
+        }
+
+
+
+    </script>
+</body>
+</html>
