@@ -1,0 +1,82 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#outer{
+    width: 1903px;
+    height: 195px;
+    background-color: #f2f2f2;
+    padding: 64px 32px;
+}
+#outer>#inner>div:nth-child(1){
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 8px;
+    color: #262626;
+
+}
+#outer>#inner>div:nth-child(2){
+    color: #6b6b6b;
+    margin-bottom: 32px;
+    font-weight: 400;
+
+
+}
+input{
+    background-color: #ffffff;
+    float: left;
+    width: 740px;
+    padding-left: 55px;
+    margin-left: 50px;
+    border-left-color:      white;
+
+
+}
+button,input{
+    height: 55px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width:5px ;
+    border-right-width: 1px;
+    border-left-width: 5px;
+
+    border-top-color: rgb(255, 181, 43);
+    border-bottom-color:      rgb(255, 181, 43);
+    border-right-color: rgb(255, 181, 43);
+    border-left-color: rgb(255, 181, 43);
+    border-radius: 5px;
+
+    
+    
+
+}
+button{
+    width: 100px;
+    background-color: #0071c2;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    list-style: 24px;
+
+}
+#searchsymbol{
+    width: 20px;
+    height: 40px;
+    background-color: white;
+    float: left;
+    margin-right: -50px;
+    padding-left: 40px;
+    padding-top: 15px;
+    border-radius: 5px;
+  
+
+}
+#inner{
+    margin-left: 500px;
+}
+
+
+
+
+
