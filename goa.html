@@ -6,11 +6,85 @@ href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 integrity="sha384- 
  B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
   crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
    <style>
        body{
            margin: 0px;
            margin-left: 100px;
        }
+      
+        #t_nav{   
+            position: fixed;         
+            width: 100vw;
+            height: 135px;
+            background-color: #0f3079;
+            margin-top: -20px;
+        }
+        #t_book,#t_com{
+            font-size: x-large;
+            float: left;
+            margin-top: 35px;
+        }
+        #t_book{
+            color: white;             
+            margin-left: 100px;          
+        }
+        #t_com{
+            color: rgb(79, 149, 230);            
+        }
+        #t_stay{            
+         display: flex;
+        padding-left: 85px;
+         width: 100vw;
+         height: 30px;
+        }
+        #t_stay>a>p,#t_ind>a>p{
+            color: white;
+            float: left;
+            margin: 10px 20px;
+        }
+        #t_ind{
+            display: flex;            
+            padding-left: 500px;
+            margin-top: 20px;
+        }
+        #t_ind>a>p{
+     
+        }
+        #t_btn1{
+            color: white;
+            background-color: unset;
+            border: 1px solid white;
+            height: 33px;
+        }
+        #t_btn2{
+            height: 33px;
+            color: rgb(17, 117, 184);
+        }
+        #t_btn{
+            background-color: unset;
+            color: white;
+            border: 2px solid rgb(37, 96, 185);
+            height: 50px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        #t_goa_float{
            float: left;
        }
@@ -181,7 +255,7 @@ integrity="sha384-
    </div>
 </div>
 
-<div id="t_goa_itc">
+<div id="t_goa_itc" value="8.8">
     <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/286811188.webp?k=146b6e1e041f0c6fd6652e0ca20008da8ba6d8c8ed2691212ee1f06e9126f776&o="/>
    <div id="t_goa_itc1">
        <h2>Hyatt Centric Candolim Goa  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
@@ -198,7 +272,7 @@ integrity="sha384-
 <div id="t_goa_itc">
     <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/141814415.webp?k=5df6b8a4d85a00ed4d7e5532c46b2a00a0a1858514aeb8623c4b72c830c82993&o="/>
    <div id="t_goa_itc1">
-       <h2>Planet Hollywood Beach Resort Goa <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>Planet Hollywood Beach  Resort <br>Goa <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Offering an outdoor swimming pool and a fitness center, Planet Hollywood <br>Beach Resort Goa is located on the Uttorda Beach.</p>
    <p id="t_goa_book">Book 13 times in last 8 hours</p>
    </div>
@@ -223,7 +297,40 @@ integrity="sha384-
    </div>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+<div id="t_nav">
+    <p  id ="t_book">Booking</p><p id="t_com">.com</p>
+
+    <div id="t_ind">
+        <a href=""><p><button id="t_btn">INR</button></p></a>
+        <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
+        <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
+        <a href=""><p><button id="t_btn1">List your property</button></p></a>
+        <a href=""><p><button id="t_btn2">Register</button></p></a>
+        <a href=""><p><button id="t_btn2">Sing in</button></p></a>
+
+    </div>
+    <div id="t_stay">
+        <a href=""><p> <i class="fa fa-hotel"> Stays </i></p></a>
+        <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
+        <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
+        <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
+        <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
+        <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+       
+    </div>
+   
+</div>
     <script>
+        
 
     </script>
 </body>
