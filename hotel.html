@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="hotel">
+            <div><input id="city" type="text"></div>
+            <div><input id="locale" type="text"></div>
+        </div>
+        
+        <script>
+            
+
+        function fet(){
+            fetch(`https://hotels4.p.rapidapi.com/locations/search?query=${city}&locale=${locale}`, {
+	            "method": "GET",
+	        "headers": {
+		    "x-rapidapi-key": "f5629c4d93msh8068215b55da557p1d5ad2jsn25f18956f991",
+		    "x-rapidapi-host": "hotels4.p.rapidapi.com"
+	    }
+            })
+            .then(response => {
+	        console.log(response);
+            response.json().then((rp)=>{
+            console.log(rp)
+            display(rp)
+        })
+        })
+        .catch(err => {
+	    console.error(err);
+        });
+        }
+        function display(data){
+            
+        }
+        </script>
+    </body>
+</html>

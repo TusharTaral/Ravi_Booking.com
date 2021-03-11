@@ -88,7 +88,7 @@
             #signNav{
                 background-color: #004586;
                 width:100%;
-                height: 11vh;
+                height: 70px;
                 position: fixed;
                 top:0;
                 left:0;
@@ -163,9 +163,11 @@
                 var btn=document.querySelector("button");
                 btn.addEventListener("click",sign);
                 function sign(){
+                    if(ip[0].value==ip[1].value){
+                        localStorage.setItem("password",ip[0].value);
+                   window.location.href="./main page/mainLandingPage.html";
+                    }
                     
-                    localStorage.setItem("Email",ip);
-                    window.location.href="./Booking pass.html";
                 }
         </script>
     </body>
