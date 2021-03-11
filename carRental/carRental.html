@@ -3,11 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Cheap car rentals: Find best car deals & worldwide locations</title>
         <style type="text/css">
             body {
-                margin: 1em 0;
+                margin: 0;
                 font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+
+            /* --------------------------------------------------Navbar CSS -------------------------------------------------------- */
+           
+            header {
+                margin-top: -1.5em;
+                height: 8em;
+                background-color: #0f3079;
+            }
+            header > nav {
+                height: 100%;
+                margin: 0 14%;
+            }
+            #t_nav {
+                width: 100%;
+                height: 100%;
+            }
+            #t_book, #t_com {
+                font-size: x-large;
+                float: left;
+                margin-top: 35px;
+            }
+            #t_book {
+                color: white;          
+            }
+            #t_com {
+                color: rgb(79, 149, 230);            
+            }
+            #t_stay {            
+            display: flex;
+            width: 100%;
+            height: 30px;
+            }
+            #t_stay > a > p, #t_ind > a > p{
+                color: white;
+                float: left;
+                margin: 10px 20px;
+            }
+            #t_ind {
+                display: flex;            
+                padding-left: 500px;
+                margin-top: 20px;
+            }
+            #t_btn1 {
+                color: white;
+                background-color: unset;
+                border: 1px solid white;
+                height: 33px;
+            }
+            #t_btn2 {
+                height: 33px;
+                color: rgb(17, 117, 184);
+            }
+            #t_btn {
+                background-color: unset;
+                color: white;
+                border: 2px solid rgb(37, 96, 185);
+                height: 40px;
             }
 
             /* -------------------------------------------------- Car Rentals CSS -------------------------------------------------- */
@@ -502,6 +561,33 @@
     </head>
     <body>
         <!---------------------------------------------------- header goes gere --------------------------------------------------------------->
+        <header>
+            <nav>
+                <div id="t_nav">
+                    <p  id ="t_book">Booking</p><p id="t_com">.com</p>
+            
+                    <div id="t_ind">
+                        <a href=""><p><button id="t_btn">INR</button></p></a>
+                        <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
+                        <a href=""><p ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
+                        <a href=""><p><button id="t_btn1">List your property</button></p></a>
+                        <a href=""><p><button id="t_btn2">Register</button></p></a>
+                        <a href=""><p><button id="t_btn2">Sing in</button></p></a>
+            
+                    </div>
+                    <div id="t_stay">
+                        <a href=""><p> <i class="fa fa-hotel"> Stays </i></p></a>
+                        <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
+                        <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
+                        <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
+                        <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
+                        <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+                    </div>
+                   
+                </div>
+            </nav>
+        </header>
+        
 
         <!---------------------------------------------------- Car Rentals -------------------------------------------------------------------->
         <div class="carRentals_main">
@@ -1037,13 +1123,5 @@
             });
         }
         
-        function check() {
-            let name = document.getElementsByName("location")
-            for(let i=0; i<name.length; i++) {
-                if(name[i].checked) {
-                    console.log(name[i].value);
-                }
-            }
-        }
     </script>
 </html>
