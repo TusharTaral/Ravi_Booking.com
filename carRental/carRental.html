@@ -9,6 +9,9 @@
                 margin: 1em 0;
                 font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             }
+
+            /* -------------------------------------------------- Car Rentals CSS -------------------------------------------------- */
+            
             .carRentals_main {
                 height: 60vh;
             }
@@ -260,10 +263,9 @@
                 font-weight: 400;
             }
             .carRentals_FAQs {
-                height: 20em;
                 margin: 2% 14%;
                 display: flex;
-                box-shadow: 1px 1px 10px;
+                border: 1px solid whitesmoke;
             }
             .carRentals_FAQs > div:nth-child(1) {
                 width: 28%;
@@ -275,22 +277,233 @@
                 background-color: whitesmoke;
             }
             .carRentals_FAQs_list {
-                list-style: none;
-                list-style-position: initial;
-                list-style-image: initial;
+                width: 100%;
+                height: 100%;
             }
-            .carRentals_FAQs_list li {
-                /* width: 50em;
-                margin: 0;
-                padding: 0;
-                border: 1px solid #e6e6e6;
-                box-shadow: 1px 1px 10px; */
+            .carRentals_FAQs_list_accordion {
+                padding: 18px;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 700;
+                transition: 0.4s;
+                border: 1px solid whitesmoke;
+                text-align: left;
+                outline: none;
+                color: #444;
+                cursor: pointer;
+                background-color: #fff;
+            }
+
+            .carRentals_FAQs_list_active, .carRentals_FAQs_list_accordion:hover {
+                background-color: #ccc; 
+            }
+            .carRentals_FAQs_list_panel {
+                padding: 0 18px;
+                font-size: 12px!important;
+                display: none;
+                background-color: white;
+                overflow: hidden;
+            }
+            .carRentals_worldwide_locations {
+                height: 100vh;
+            }
+            .carRentals_worldwide_locations > div {
+                margin: 5% 14%;
+                height: 100%;
+            }
+            .carRentals_worldwide_locations_heading {
+                font-size: 21px;
+                font-weight: 600;
+                line-height: 32px;
+                margin-left: 0;
+                color: #333;
+            }
+            .carRentals_worldwide_locations_blocks {
+                height: 93%;
+                width: 100%;
+            }
+            .carRentals_worldwide_locations_blocks > div {
+                display: flex;
+                height: 30%;
+            }
+            .carRentals_worldwide_locations_blocks > div:nth-child(2), .carRentals_worldwide_locations_blocks > div:nth-child(3) {
+                margin: 2em 0 1em;
+            }
+            .carRentals_worldwide_locations_blocks > div > div {
+                flex: 1;
+                height: 100%;
+                border-radius: 2px;
+                cursor: pointer;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .carRentals_worldwide_locations_blocks > div > div:nth-child(2) {
+                margin: 0 1.5% 0 3%;
+            }
+            .carRentals_worldwide_locations_blocks > div > div:nth-child(3) {
+                margin: 0 3% 0 1.5%;
+            }
+            .carRentals_worldwide_locations_blocks > div > div > div {
+                width: 100%;
+                height: 34%;
+                line-height: 0.5em;
+                margin-top: 60.6%;
+                border-radius: 2px;
+                overflow: hidden;
+                background: linear-gradient(to top,rgba(0,0,0,1) 0,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0) 100%);
+            }
+            .carRentals_worldwide_locations_blocks > div > div > div > a {
+                text-decoration: none;
+                color: #fff;
+                line-height: 0;
+            }
+            .carRentals_worldwide_locations_blocks > div > div > div > a:hover {
+                color: rgba(250, 176, 65, 0.9);
+            }
+            .carRentals_worldwide_locations_blocks h4 {
+                font-size: 17px;
+                margin-left: 1em;
+            }
+            .carRentals_worldwide_locations_blocks p {
+                font-size: 14px;
+                margin-left: 1.2em;
+            }
+            /* -------------------------------------------- Footer CSS ------------------------------------------------------- */
+        
+            #footer {
+                margin-top: 3em;
+                height: 20em;
+                text-align: center;
+                line-height: 10px;
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                display: flex;
+                margin: 0.4% 30.5% 0;
+            }
+            .footer_checkbox > input {
+                margin-top: -0.1em;
+            }
+            .subscription_form {
+                height: 3em;
+                margin: 2% 30% 0;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 70%;
+                height: 86%;
+                padding: 0 1.5%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 25%;
+                height: 95%;
+                font-size: 20px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom {
+                height: 20%;
+                padding: 1em 0;
+                background-color: #003580;
+            }
+            .footer_bottom > div:nth-child(1) {
+                padding: 6px 0 10px;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                margin: 0 0.5%;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 15px 10px;
+            }
+            #footer_lists {
+                margin: 0 12%;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                font-size: 14px;
+                line-height: 1.6em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote, .footer_copyright, .footer_priceline_title {
+                margin: 0 15%;
+                font-size: 12px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_priceline_title {
+                text-align: center;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin-right: 2.5em;
             }
         </style>
     </head>
     <body>
-        <!-- header goes gere -->
-        <!-- Car rentals -->
+        <!---------------------------------------------------- header goes gere --------------------------------------------------------------->
+
+        <!---------------------------------------------------- Car Rentals -------------------------------------------------------------------->
         <div class="carRentals_main">
             <div class="carRentals_clean_cars">
                 <div>
@@ -514,25 +727,316 @@
             <div>
                 <h3>Frequently Asked Questions</h3>
             </div>
+            <div class="carRentals_FAQs_list">
+                <button class="carRentals_FAQs_list_accordion">What do I need to rent a car?</button>
+                <div class="carRentals_FAQs_list_panel">
+                    <p>When you're booking a car, all you need is a debit or credit card.</p>
+                    <p>At the rental counter, you'll nedd:</p>
+                    <ul>
+                        <li>Your passport</li>
+                        <li>Your voucher</li>
+                        <li>A driver's license for each driver</li>
+                        <li>The main driver's credit card (some companies accept debit cards, but most don't).</li>
+                    </ul>
+                    <p>Important: Check the car’s rental terms as well, because each company has its own rules. For example, they might need to see extra ID, might not accept certain types of credit cards, or might not rent to anybody who hasn’t held their driver's license for 36 months, etc.</p>
+                </div>
+
+                <button class="carRentals_FAQs_list_accordion">Am I old enough to rent a car?</button>
+                <div class="carRentals_FAQs_list_panel">
+                <p>Most companies will let you rent a car if you’re at least 21, and some will even rent to younger drivers. However, if you’re under 25, you might have to pay a "young driver fee."</p>
+                </div>
+
+                <button class="carRentals_FAQs_list_accordion">Can I book a rental car for someone else?</button>
+                <div class="carRentals_FAQs_list_panel">
+                    <p>Of course. Just put their info on the "Driver details" form when booking the car.</p>
+                </div>
+                
+                <button class="carRentals_FAQs_list_accordion">Any tips for picking the right car?</button>
+                <div class="carRentals_FAQs_list_panel">
+                    <ul>
+                        <li>Think about where you’re going. An SUV might be great for cruising down a Texas freeway, but a smaller car will be a lot easier for getting around Rome.</li>
+                        <li>See what other people think. You’ll find lots of reviews and ratings on our site, so check out what other customers liked (and didn’t like) about each company.</li>
+                        <li>Don’t forget the transmission. In some countries, almost everyone drives manual cars, while automatics are the norm in other ones. Make sure you rent a car you can drive!</li>
+                    </ul>
+                </div>
+                
+                <button class="carRentals_FAQs_list_accordion">Are all fees inculded in the rental prices?</button>
+                <div class="carRentals_FAQs_list_panel">
+                    <p>The price you see includes the car, mandatory coverage (theft protection and collision damage waiver), and mandatory fees (e.g. one-way fees, airport surcharges, local taxes, etc.).</p>
+                    <p>It also includes any extras you already added (e.g. GPS, car seats).</p>
+                    <p>It doesn’t include any extra coverage you buy at the rental counter.</p>
+                    <p>Tip: Review the full price breakdown on the Payment page.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carRentals_worldwide_locations">
             <div>
-                <ul class="carRentals_FAQs_list">
-                    <li>
-                        <button>
+                <div class="carRentals_worldwide_locations_heading">
+                    <h4>Top worldwide locations for car rentals</h4>
+                </div>
+                <div class="carRentals_worldwide_locations_blocks">
+                    <div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/619932.webp?k=81c20cf1191a1d05472b45413bed3cee67dc92b8c1387c60a960beb5629f109d&o=);">
                             <div>
-                                <h3>What do I need to rent a car?</h3>
+                                <a href="#">
+                                    <h4>Dubai</h4>
+                                    <p>Car hire from &#8377 500 per day </p>
+                                </a>
                             </div>
-                        </button>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/645577.webp?k=81d61cb4e120af4d4218386546a117b77ef18dfcf3727d186ec3a1aad60f38fe&o=);">
+                            <div>
+                                <a href="">
+                                    <h4>Malaga</h4>
+                                    <p>Car hire from &#8377 494 per day</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/619965.webp?k=8b2bc851e921e03c4565fe28e4f608c30223227743b3b2cc56c476a5ef04d3da&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Lisbon</h4>
+                                    <p>Car hire from &#8377 494 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/683175.webp?k=12ee6c35c41bf53f6677d9639e451b1c78be233ee572973cae23265f2c8bd1bd&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Munich</h4>
+                                    <p>Car hire from &#8377 765 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/654659.webp?k=9c4ac59d35869485631346dc1ee16d28e82ec5f79654bf56b4b4eaeef3388299&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Istanbul</h4>
+                                    <p>Car hire from &#8377 524 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/972592.webp?k=786a11b191b86a238ec986b90fe732664cd9ca2f17dce9faa02bb08777749fc1&o=);">
+                            <div>
+                                <a href="">
+                                    <h4>Frankfurt/Main</h4>
+                                    <p>Car hire from &#8377 507 per day</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/644849.webp?k=f581ad57a3045790f8c1de80f578154b3369d4bd9f090a4a1146a4eab76224ad&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Alicante</h4>
+                                    <p>Car hire from &#8377 494 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/972613.webp?k=bad433a74a80d55d3e6ce265ac7b61bac169cc0c7c54cdc576f6baf8730e2c8d&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Berlin</h4>
+                                    <p>Car hire from &#8377 673 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/626991.webp?k=2e39cf151988e12f16bff255da7e0f2900498f12070771d0183499504775614d&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Venice</h4>
+                                    <p>Car hire from &#8377 494 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/971983.webp?k=ba34c6155d25b9938999f108ba9d18c23e62b92fffacb3b53b2a04e46694e4c6&o=);">
+                            <div>
+                                <a href="">
+                                    <h4>Porto</h4>
+                                    <p>Car hire from &#8377 494 per day</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/620036.webp?k=da1bb740e7026af0062b9bbab20fde0f05f522f18535bae387e66f72f4488703&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Los Angeles</h4>
+                                    <p>Car hire from &#8377 614 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/360x240/639763.webp?k=0f28532f00c333c4be96a7ec57b84beb47856bf069dae8c5eb3b253b5c770674&o=);">
+                            <div>
+                                <a href="#">
+                                    <h4>Catania</h4>
+                                    <p>Car hire from &#8377 494 per day </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------- Footer HTML ---------------------------------------------------------------->
+        
+        <div id="footer">
+            <div>
+                <div>
+                    <h2>Save time, save money!</h2>
+                    <h3>Sign up and we'll send the best deals to you</h3>
+                </div>
+                <div class="subscription_form">
+                    <div>
+                        <input type="email" placeholder="Your email">
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+                <label class="footer_checkbox">
+                    <input type="checkbox">
+                    Send me a link to get the FREE Booking.com app!
+                </label>
+            </div>
+            <div class="footer_bottom">
+                <div>
+                    <a href="#">List your property</a>
+                </div>
+                <div style="height: 0.01em; background:white; margin: 0.8em 0;"></div>
+                <div>
+                    <a href="#">Mobile version</a>
+                    <a href="#">Your account</a>
+                    <a href="#">Make changes online to your booking</a>
+                    <a href="#" title='Your Reference ID is "C5DA764"'>Contact Customer Service</a>
+                    <a href="#" title="Become an affiliate">Become an affiliate</a>
+                    <a href="#">Booking.com for Business</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer_lists">
+            <div>
+                <ul>
+                    <li><a href="#">Countries</a></li>
+                    <li><a href="#">Regions</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><a href="#">Districts</a></li>
+                    <li><a href="#">Airports</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Places of interest</a></li>
                 </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Homes</a></li>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Resorts</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Hostels</a></li>
+                    <li><a href="#">B&Bs</a></li>
+                    <li><a href="#">Guest houses</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Unique places to stay</a></li>
+                    <li><a href="#">All destinations</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Upacked: Travel articles</a></li>
+                    <li><a href="#">Travel communities</a></li>
+                    <li><a href="#">Seasonal and holiday deals</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Car rental</a></li>
+                    <li><a href="#">Flight finder</a></li>
+                    <li><a href="#">Restaurant reservations</a></li>
+                    <li><a href="#">Booking.com for Travel Agents</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+                    <li><a href="#">About Booking.com</a></li>
+                    <li><a href="#">Contact Customer Service</a></li>
+                    <li><a href="#">Partner help</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press center</a></li>
+                    <li><a href="#">Safety Resource Center</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Partner dispute</a></li>
+                    <li><a href="#">Privacy and cookie statement</a></li>
+                    <li><a href="#">Corporate contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_quote">
+            <div>
+                <p>
+                    Whoever you are, whatever you're looking for, we have the perfect place for you. Our 28,085,332 listings
+                    include 6,457,264 listings of homes, apartments, and other unique places to stay,
+                    and are located in 153,842 destinations 
+                    in 225 countries and territories. 
+                    Booking.com B.V. is based in Amsterdam, the Netherlands and is supported internationally by <a href="#">198 offices in 70 countries.</a>
+                </p>
+            </div>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_login">
+            <a href="">Extranet login</a>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_copyright">
+            <div>
+                <p>Copyright &#169 1996-2021 Booking.com&#8482. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_title">
+            <div>
+                <p>Booking.com is part of Booking Holidings Inc., the world leader in online travel and related services.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_images">
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="">
             </div>
         </div>
     </body>
     <script>
 
+        const accordion = document.getElementsByClassName("carRentals_FAQs_list_accordion");
+
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function() {
+                this.classList.toggle("carRentals_FAQs_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                panel.style.display = "block";
+                }
+            });
+        }
+        
         function check() {
             let name = document.getElementsByName("location")
             for(let i=0; i<name.length; i++) {
