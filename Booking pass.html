@@ -172,7 +172,10 @@
                     ipPass=[]
                 }
                 else{
-                    ipPass= localStorage.getItem("password");
+
+                    var ran=localStorage.getItem("password")
+                    ipPass= JSON.parse(ran);
+
                 }
 
                 function sign(){
@@ -186,7 +189,7 @@
                         // }
                         
                         ipPass.push(ip[0].value);
-                        localStorage.setItem("password",ipPass);
+                        localStorage.setItem("password",JSON.stringify(ipPass));
                         window.location.href="./main page/mainLandingPage.html";
                     }
                     else{

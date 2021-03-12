@@ -158,13 +158,14 @@
                 btn.addEventListener("click",sign);
                 function sign(){
                     if(localStorage.getItem("Email")==undefined){
-                        var ip=[]
+                        var ip=[];
                     }else{
-                        var ip=localStorage.getItem("Email")
+                        var ran=localStorage.getItem("Email")
+                        var ip=JSON.parse(ran);
                     }
                    
                     ip.push(document.querySelector("input").value);
-                    localStorage.setItem("Email",ip);
+                    localStorage.setItem("Email",JSON.stringify(ip));
                     window.location.href="./Booking pass.html";
                 }
                 var returnTo=document.getElementById("mainPage");
