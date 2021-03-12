@@ -473,7 +473,7 @@ body {
 <div id="t_goa_sea">
     <h3>Search</h3><p>Destination</p>
     <span style="position: absolute;margin-left: 5px;margin-top: 5px;"><i class="fa fa-search"></i></span>
-    <input type="text"  placeholder="Bangalore"style="height:29px;border:none;text-align:center" id="">
+    <input type="text"  placeholder="Bangalore"style="height:29px;border:none;text-align:center" id="t_goa55">
 <p>check in Date</p>
     <input type="datetime-local"style="height:29px;border:none">
     <p>check out Date</p>
@@ -485,20 +485,20 @@ body {
     
     <input type="number" placeholder="1 room" style="height:29px;border:none;width: 80px;">
 <p></p>
-<button style="height: 45px;color:white;border: unset;  background-color: blue;width: 170px;">Search</button>
+<button style="height: 45px;color:white;border: unset;  background-color: blue;width: 170px; " onclick="search()" >Search</button>
 </div>
     <div id="t_goa_float">
     <div id="t_goa"  ><h1>Bangalore: 1,256 properties found </h1></div>
      <div id="t_goa_top" >
         <div id="t_goa_top1" class="goaTop" >Our Top Picks</div>
         <div id="t_goa_top2" class="goaTop">Entire Home </div>
-        <div id="t_goa_top3" class="goaTop">Stars (highest first)</div>
-        <div id="t_goa_top4" class="goaTop">Stars (lowest first)</div>
-        <div id="t_goa_top5" class="goaTop">Top Reviewed</div>
+        <div style="cursor: pointer;" id="t_goa_top3" class="goaTop" onclick="highest()">Stars (highest first)</div>
+        <div style="cursor: pointer;"  id="t_goa_top4" class="goaTop" onclick="lowest()">Stars (lowest first)</div>
+        <div style="cursor: pointer;"  id="t_goa_top5" class="goaTop" onclick="reviews()">Top Reviewed</div>
      </div>
 
      <div id="t_goa_itc"class="t_dom1">
-         <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/163940147.webp?k=a645641232f44cefc2265b0f65215a4ed4a73aafb3e860fac39b54f6a17a8369&o="/>
+         <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/26389208.webp?k=e27ad1d2a6ec7bdf6b712c8c8d912fbf8ee9c1d7d89cb2e7fe5987dd5b1eb36e&o="/>
         <div id="t_goa_itc1">
             <h2>ITC Grand Bangalore, a Luxury Collection Resort & <br> Spa <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
         <p>ITC Grand Bangalore Resort & Spa is set within 45 acres of landscaped gardens with <br> glimmering waterways and lagoons along the pristine Arossim Beach.</p>
@@ -526,9 +526,9 @@ body {
    </div>
 
    <div id="t_goa_itc" class="t_dom3">
-    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/218781657.webp?k=08ebde1a792f99f89b7262fa5c238ea35dbc96bb3444e24f3549d080a025a0ba&o="/>
+    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/48254908.webp?k=ce6fb7f862332a9baf41424b06770027cdc104b3201dacf9fd20a7bbf6df295c&o="/>
    <div id="t_goa_itc1">
-       <h2>Fairfield by Marriott Bangalore Anjuna <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>The Leela Palace Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Fairfield by Marriott Bangalore Anjuna is located in Anjuna in the Bangalore Region.<br> The property offers complimentary shuttle service to Anjuna<br> beaches five times a day.</p>
    <p id="t_goa_book">Book 12 times in last 12 hours</p>
    </div>
@@ -540,9 +540,9 @@ body {
 </div>
 
 <div id="t_goa_itc"class="t_dom4">
-    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/145814506.webp?k=18fb49c6cdaf938a5376cbfc1501ab020a52b1c6f542e481cb34d36045463eaa&o="/>
+    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/251564861.webp?k=b2ecf8b93c0b6f41914c45c1148c382ca8a35fe8132e4be2290ad9f630b4e0d4&o="/>
    <div id="t_goa_itc1">
-       <h2>Taj Exotica Resort & Spa, Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>Conrad Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Spread across 56 acres of landscaped gardens, the Mediterranean-style<br> Taj Exotica Resort & Spa, Bangalore sits along a private beach overlooking <br>the Arabian Sea.</p>
    <p id="t_goa_book">Book 14 times in last 6 hours</p>
    </div>
@@ -556,7 +556,7 @@ body {
 <div id="t_goa_itc"class="t_dom5">
     <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/27712238.webp?k=2f889f8ba299dd22d520af359921098124b9eb536fe67cc0e8f63f2ccb83aa26&o="/>
    <div id="t_goa_itc1">
-       <h2>Caravela Beach Resort Bangalore<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>Caravela Resort Bangalore<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Located on Varca beach, Caravela Beach Resort Bangalore offers beachfront <br>accommodations with private balconies.</p>
    <p id="t_goa_book">Book 9 times in last 4 hours</p>
    </div>
@@ -570,7 +570,7 @@ body {
 <div id="t_goa_itc"class="t_dom6">
     <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/253696378.webp?k=797a671c1d1d07cb121279cb4700ca7cb35f55a490f94618b1b04eb66415a30e&o="/>
    <div id="t_goa_itc1">
-       <h2>W Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>JW Marriotte Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Offering a spa center and sauna and 24-hour concierge service, W Bangalore is <br>set in Vagator. Guests can enjoy the outdoor swimming pool or grab<br> a drink at the WooBar.</p>
    <p id="t_goa_book">Book 9 times in last 6 hours</p>
    </div>
@@ -598,7 +598,7 @@ body {
 <div id="t_goa_itc"class="t_dom8">
     <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/141814415.webp?k=5df6b8a4d85a00ed4d7e5532c46b2a00a0a1858514aeb8623c4b72c830c82993&o="/>
    <div id="t_goa_itc1">
-       <h2>Planet Hollywood Beach  Resort <br>Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>Planet Hollywood  Resort <br>Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Offering an outdoor swimming pool and a fitness center, Planet Hollywood <br>Beach Resort Bangalore is located on the Uttorda Beach.</p>
    <p id="t_goa_book">Book 13 times in last 8 hours</p>
    </div>
@@ -610,9 +610,9 @@ body {
 </div>
 
 <div id="t_goa_itc"class="t_dom9">
-    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/278373372.webp?k=9b1ca1463e6189f09ec5525914ec05ed6391cc45bab61ebc1c7474ce4cd87704&o="/>
+    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/122951787.webp?k=a369ea10dbbdc6357eb7779c9756f8cb9efa3706ad93b92f6089b860e12f8216&o="/>
    <div id="t_goa_itc1">
-       <h2>Heritage Village Resort & Spa Bangalore <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
+       <h2>Hillton Bangalore Embassy Golf<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>The Heritage Village Resort & Spa Bangalore is nestled along the pristine white <br>sands of Arossim Beach.The property features a traditional Indian spa.</p>
    <p id="t_goa_book">Book 3 times in last 12 hours</p>
    </div>
@@ -625,14 +625,14 @@ body {
 
 
 <div id="t_goa_itc" class="t_dom10">
-    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/286811188.webp?k=146b6e1e041f0c6fd6652e0ca20008da8ba6d8c8ed2691212ee1f06e9126f776&o="/>
+    <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/285377290.webp?k=57e9ff6f8428bbcebb3f0f98c449612abd885d3a7270f1c78f95f986b7cd1ad7&o="/>
    <div id="t_goa_itc1">
        <h2>Hyatt Centric Candolim Bangalore  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-thumbs-up"></i></h2>
    <p>Hyatt Centric Candolim Bangalore is set in Candolim in the Bangalore Region, 1 mi<br> from Calangute. Guests can enjoy the on-site bar and signature restaurant <br>GROK that offers comfortable indoor</p>
    <p id="t_goa_book">Book 11 times in last 6 hours</p>
    </div>
    <div id="t_goa_good">
-       <button>8.8</button><h3 >Very good</h3>
+       <button>9.3</button><h3 >Very good</h3>
       <p style="margin-top: -10px;"> 759 reviews</p>
       <button id="t_goa_good1"> Show prices</button>
    </div>
@@ -779,6 +779,11 @@ body {
 </div>
 
     <script>
+function search() {
+        var data=document.querySelector("#t_goa55").value
+        window.location.href=`${data}.html`
+}
+
         var a=document.querySelector('.t_dom1')
         var b=document.querySelector('.t_dom2')
         var c=document.querySelector('.t_dom3')
@@ -842,6 +847,36 @@ body {
           h.innerHTML=q                 
           j.innerHTML=j.innerHTML
       } 
+
+      function reviews(){
+        var a=document.querySelector('.t_dom1')
+        var b=document.querySelector('.t_dom2')
+        var c=document.querySelector('.t_dom3')
+        var d=document.querySelector('.t_dom4')
+        var e=document.querySelector('.t_dom5')
+        var f=document.querySelector('.t_dom6')
+        var g=document.querySelector('.t_dom7')
+        var h=document.querySelector('.t_dom8')
+        var i=document.querySelector('.t_dom9')
+        var j=document.querySelector('.t_dom10')
+          var p=a.innerHTML
+          var q=c.innerHTML
+          var r=f.innerHTML
+          a.innerHTML=d.innerHTML
+          d.innerHTML=j.innerHTML
+          j.innerHTML=i.innerHTML
+          i.innerHTML=e.innerHTML
+          e.innerHTML=p  
+          
+          b.innerHTML=b.innerHTML
+          c.innerHTML=g.innerHTML 
+          g.innerHTML=q        
+                 
+          f.innerHTML=h.innerHTML
+          
+          h.innerHTML=r                 
+         
+      }
 
     </script>
 </body>
