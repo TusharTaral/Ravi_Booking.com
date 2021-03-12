@@ -108,7 +108,9 @@
                 top:15px;
                 cursor: pointer;
             }
-
+            #alertWrong{
+                color: red;
+            }
 
         </style>
     </head>
@@ -121,6 +123,7 @@
             <div><h1>Sign in or create an account</h1></div>
             <div><label style="font-size: 14px;">Email address</label></div>
            <div> <div><input type="email" style="width:90%; height: 36px; border-radius: 2px;"/></div></div>
+           <div id="alertWrong"></div>
             <div> <button style="font-size: 16px; border-radius: 2px;">Continue with email</button></div>
             <div class="signTextCentre signTextFont">
                 or use one of these options
@@ -160,14 +163,16 @@
                 btn.addEventListener("click",sign);
                 var counter;
                 function sign(){
-                    if(localStorage.getItem("Email")==undefined){
-                        var ip=[];
-                    }else{
-                        var ran=localStorage.getItem("Email")
-                        var ip=JSON.parse(ran);
-                    }
+                    if(document.querySelector("input").value.length!=0){
+                        if(localStorage.getItem("Email")==undefined){
+                         var ip=[];              //instead of array we can take array of objects
+                        }
+                        else{
+                            var ran=localStorage.getItem("Email")
+                            var ip=JSON.parse(ran);
+                        }
                    
-                     for(var i=0;i<ip.length;i++){
+                        for(var i=0;i<ip.length;i++){
                          if(ip[i] == document.querySelector("input").value){
                              //window.location.href=
                              counter=i;
@@ -188,6 +193,16 @@
 
 
                     counter=0;
+                    }
+
+                    else{
+                        document.getElementById("alertWrong").textContent="";
+                        var passWrong=document.createElement("p");
+                        passWrong.textContent="Please enter your email address";
+                        document.getElementById("alertWrong").appendChild(passWrong);
+                        document.querySelector("input").style.border="1px solid red";
+                    }
+                    
                 }
                 var returnTo=document.getElementById("mainPage");
                 returnTo.addEventListener("click",mainPage)

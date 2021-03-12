@@ -133,7 +133,7 @@
         </nav>
         <div id="signcont">
             <div><h1>Create password</h1></div>
-            <div><label style="font-size: 14px;">Use a minimum of 10 characters, including uppercasee letters, lowercase letters and numbers.</label></div>
+            <div><label style="font-size: 14px;">Use a minimum of 10 characters, including uppercase letters, lowercase letters and numbers.</label></div>
             <strong>Password</strong>
            <div> <div><input type="password" /></div></div>
            <div id="alertWrong"></div>
@@ -159,7 +159,7 @@
                 var ipPass    //=[] || localStorage.getItem("password");
                 if(localStorage.getItem("password")==undefined){
                     console.log("empty");
-                    ipPass=[]
+                    ipPass=[]                    //instead of array we can take array of objects
                 }
                 else{
 
@@ -195,6 +195,7 @@
                 returnTo.addEventListener("click",mainPage)
                 function mainPage(){
                     console.log("m");
+
                     window.location.href="./main page/mainLandingPage.html";       
                 }
 
