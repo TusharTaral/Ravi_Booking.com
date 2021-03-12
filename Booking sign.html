@@ -112,7 +112,7 @@
     </head>
     <body>
         <nav id="signNav">
-            <div> <a style="color:white" href="#">Booking<a style="color:#0280da" href="#">.com</a></a></div>
+            <div id="mainPage"> <a style="color:white" href="#">Booking<a style="color:#0280da" href="#">.com</a></a></div>
             <div><img  src="./reasons-to-avoid-hamburger-icon-368x246.jpg"></div>
         </nav>
         <div id="signcont">
@@ -157,9 +157,21 @@
                 var btn=document.querySelector("button");
                 btn.addEventListener("click",sign);
                 function sign(){
-                    var ip=document.querySelector("input").value;
+                    if(localStorage.getItem("Email")==undefined){
+                        var ip=[]
+                    }else{
+                        var ip=localStorage.getItem("Email")
+                    }
+                   
+                    ip.push(document.querySelector("input").value);
                     localStorage.setItem("Email",ip);
                     window.location.href="./Booking pass.html";
+                }
+                var returnTo=document.getElementById("mainPage");
+                returnTo.addEventListener("click",mainPage)
+                function mainPage(){
+                    console.log("m");
+                    window.location.href="./main page/mainLandingPage.html"
                 }
         </script>
     </body>
