@@ -148,6 +148,7 @@ body{
     font-weight: 700;
     line-height: 24px;
     padding-right: 32px;
+    color:#262626
     
 }
 #signinblock>p{
@@ -162,9 +163,43 @@ body{
     width: 70%;
 }
 
+#covered > header >h2{
+    color: #262626;
+    font-weight: 500;
+    margin-left: 2.0%;
 
-
-
+}
+.exptopattractions>div:nth-child(2),.exptopattractions>div:nth-child(3){
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color:#262626;
+}
+.exptopattractions>div:nth-child(3){
+    font-weight: 400;
+}
+#covered > div>ul{
+    display: flex;
+    gap: 30px;
+}
+#covered{
+    margin-left: 18%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#findthings>div:nth-child(1){
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+}
+#findthings>div:nth-child(2){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+#findthings{
+    margin-left: 20%;
+}
 
 
 
