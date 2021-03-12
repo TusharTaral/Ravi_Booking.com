@@ -119,12 +119,14 @@
                 font-size: 14px;
                 margin-left: 6px;
                 font-weight: 500;
+            }#alertWrong{
+                color: red;
             }
         </style>
     </head>
     <body>
         <nav id="signNav">
-            <div> <a style="color:white" href="#">Booking<a style="color:#0280da" href="#">.com</a></a></div>
+            <div id="mainPage"> <a style="color:white" href="#">Booking<a style="color:#0280da" href="#">.com</a></a></div>
             <div><img  src="./reasons-to-avoid-hamburger-icon-368x246.jpg"></div>
         </nav>
         <div id="signcont">
@@ -132,6 +134,7 @@
             <div><label style="font-size: 14px;">Use a minimum of 10 characters, including uppercasee letters, lowercase letters and numbers.</label></div>
             <strong>Password</strong>
            <div> <div><input type="password" /></div></div>
+           <div id="alertWrong"></div>
             <br>
            <strong>Confirm password</strong>
            <div> <div><input type="password" /></div></div>
@@ -162,13 +165,48 @@
                 var ip=document.getElementsByTagName("input");
                 var btn=document.querySelector("button");
                 btn.addEventListener("click",sign);
+
+                var ipPass    //=[] || localStorage.getItem("password");
+                if(localStorage.getItem("password")==undefined){
+                    console.log("empty");
+                    ipPass=[]
+                }
+                else{
+
+                    var ran=localStorage.getItem("password")
+                    ipPass= JSON.parse(ran);
+
+                }
+
                 function sign(){
-                    if(ip[0].value==ip[1].value){
-                        localStorage.setItem("password",ip[0].value);
-                   window.location.href="./main page/mainLandingPage.html";
+                    if(ip[0].value==ip[1].value&&ip[0].value.length>9){
+
+                        // if(localStorage.getItem("password")==undefined){
+                        //     var ipPass=[]
+                        // }
+                        // else{
+                        //     var ipPass=localStorage.getItem("password");
+                        // }
+                        
+                        ipPass.push(ip[0].value);
+                        localStorage.setItem("password",JSON.stringify(ipPass));
+                        window.location.href="./main page/mainLandingPage.html";
+                    }
+                    else{
+                        var passWrong=document.createElement("p");
+                        passWrong.textContent="Your password must be at least 10 characters";
+                        document.getElementById("alertWrong").appendChild(passWrong);
+                        ip[0].style.border="1px solid red";
                     }
                     
                 }
+                var returnTo=document.getElementById("mainPage");
+                returnTo.addEventListener("click",mainPage)
+                function mainPage(){
+                    console.log("m");
+                    window.location.href="./main page/mainLandingPage.html";       
+                }
+
         </script>
     </body>
 </html>
