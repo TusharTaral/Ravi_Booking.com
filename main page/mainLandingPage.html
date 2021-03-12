@@ -20,12 +20,14 @@
             font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             background-color: whitesmoke;
         }
-        #t_nav{            
+        
+        /*------------------------------------------------------------------------------------------- Navbar ----------------------------------------------------------------------------*/
+        #t_nav{
             width: 100%;
-            height: 135px;
+            padding-top: 1em;
+            height: 130px;
             background-color: #0f3079;
             margin-top: -20px;
-            
         }
         #t_book,#t_com{
             font-size: x-large;
@@ -34,16 +36,19 @@
         }
         #t_book{
             color: white;             
-            margin-left: 100px;          
+            padding-left: 200px;      
         }
         #t_com{
             color: rgb(79, 149, 230);            
         }
         #t_stay{            
             display: flex;
-            padding-left: 85px;
-            width: 100vw;
             height: 30px;
+            margin: 0 14%;
+        }
+        #t_stay > a {
+            flex: 1;
+            margin-left: -10%;
         }
         #t_stay>a>p,#t_ind>a>p{
             color: white;
@@ -72,10 +77,61 @@
             height: 50px;
         }
 
+        /*--------------------------------------------------------------------------- Landing Page covid info, CSS ----------------------------------------------------------------------*/
 
+        .landing_covidInfo, .landing_covidInfo_list_active {
+            background-color: #ffe08a30;
+        }
+        .landing_covidInfo > div {
+            margin: 0 14%;
+            height: 100%;
+        }
+        .landing_covidInfo_list {
+            width: 100%;
+            height: 100%;
+        }
+        .landing_covidInfo_accordion > div {
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 1%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .landing_covidInfo_accordion {
+            padding: 10px 18px 0 0;
+            width: 100%;
+            font-size: 15px!important;
+            font-weight: 700;
+            transition: 0.4s;
+            display: flex;
+            border: 1px solid whitesmoke;
+            text-align: left;
+            outline: none;
+            color: #444;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .landing_covidInfo_accordion:hover {
+            background-color: white;
+        }
+        .landing_covidInfo_panel {
+            width: 100%;
+            font-size: 15px!important;
+            display: none;
+            overflow: hidden;
+        }
+        .landing_covidInfo_panel > a {
+            text-decoration: none;
+            color: #0071c2;
+            font-weight: 900;
+        }
+        .landing_covidInfo_panel > a:hover {
+            text-decoration: underline;
+        }
 
-
-
+        /*----------------------------------------------------------------------------- Landing search bar -------------------------------------------------------------------*/
+        
         #ss{
             font-size: 14px;
             line-height: 20px;
@@ -111,16 +167,15 @@
             width: 100px;
         }
         #t_searchBar{
-        
-            margin: 50px;
-            margin-left: 100px;
-            margin-bottom: 20px;
+            /* margin: 50px; */
+            margin: 0 14%;
+            /* margin-left: 100px;
+            margin-bottom: 20px; */
             background-color: whitesmoke;
         }
         #t_sear_che{
-            
-            margin-top: -140px;
-            margin-left: 100px;
+            /* margin-top: -140px; */
+            margin-left: 14%;
             padding-left: 10px;
             height: 20px;
             width: 25px;
@@ -130,12 +185,14 @@
             width: 100px;
         }
 
+        /*------------------------------------------------------------------------ Landing connect with travellers -----------------------------------------------------------*/
+        
         #heading {
             font-size: 24px;
         }
         #connect_travelers {
             height: 30em;
-            margin: 0 8%;
+            margin: 0 14%;
         }
         .travelers_block {
             display: flex;
@@ -165,7 +222,7 @@
             margin-top: -3%;
             margin-bottom: 16px;
             display: block;
-            margin-left: 8%;
+            margin-left: 14%;
             color: #333;
         }
         li > div:nth-child(1)>img{
@@ -194,7 +251,7 @@
             display: list-item;        
         }
         .carousel{
-            width: 1130px;
+            width: 81.5%;
             height: 100%;
         }
 
@@ -205,7 +262,7 @@
         }
         #Mumbai_Delhi_Chennai > div {
             height: 100%;
-            margin: 2% 8%;
+            margin: 2% 14%;
             display: flex;
         }
         .MDC_properties {
@@ -279,7 +336,7 @@
         /*------------------------------------------------------------- Inspiration Trip, CSS -----------------------------------------------------*/
         #inspiration_trip {
             height: 45em;
-            margin: 0 8%;
+            margin: 0 14%;
         }
         #inspiration_trip > h1 {
             font-size: 28px;
@@ -330,9 +387,191 @@
             margin: 0 1.5% 0 0;
         }
 
+        /*---------------------------------------------------------------------------------- Explore India ----------------------------------------------------------------------*/
+        #exploreheading{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 16px;
+            display: block;
+            margin-left: 3%;
+            color: #333;
+        }
+        .carousel a>div:nth-child(1)> img{
+            width: 210px;
+            height: 210px;
+        } 
+        .carousel li>a>div:nth-child(2)>h3{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        #exploreheading+h3{
+            color:#6b6b6b;
+            margin-left: 3% ;
+            font-weight: lighter;
+            margin-top: -10px;
+
+        }
+        .carousel li>a>div:nth-child(2)>p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6b6b6b;
+            display: block;
+            margin-top: -15px;
+        }
+        #ExploreIndia{
+            margin-left:11.5%;
+        }
+
+        #lastsection{
+            margin-left: 11.5%;
+        }
+        .outerblock{
+            position: relative;
+        }
+        .card_header{
+            position: absolute;
+            margin-top: -80px;
+            margin-left: 20px;
+        }
+        .outerblock>a> img{
+            width: 260px;
+        }
+        .card_header >p{
+            margin-top: -15px;
+        }
+        .card_title{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: white;
+        }
+        .card_subtitle{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: white;
+            margin-top: 60px;
+        }
+        .links{
+            text-decoration: underline;
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+        a:link{
+            color: #0071c2;
+        }
+
+        /*---------------------------------------------------------------------------- Discover, CSS -----------------------------------------------------------------------*/
+        
+        #t_dis {
+            float: left;
+            padding-left: 3.5em;
+        }
+
+        #t_dis_btn {
+            float: right;
+            width: 100vw;
+            text-align: right;
+            margin-right: 200px;
+        }
+
+        #t_dis_btn0 {
+            margin: 4px;
+            height: 25px;
+            width: 20px;    
+            color: white;
+            border: unset;
+            background-color: grey;
+        }
+
+        #t_dis_btn0:hover {
+            background-color: rgb(0, 0, 255);
+        }
+
+        #t_dis_usa1 {
+            margin-left: 3em;
+            background-image: url("https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg");
+        }
+
+        #t_dis_usa2 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU");
+        }
+
+        #t_dis_usa3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU");
+        }
+
+        #t_dis_usa4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU");
+        }
+
+        #t_dis_usa5 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU");
+        }
+
+        #t_dis_usa1,
+        #t_dis_usa2,
+        #t_dis_usa3,
+        #t_dis_usa4,
+        #t_dis_usa5 {
+            float: left;
+            height: 130px;
+            width: 205px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        #t_dis_usa1+p,
+        #t_dis_usa2+p,
+        #t_dis_usa3+p,
+        #t_dis_usa4+p,
+        #t_dis_usa5+p {
+            margin-left: 5em;
+            float: left;
+            clear: both;
+        }
+
+        #t_usa_hov1,
+        #t_usa_hov2,
+        #t_usa_hov3,
+        #t_usa_hov4,
+        #t_usa_hov5 {
+            padding: 4px;
+            overflow: hidden;
+            height: 17px;
+            font-size: 16px;
+            background-Color: rgba(0, 0, 0, 0.6);
+        }
+
+        #t_usa_hov1:hover,
+        #t_usa_hov2:hover,
+        #t_usa_hov3:hover,
+        #t_usa_hov4:hover,
+        #t_usa_hov5:hover {
+            height: 95%;
+        }
+
+        #t_dis_usa {
+            float: left;
+            margin: 20px;
+        }
+
+        #t_country_name {
+            color: rgb(8, 110, 194);
+        }
+
+        #t_country_name:hover {
+            color: rgb(212, 176, 12);
+        }
+
         /*---------------------------------------------------------------- Footer, CSS --------------------------------------------------------------*/
         #footer {
             height: 20em;
+            margin-top: -10em;
             text-align: center;
             line-height: 10px;
             margin-left: -100px;   
@@ -603,187 +842,6 @@
             }
         }
 
-        /*---------------------------------------------------------------------------------- Explore India ----------------------------------------------------------------------*/
-        #exploreheading{
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            margin-bottom: 16px;
-            display: block;
-            margin-left: 3%;
-            color: #333;
-        }
-        .carousel a>div:nth-child(1)> img{
-            width: 210px;
-            height: 210px;
-        } 
-        .carousel li>a>div:nth-child(2)>h3{
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-        }
-        #exploreheading+h3{
-            color:#6b6b6b;
-            margin-left: 3% ;
-            font-weight: lighter;
-            margin-top: -10px;
-
-        }
-        .carousel li>a>div:nth-child(2)>p{
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            color: #6b6b6b;
-            display: block;
-            margin-top: -15px;
-        }
-        #ExploreIndia{
-            margin-left:5.5%;
-        }
-
-        #lastsection{
-            margin-left: 5.5%;
-        }
-        .outerblock{
-            position: relative;
-        }
-        .card_header{
-            position: absolute;
-            margin-top: -80px;
-            margin-left: 20px;
-        }
-        .outerblock>a> img{
-            width: 260px;
-        }
-        .card_header >p{
-            margin-top: -15px;
-        }
-        .card_title{
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            color: white;
-        }
-        .card_subtitle{
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            color: white;
-            margin-top: 60px;
-        }
-        .links{
-            text-decoration: underline;
-            white-space: nowrap;
-            margin-top: 20px;
-        }
-        a:link{
-            color: #0071c2;
-        }
-
-        /*---------------------------------------------------------------------------- Discover, CSS -----------------------------------------------------------------------*/
-        
-        #t_dis {
-            float: left;
-            width: 100vw;
-        }
-
-        #t_dis_btn {
-            float: right;
-            width: 100vw;
-            text-align: right;
-            margin-right: 200px;
-        }
-
-        #t_dis_btn0 {
-            background-color: grey;
-            color: white;
-            border: unset;
-            margin: 5px;
-            height: 25px;
-            width: 25px;
-        }
-
-        #t_dis_btn0:hover {
-            background-color: rgb(0, 0, 255);
-        }
-
-        #t_dis_usa1 {
-            margin-left: 5em;
-            background-image: url("https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg");
-        }
-
-        #t_dis_usa2 {
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU");
-        }
-
-        #t_dis_usa3 {
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU");
-        }
-
-        #t_dis_usa4 {
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU");
-        }
-
-        #t_dis_usa5 {
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU");
-        }
-
-        #t_dis_usa1,
-        #t_dis_usa2,
-        #t_dis_usa3,
-        #t_dis_usa4,
-        #t_dis_usa5 {
-            float: left;
-            height: 130px;
-            width: 205px;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            color: white;
-        }
-
-        #t_dis_usa1+p,
-        #t_dis_usa2+p,
-        #t_dis_usa3+p,
-        #t_dis_usa4+p,
-        #t_dis_usa5+p {
-            margin-left: 5em;
-            float: left;
-            clear: both;
-        }
-
-        #t_usa_hov1,
-        #t_usa_hov2,
-        #t_usa_hov3,
-        #t_usa_hov4,
-        #t_usa_hov5 {
-            padding: 4px;
-            overflow: hidden;
-            height: 17px;
-            font-size: 16px;
-            background-Color: rgba(0, 0, 0, 0.6);
-        }
-
-        #t_usa_hov1:hover,
-        #t_usa_hov2:hover,
-        #t_usa_hov3:hover,
-        #t_usa_hov4:hover,
-        #t_usa_hov5:hover {
-            height: 95%;
-        }
-
-        #t_dis_usa {
-            float: left;
-            margin: 20px;
-        }
-
-        #t_country_name {
-            color: rgb(8, 110, 194);
-        }
-
-        #t_country_name:hover {
-            color: rgb(212, 176, 12);
-        }
-
     </style>
 </head>
 <body>
@@ -811,9 +869,27 @@
        
     </div>
 
+    <!---------------------------------------------------------------------------------- Landing Page covid info ---------------------------------------------------------------->
+    
+    <div class="landing_covidInfo">
+        <div>
+            <div class="landing_covidInfo_list">
+                <button class="landing_covidInfo_accordion">
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/1/1176.svg?token=exp=1615451895~hmac=7b1448372d94a11260bc4e6935ede1d8);"></div>
+                    <h3 style="margin-top: 0;">Protecting you during COVID-19</h3>
+                </button>
+                <div class="landing_covidInfo_panel">
+                    <p style="margin: 0 15% 0 1%;">Your safety matters. From July 2020, we’re asking all customers to wear a face covering when travelling with us. If you don’t wear a face covering,
+                    your driver may not be able to start your journey. Where Coronavirus may affect your plans, here’s what you need to know about booking with us at this time.
+                    </p>
+                    <a href=""><h4 style="margin-left: 1%;">Read more</h4></a>
+                </div>
+            </div>  
+        </div>
+    </div>
 
-<div style='height: 100px;'></div>
-
+    <!----------------------------------------------------------------------------------- Landing Page search info --------------------------------------------------------------->
+    
     <div id="t_searchBar">
         <h1>Find deals on hotels, homes, and much more...</h1>
         <p>From cozy country homes to funky city apartments</p>
@@ -829,10 +905,8 @@
        
     </div>
     <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
-   
 
-
-
+    <!--------------------------------------------------------------------------- Connect Travelers ------------------------------------------------------------------------------->
 
     <div id="connect_travelers">
         <h2 id="heading">Connect with other travelers</h2>
@@ -871,11 +945,10 @@
         </div>
     </div>
 
-
-
+    <!------------------------------------------------------------------------------ Browse  by property type ----------------------------------------------------------------------->
 
     <h2 class="heading">Browse by property type</h2>
-    <div style=" margin-left:5.5%; margin-bottom: 3em; margin-top: 0;">
+    <div style=" margin-left:11.5%; margin-bottom: 3em; margin-top: 0;">
         <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":1 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
             <li>
                 <div>
@@ -1262,8 +1335,7 @@
         </div>
     </div>
 
-
-<div style="margin-top: 50px;"></div>
+    <!----------------------------------------------------------------------------------- Landing Inspiration trip -------------------------------------------------------------------------------------------->
 
     <div id="inspiration_trip" >
         <h1>Get inspiration for your next trip</h1>
@@ -1313,6 +1385,7 @@
         </div>
     </div>
 
+    <!------------------------------------------------------------------------------------------- Landing Page Explore Inida ------------------------------------------------------------------------>
 
     <div id="ExploreIndia">
         <h2 id="exploreheading">Explore India</h2>
@@ -1469,10 +1542,6 @@
      
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    
-
-
 
     <div id="lastsection">
         <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":2 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
@@ -1698,7 +1767,7 @@
             <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn6()">10</button>
 
         </div>
-        <div id="t_dis_usa" style="margin-left: 50px;">
+        <div id="t_dis_usa" style="margin-left: 8em;">
             <div id="t_dis_usa1">
                 <div id="t_usa_hov1">You'll love relaxation,<br>
                     restaurants and shopping<br>during your next trip to United<br>States of America!</div>
@@ -1741,12 +1810,9 @@
 
     </div>
 
+    <div style="height: 500px;"></div>
 
-
-
-
-<div style="height: 500px;"></div>
-
+    <!-------------------------------------------------------------------------------------------------------- Footer ------------------------------------------------------------------------------------------------------------>
 
     <div id="footer">
         <div id="footer_top">
@@ -1894,12 +1960,27 @@
            // window.location.href="./loveLetters"  // Ravi_Booking.com/Booking sign.html    ../main page/Booking sign.html
         }
         function citySearch() {
-        var data=document.querySelector("#t_sear1").value
-        window.location.href=`${data}.html`
-}
+            var data=document.querySelector("#t_sear1").value
+            window.location.href=`${data}.html`
+        }
 
+        
+        const landing_accordion = document.getElementsByClassName("landing_covidInfo_accordion");
 
-function countryBtn1() {
+        for (let i = 0; i < landing_accordion.length; i++) {
+            landing_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("landing_covidInfo_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } 
+                else {
+                panel.style.display = "block";
+                }
+            });
+        }
+
+        function countryBtn1() {
             var usa_img1 = document.querySelector('#t_dis_usa1')
             var country_name1 = document.querySelector('#t_country_name1')
             var usa_text1 = document.querySelector('#t_usa_hov1')
