@@ -783,6 +783,81 @@ body{
             color: rgb(212, 176, 12);
         }
 
+        #Mumbai_Delhi_Chennai {
+                height: 40vh;
+            }
+            #Mumbai_Delhi_Chennai > div {
+                height: 100%;
+                margin: 2% 8%;
+                display: flex;
+            }
+            .MDC_properties {
+                flex: 1;
+                color: #fff;
+                cursor: pointer;
+                position: relative;
+                text-shadow: 1px 1px black;
+                background-repeat: no-repeat;
+                background-position: center center; 
+                background-size: cover;
+            }
+            .MDC_properties > div:nth-child(1) { 
+                display: flex;
+                padding-left: 1em;
+                height: 15%;
+                z-index: 1;
+                position: absolute;
+            }
+            .MDC_properties > div:nth-child(1) > div {
+                width: 0.1em;
+                height: 0.1em;
+                margin: 1.9em 1em;
+                padding: 0.8em;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .MDC_properties > p {
+                margin: 17% 4%;
+                font-size: 18px;
+                font-weight: 700;
+                z-index: 1;
+                position: absolute;
+            }
+            .MDC_properties > div:nth-child(3) {
+                margin-top: 55%;
+            }
+            .MDC_properties > div:nth-child(3) > div {
+                text-align: right;
+                width: 23%;
+                margin-left: 73%;
+                padding: 0.1em;
+                margin-bottom: 0.5em;
+                line-height: 0;
+                color: white;
+                border-radius: 3px;
+            }
+            .MDC_properties h5 {
+                font-size: 13px;
+                margin-top: 1em;
+            }
+            .MDC_properties h3 {
+                margin-top: 0;
+                margin-bottom: 0.7em;
+            }
+            .MDC_pointer {
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                top: 0;
+                opacity: 0.3;
+                position: absolute;
+                background: linear-gradient(to top, #000 0%, #fff 40%, #000 100%);
+            }
+            .MDC_pointer:hover {
+                border: 0.3px solid #ff8000;
+                background: linear-gradient(to bottom, #000 100%, #fff 100%)
+            }
 
 
     </style>
@@ -796,8 +871,8 @@ body{
             <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
             <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
             <a href=""><p><button id="t_btn1">List your property</button></p></a>
-            <a href=""><p><button id="t_btn2">Register</button></p></a>
-            <a href=""><p><button id="t_btn3">Sign in</button></p></a>
+            <a href="../Booking pass.html"><p><button id="t_btn2">Register</button></p></a>
+            <a href="../Booking sign.html"><p><button id="t_btn3">Sign in</button></p></a>
 
         </div>
         <div id="t_stay">
@@ -806,7 +881,7 @@ body{
             <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
             <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
             <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
-            <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+            <a href="../AirPort_Taxi/book_airport_taxi.html"><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
            
         </div>
        
@@ -1204,13 +1279,72 @@ body{
 
 
 
+    <div id="Mumbai_Delhi_Chennai">
+        <div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/971345.webp?k=9bf85dfa10a224e2855ca2f8ca3fcd96916a962d87cdfcc48d6d57c09bef3c65&o=);">
+                <div>
+                    <h1>Mumbai</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>1,673 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,974</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 2,610</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684764.webp?k=6c3c9e920a39ca4f9eddcdfaa916999ea5d2765844610dd59349f4271f7596b3&o=); margin: 0 2%;">
+                <div>
+                    <h1>New Delhi</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>2,912 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,067</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 1,831</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684727.webp?k=a6fd59b0c31df52ae2a907dcf2441c7842bb56e2e68d89bffd2398024c0812d3&o=)">
+                <div>
+                    <h1>Chennai</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>1,416 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,536</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 2,026</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+        </div>
+    </div>
 
 
+<div style="margin-top: 50px;"></div>
 
-    <div id="inspiration_trip">
+    <div id="inspiration_trip" >
         <h1>Get inspiration for your next trip</h1>
         <div class="inspiration_blocks">
-            <a href="./loveLetters.html" style="color: white;">
+            <a href="../Inspiration/a-collection-of-love-letters-to-america.html" style="color: white;">
                 <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/110465249.webp?k=4429b31459fed3b7551f5a4d4912d8afe1dc4e2e388cd34a3364c906db94afac&o=);">
                     <div class="inspiration_text">
                         <h2>A collection of love letters to America</h2>
@@ -1218,7 +1352,7 @@ body{
                     </div>
                 </div>
             </a>
-            <a href="./americaForEveryone.html" style="color: white;">
+            <a href="../Inspiration/america-is-for-everyone.html" style="color: white;">
                 <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/104028063.webp?k=c22f340e36295722da6b9f0d75ce4a649e39eb220d17aec38df30f5a36ae2684&o=);">
                     <div class="inspiration_text">
                         <h2>America is for everyone</h2>
