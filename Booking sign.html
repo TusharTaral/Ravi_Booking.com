@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg">
+        <title>Booking.com</title>
         <style>
             #signcont{
                
@@ -156,6 +158,7 @@
                
                 var btn=document.querySelector("button");
                 btn.addEventListener("click",sign);
+                var counter;
                 function sign(){
                     if(localStorage.getItem("Email")==undefined){
                         var ip=[];
@@ -164,9 +167,27 @@
                         var ip=JSON.parse(ran);
                     }
                    
-                    ip.push(document.querySelector("input").value);
-                    localStorage.setItem("Email",JSON.stringify(ip));
-                    window.location.href="./Booking pass.html";
+                     for(var i=0;i<ip.length;i++){
+                         if(ip[i] == document.querySelector("input").value){
+                             //window.location.href=
+                             counter=i;
+                             localStorage.setItem("counter",counter);
+                             break;
+                         }
+                     }
+                     if(counter!=undefined){
+                         
+                            window.location.href="./Enter password.html"
+                        
+                     }
+                     else{
+                        ip.push(document.querySelector("input").value);
+                        localStorage.setItem("Email",JSON.stringify(ip));
+                        window.location.href="./Booking pass.html";
+                     }
+
+
+                    counter=0;
                 }
                 var returnTo=document.getElementById("mainPage");
                 returnTo.addEventListener("click",mainPage)
