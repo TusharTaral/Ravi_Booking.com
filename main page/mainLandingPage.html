@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-    integrity="sha384- 
-     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
-      crossorigin="anonymous">
-
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Booking.com</title>
     <style>
-body{
-    background-color: whitesmoke;
-}
-        #t_nav{   
-            position: absolute;         
-            width: 100vw;
-            height: 135px;
+        body{
+            margin: 0;
+            font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            background-color: white;
+        }
+        
+        /*------------------------------------------------------------------------------------------- Navbar ----------------------------------------------------------------------------*/
+        #t_nav{
+            width: 100%;
+            padding-top: 1em;
+            height: 130px;
             background-color: #0f3079;
             margin-top: -20px;
-            
         }
         #t_book,#t_com{
             font-size: x-large;
@@ -33,16 +32,19 @@ body{
         }
         #t_book{
             color: white;             
-            margin-left: 100px;          
+            padding-left: 200px;      
         }
         #t_com{
             color: rgb(79, 149, 230);            
         }
         #t_stay{            
-         display: flex;
-        padding-left: 85px;
-         width: 100vw;
-         height: 30px;
+            display: flex;
+            height: 30px;
+            margin: 0 14%;
+        }
+        #t_stay > a {
+            flex: 1;
+            margin-left: -10%;
         }
         #t_stay>a>p,#t_ind>a>p{
             color: white;
@@ -53,9 +55,6 @@ body{
             display: flex;            
             padding-left: 500px;
             margin-top: 20px;
-        }
-        #t_ind>a>p{
-     
         }
         #t_btn1{
             color: white;
@@ -74,466 +73,168 @@ body{
             height: 50px;
         }
 
+        /*--------------------------------------------------------------------------- Landing Page covid info, CSS ----------------------------------------------------------------------*/
 
+        .landing_covidInfo, .landing_covidInfo_list_active {
+            background-color: #ffe08a30;
+        }
+        .landing_covidInfo > div {
+            margin: 0 14%;
+            height: 100%;
+        }
+        .landing_covidInfo_list {
+            width: 100%;
+            height: 100%;
+        }
+        .landing_covidInfo_accordion > div {
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 1%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .landing_covidInfo_accordion {
+            padding: 10px 18px 0 0;
+            width: 100%;
+            font-size: 15px!important;
+            font-weight: 700;
+            transition: 0.4s;
+            display: flex;
+            border: 1px solid whitesmoke;
+            text-align: left;
+            outline: none;
+            color: #444;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .landing_covidInfo_accordion:hover {
+            background-color: white;
+        }
+        .landing_covidInfo_panel {
+            width: 100%;
+            font-size: 15px!important;
+            display: none;
+            overflow: hidden;
+        }
+        .landing_covidInfo_panel > a {
+            text-decoration: none;
+            color: #0071c2;
+            font-weight: 900;
+        }
+        .landing_covidInfo_panel > a:hover {
+            text-decoration: underline;
+        }
 
-
-
+        /*----------------------------------------------------------------------------- Landing search bar -------------------------------------------------------------------*/
+        #findDeals {
+            padding: 1.5% 0;
+            background-color: whitesmoke;
+            border-bottom: 2px solid whitesmoke;
+        }
         #ss{
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    background: #fff;
-    color: #333;
-    height: 52px;
-    border: 0;
-    border-radius: 2px;
-    display: table;
-    padding: 0 16px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.t_search_lo{
-    height: 52px;
-    border: 4px solid rgb(247, 171, 7);    
-    outline: none;
-    margin:-5px;
-    padding: 0px 40px;
-    font-size: 15px;
-}
-#t_sear_btn{
-    font-size: 15px;
-    height: 52px;
-    border: 4px solid rgb(247, 171, 7);
-    margin:0px;
-    outline: none;
-    background-color: rgb(12, 105, 245);
-    color: white;
-    width: 100px;
-}
-#t_searchBar{
-   
-    margin: 50px;
-    margin-left: 100px;
-    margin-bottom: 20px;
-    background-color: whitesmoke;
-}
-#t_sear_che{
-    
-    margin-top: -140px;
-    margin-left: 100px;
-    padding-left: 10px;
-    height: 20px;
-    width: 25px;
-   
-}
-#t_sear2{
-    width: 100px;
-}
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            background: #fff;
+            color: #333;
+            height: 52px;
+            border: 0;
+            border-radius: 2px;
+            display: table;
+            padding: 0 16px;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .t_search_lo{
+            height: 52px;
+            border: 4px solid rgb(247, 171, 7);    
+            outline: none;
+            margin:-5px;
+            padding: 0px 40px;
+            font-size: 15px;
+        }
+        #t_sear_btn{
+            font-size: 15px;
+            height: 52px;
+            border: 4px solid rgb(247, 171, 7);
+            margin:0px;
+            outline: none;
+            background-color: rgb(12, 105, 245);
+            color: white;
+            width: 100px;
+        }
+        #t_searchBar{
+            margin: 0 14%;
+            background-color: whitesmoke;
+        }
+        #t_sear_che{
+            margin-left: 14%;
+            padding-left: 10px;
+            height: 20px;
+            width: 25px;
+        
+        }
+        #t_sear2{
+            width: 100px;
+        }
 
+        /*------------------------------------------------------------------------ Landing connect with travellers -----------------------------------------------------------*/
+        
+        #heading {
+            font-size: 24px;
+        }
+        #connect_travelers {
+            height: 30em;
+            margin: 0 14%;
+        }
+        .travelers_block {
+            display: flex;
+        }
+        .travelers_block > a{
+            width: 17em;
+            height: 24em;
+            margin-right: 1.5%;
+            line-height: 20%;
+            color: #000;
+            text-decoration: none;
+        }
+        .travel_community > h4 {
+            margin-top: 1.5em;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .travel_community > p {
+            color: #6b6b6b;
+        }
 
-
-
-
-            .heading {
-                font-size: 24px;
-                font-family: 'Montserrat', sans-serif;
-            }
-            #connect_travelers {
-                height: 30em;
-                margin: 0 8%;
-            }
-            .travelers_block {
-                display: flex;
-            }
-            .travelers_block > a{
-                width: 17em;
-                height: 24em;
-                margin-right: 1.5%;
-                line-height: 20%;
-                color: #000;
-                text-decoration: none;
-            }
-            .travel_community > h4 {
-                margin-top: 1.5em;
-                font-family: 'Montserrat', sans-serif;
-            }
-            .travel_community > p {
-                color: #6b6b6b;
-            }
-
-
-            body {
-                margin: 0;
-                font-family: 'IBM Plex Sans', sans-serif;
-            }
-            #inspiration_trip {
-                height: 45em;
-                margin: 0 8%;
-            }
-            #inspiration_trip > h1 {
-                font-size: 28px;
-            }
-            .inspiration_blocks {
-                width: 100%;
-                height: 45.5%;
-                display: flex;
-            }
-            .inspiration_article {
-                width: 100%;
-                height: 45%;
-                margin-top: 1em;
-                display: flex;
-            }
-            .inspiration_blocks > a, .inspiration_article > a {
-                flex: 1;
-                display: block;
-                color: #fff;
-                text-decoration: none;
-                overflow: hidden;
-            }
-            .inspiration_blocks > a:nth-child(2) {
-                margin: 0 1.5%;
-            }
-            .inspiration_blocks > a  > div, .inspiration_article > a > div{
-                height: 100%;
-                border-radius: 4px;
-                background-position: 50% 50%;
-                position: relative;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .inspiration_blocks > a  > div > div, .inspiration_article > a > div > div {
-                width: 92%;
-                bottom: 0;
-                font-weight: bold;
-                position: absolute;
-                vertical-align: bottom;
-            }
-            .inspiration_text {
-                line-height: 20px;
-                border-radius: 4px;
-                padding: 10% 4% 0 4%;
-                background-image: linear-gradient(180deg,rgba(0,0,0,0) 12%,#000 99%);
-            }
-            .inspiration_article > a:nth-child(1) {
-                margin: 0 1.5% 0 0;
-            }
-
-
-
-
-        body {
-                margin: 0;
-                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            }
-            #footer {
-                height: 20em;
-                text-align: center;
-                line-height: 10px;
-                margin-left: -100px;
-                
-                
-            }
-            #footer > div:nth-child(1) {
-                height: 60%;
-                padding: 2% 0 0;
-                color: white;
-                background-color: #00224f;
-            }
-            #footer > div:nth-child(1) > div {
-                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            }
-            #footer > div:nth-child(1) h3 {
-                color: #bdbdbd;
-            }
-            .footer_checkbox {
-                display: flex;
-                margin: 0.4% 30.5% 0;
-            }
-            .footer_checkbox > input {
-                margin-top: -0.1em;
-            }
-            .subscription_form {
-                height: 3em;
-                margin: 2% 30% 0;
-                display: flex;
-            }
-            .subscription_form > div {
-                width: 70%;
-                height: 86%;
-                padding: 0 1.5%;
-            }
-            .subscription_form > div > input {
-                width: 100%;
-                height: 100%;
-                font-size: 20px;
-                border-radius: 4px;
-                border: 1px solid black;
-            }
-            .subscription_form > button {
-                width: 25%;
-                height: 95%;
-                font-size: 20px;
-                font-weight: 100;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                background-color: #0071c2;
-            }
-            .footer_bottom {
-                height: 20%;
-                padding: 1em 0;
-                background-color: #003580;
-            }
-            .footer_bottom > div:nth-child(1) {
-                padding: 6px 0 10px;
-            }
-            .footer_bottom >div:nth-child(1) > a {
-                border: 1px solid white;
-                color: white;
-                padding: 5px 10px;
-                border-radius: 5px;
-                text-decoration: none;
-            }
-            .footer_bottom > div:nth-child(1) > a:hover {
-                background-color: #4a7ec780;
-            }
-            .footer_bottom > div:nth-child(3) > a {
-                color: white;
-                margin: 0 0.5%;
-                font-size: 13px;
-                font-weight: bold;
-                padding: 15px 10px;
-            }
-            #footer_lists {
-                margin: 0 12%;
-                display: flex;
-            }
-            #footer_lists > div {
-                flex: 1;
-            }
-            #footer_lists > div > ul {
-                list-style: none;
-                font-size: 14px;
-                line-height: 1.6em;
-            }
-            #footer_lists a {
-                text-decoration: none;
-                color: #0071c2;
-            }
-            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
-                color: rgb(221, 103, 19);
-            }
-            .footer_quote, .footer_copyright, .footer_priceline_title {
-                margin: 0 15%;
-                font-size: 12px!important;
-                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            }
-            .footer_quote a {
-                color: #0071c2;
-                font-weight: 700;
-                text-decoration: none;
-            }
-            .footer_login {
-                text-align: center;
-            }
-            .footer_login > a {
-                text-decoration: none;
-                color: #333;
-                opacity: 80%;
-                font-size: 14.5px;
-                font-weight: 700;
-            }
-            .footer_priceline_title {
-                text-align: center;
-            }
-            .footer_priceline_images {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 1.5em;
-            }
-            .footer_priceline_images > div {
-                margin-right: 2.5em;
-            }
-
-            /* Footer Media queries */
-            @media only screen and (max-width: 800px) {
-                body {
-                    margin: 0;
-                }
-                #footer {
-                    width: 100%;
-                    height: 16em;
-                    text-align: center;
-                    line-height: 10px;
-                    margin-top: 200px;
-                }
-                #footer > div:nth-child(1) {
-                    height: 60%;
-                    padding: 2% 0 0;
-                    color: white;
-                    background-color: #00224f;
-                }
-                #footer > div:nth-child(1) > div {
-                    font-size: 14px;
-                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                }
-                #footer > div:nth-child(1) h3 {
-                    color: #bdbdbd;
-                }
-                .footer_checkbox {
-                    width: 50%;
-                    font-size: 10px;
-                    display: flex;
-                }
-                .footer_checkbox > input {
-                    width: 0.8em;
-                    height: 0.8em;
-                }
-                .subscription_form {
-                    width: 50%;
-                    height: 2.5em;
-                    margin-left: 10em;
-                    display: flex;
-                }
-                .subscription_form > div {
-                    width: 60%;
-                    height: 86%;
-                }
-                .subscription_form > div > input {
-                    width: 100%;
-                    height: 100%;
-                    font-size: 13px;
-                    border-radius: 4px;
-                    border: 1px solid black;
-                }
-                .subscription_form > button {
-                    width: 35%;
-                    height: 95%;
-                    margin-left: 0.25em;
-                    font-size: 13px;
-                    font-weight: 100;
-                    color: white;
-                    border: none;
-                    border-radius: 4px;
-                    background-color: #0071c2;
-                }
-                .footer_bottom >div:nth-child(1) > a {
-                    border: 1px solid white;
-                    color: white;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    text-decoration: none;
-                }
-                .footer_bottom > div:nth-child(1) > a:hover {
-                    background-color: #4a7ec780;
-                }
-                .footer_bottom > div:nth-child(3) > a {
-                    color: white;
-                    font-size: 8px;
-                    font-weight: bold;
-                    padding: 0;
-                }
-                #footer_lists {
-                    margin: 2% 0 0;
-                    display: flex;
-                }
-                #footer_lists > div {
-                    flex: 1;
-                }
-                #footer_lists > div > ul {
-                    list-style: none;
-                    padding-left: 10px;
-                    font-size: 8px;
-                    line-height: 1.8em;
-                }
-                #footer_lists a {
-                    text-decoration: none;
-                    color: #0071c2;
-                }
-                #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
-                    color: rgb(221, 103, 19);
-                }
-                .footer_quote {
-                    margin: 0 3%;
-                    font-size: 11px!important;
-                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                }
-                .footer_quote a {
-                    color: #0071c2;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-                .footer_login {
-                    text-align: center;
-                }
-                .footer_login > a {
-                    text-decoration: none;
-                    color: #333;
-                    opacity: 80%;
-                    font-size: 14.5px;
-                    font-weight: 700;
-                }
-                .footer_copyright {
-                    font-size: 6px!important;
-                }
-                .footer_copyright p {
-                    margin-left: -18%;
-                }
-                .footer_priceline_title {
-                    text-align: center;
-                    width: 100%;
-                    margin-left: 0;
-                }
-                .footer_priceline_title > div {
-                    font-size: 12px;
-                }
-                .footer_priceline_images {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 1.5em;
-                }
-                .footer_priceline_images > div {
-                    margin: 0 0 0 3%;
-                }
-                .footer_priceline_images img {
-                    width: 70%;
-                }
-                .footer_quote+p, .footer_login+p {
-                    display: none;
-                }
-            }
-
-
-       
-
-            .heading{
+        /*------------------------------------------------------------------------ Browse by property type, CSS -----------------------------------------------------------*/
+        
+        .heading{
             font-size: 24px;
             font-weight: 700;
             line-height: 32px;
+            margin-top: -3%;
             margin-bottom: 16px;
             display: block;
-            margin-left: 250px;
+            margin-left: 14%;
             color: #333;
         }
-         li > div:nth-child(1)>img{
+        li > div:nth-child(1)>img{
             width: 210px;
             height: 180px;
-        
         } 
         li>div:nth-child(2)>h3{
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
         }
-        a{
-            cursor: pointer;
+        .carousel a {
             color: black;
             text-decoration: none;
         }
-        li>div:nth-child(2)>p{
+        .carousel li>div:nth-child(2)>p{
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
@@ -541,102 +242,199 @@ body{
             display: block;
             margin-top: -15px;
         }
-        li{
-            
+        .carousel li{
             padding-right: 16px;
-            display: list-item;
-
-
-        
+            display: list-item;        
         }
         .carousel{
-            width: 1130px;
+            width: 81.5%;
             height: 100%;
         }
-        #exploreheading{
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 32px;
-        margin-bottom: 16px;
-        display: block;
-        margin-left:40px ;
-        color: #333;
-    }
-    a>div:nth-child(1)> img{
-        width: 210px;
-        height: 210px;
-    
-    } 
-    li>a>div:nth-child(2)>h3{
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-    #exploreheading+h3{
-        color:#6b6b6b;
-        margin-left:40px ;
-        font-weight: lighter;
-        margin-top: -10px;
 
-    }
-    li>a{
-        cursor: pointer;
-        color: black;
-        text-decoration: none;
-    }
-    li>a>div:nth-child(2)>p{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        color: #6b6b6b;
-        display: block;
-        margin-top: -15px;
-    }
-   li{
+        /*------------------------------------------------------------------------------- Mumbai, Delhi, Chennai, CSS ----------------------------------------------------------------------*/
         
-        padding-right: 16px;
-        display: list-item;
-
-
-    
-    }
-    .carousel{
-        width: 1130px;
-        height: 100%;
-    }
-    
-    #ExploreIndia{
-            margin-left:50px;
-        
-    }
-
-
-
-
-
-    #lastsection{
-            margin-left: 80px;
+        #Mumbai_Delhi_Chennai {
+            height: 40vh;
         }
-        li{
-            padding-right: 16px;
-            display: list-item;
+        #Mumbai_Delhi_Chennai > div {
+            height: 100%;
+            margin: 2% 14%;
+            display: flex;
+        }
+        .MDC_properties {
+            flex: 1;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            text-shadow: 1px 1px black;
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-size: cover;
+        }
+        .MDC_properties > div:nth-child(1) { 
+            display: flex;
+            padding-left: 1em;
+            height: 15%;
+            z-index: 1;
+            position: absolute;
+        }
+        .MDC_properties > div:nth-child(1) > div {
+            width: 0.1em;
+            height: 0.1em;
+            margin: 1.9em 1em;
+            padding: 0.8em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .MDC_properties > p {
+            margin: 17% 4%;
+            font-size: 18px;
+            font-weight: 700;
+            z-index: 1;
+            position: absolute;
+        }
+        .MDC_properties > div:nth-child(3) {
+            margin-top: 48%;
+        }
+        .MDC_properties > div:nth-child(3) > div {
+            text-align: right;
+            width: 23%;
+            margin-left: 73%;
+            padding: 0.1em;
+            margin-bottom: 0.5em;
+            line-height: 0;
+            color: white;
+            border-radius: 3px;
+        }
+        .MDC_properties h5 {
+            font-size: 13px;
+            margin-top: 1em;
+        }
+        .MDC_properties h3 {
+            margin-top: 0;
+            margin-bottom: 0.7em;
+        }
+        .MDC_pointer {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            opacity: 0.3;
+            position: absolute;
+            background: linear-gradient(to top, #000 0%, #fff 40%, #000 100%);
+        }
+        .MDC_pointer:hover {
+            border: 0.3px solid #ff8000;
+            background: linear-gradient(to bottom, #000 100%, #fff 100%)
+        }
+
+        /*------------------------------------------------------------- Inspiration Trip, CSS -----------------------------------------------------*/
+        #inspiration_trip {
+            height: 45em;
+            margin: 0 14%;
+        }
+        #inspiration_trip > h1 {
+            font-size: 28px;
+        }
+        .inspiration_blocks {
+            width: 100%;
+            height: 45.5%;
+            display: flex;
+        }
+        .inspiration_article {
+            width: 100%;
+            height: 45%;
+            margin-top: 1em;
+            display: flex;
+        }
+        .inspiration_blocks > a, .inspiration_article > a {
+            flex: 1;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .inspiration_blocks > a:nth-child(2) {
+            margin: 0 1.5%;
+        }
+        .inspiration_blocks > a  > div, .inspiration_article > a > div{
+            height: 100%;
+            border-radius: 4px;
+            background-position: 50% 50%;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .inspiration_blocks > a  > div > div, .inspiration_article > a > div > div {
+            width: 92%;
+            bottom: 0;
+            font-weight: bold;
+            position: absolute;
+            vertical-align: bottom;
+        }
+        .inspiration_text {
+            line-height: 20px;
+            border-radius: 4px;
+            padding: 10% 4% 0 4%;
+            background-image: linear-gradient(180deg,rgba(0,0,0,0) 12%,#000 99%);
+        }
+        .inspiration_article > a:nth-child(1) {
+            margin: 0 1.5% 0 0;
+        }
+
+        /*---------------------------------------------------------------------------------- Explore India ----------------------------------------------------------------------*/
+        #exploreheading{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 16px;
+            display: block;
+            margin-left: 3%;
+            color: #333;
+        }
+        .carousel a>div:nth-child(1)> img{
+            width: 210px;
+            height: 210px;
+        } 
+        .carousel li>a>div:nth-child(2)>h3{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        #exploreheading+h3{
+            color:#6b6b6b;
+            margin-left: 3% ;
+            font-weight: lighter;
+            margin-top: -10px;
+
+        }
+        .carousel li>a>div:nth-child(2)>p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6b6b6b;
+            display: block;
+            margin-top: -15px;
+        }
+        #ExploreIndia{
+            margin-left:11.5%;
+        }
+
+        #lastsection{
+            margin-left: 11.5%;
         }
         .outerblock{
             position: relative;
-            
-            
         }
         .card_header{
             position: absolute;
             margin-top: -80px;
             margin-left: 20px;
-           
-            
         }
         .outerblock>a> img{
             width: 260px;
         }
-       
         .card_header >p{
             margin-top: -15px;
         }
@@ -652,55 +450,37 @@ body{
             line-height: 20px;
             color: white;
             margin-top: 60px;
-        
         }
         .links{
             text-decoration: underline;
             white-space: nowrap;
             margin-top: 20px;
         }
-     a:link{
+        a:link{
             color: #0071c2;
-           
         }
-        .carousel{
-        width: 1100px;
-        height: 100%;
-        }
-    
+
+        /*---------------------------------------------------------------------------- Discover, CSS -----------------------------------------------------------------------*/
         
-
-
-
-
-
-
-  
-
-
-    body {
-            margin: 0;
-        }
-
         #t_dis {
             float: left;
-            width: 100vw;
+            padding-left: 3.5em;
         }
 
         #t_dis_btn {
             float: right;
             width: 100vw;
             text-align: right;
-            margin-right: 100px;
+            margin-right: 200px;
         }
 
         #t_dis_btn0 {
-            background-color: grey;
+            margin: 4px;
+            height: 25px;
+            width: 20px;    
             color: white;
             border: unset;
-            margin: 5px;
-            height: 25px;
-            width: 25px;
+            background-color: grey;
         }
 
         #t_dis_btn0:hover {
@@ -708,6 +488,7 @@ body{
         }
 
         #t_dis_usa1 {
+            margin-left: 3em;
             background-image: url("https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg");
         }
 
@@ -734,9 +515,8 @@ body{
         #t_dis_usa5 {
             float: left;
             height: 130px;
-            width: 200px;
+            width: 205px;
             background-size: 100% 100%;
-
             background-repeat: no-repeat;
             color: white;
         }
@@ -746,6 +526,7 @@ body{
         #t_dis_usa3+p,
         #t_dis_usa4+p,
         #t_dis_usa5+p {
+            margin-left: 5em;
             float: left;
             clear: both;
         }
@@ -783,7 +564,279 @@ body{
             color: rgb(212, 176, 12);
         }
 
+        /*---------------------------------------------------------------- Footer, CSS --------------------------------------------------------------*/
+        #footer {
+            height: 20em;
+            margin-top: -10em;
+            text-align: center;
+            line-height: 10px;
+            margin-left: -100px;   
+        }
+        #footer > div:nth-child(1) {
+            height: 60%;
+            padding: 2% 0 0;
+            color: white;
+            background-color: #00224f;
+        }
+        #footer > div:nth-child(1) h3 {
+            color: #bdbdbd;
+        }
+        .footer_checkbox {
+            display: flex;
+            margin: 0.4% 30.5% 0;
+        }
+        .footer_checkbox > input {
+            margin-top: -0.1em;
+        }
+        .subscription_form {
+            height: 3em;
+            margin: 2% 30% 0;
+            display: flex;
+        }
+        .subscription_form > div {
+            width: 70%;
+            height: 86%;
+            padding: 0 1.5%;
+        }
+        .subscription_form > div > input {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+        .subscription_form > button {
+            width: 25%;
+            height: 95%;
+            font-size: 20px;
+            font-weight: 100;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            background-color: #0071c2;
+        }
+        .footer_bottom {
+            height: 20%;
+            padding: 1em 0;
+            background-color: #003580;
+        }
+        .footer_bottom > div:nth-child(1) {
+            padding: 6px 0 10px;
+        }
+        .footer_bottom >div:nth-child(1) > a {
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .footer_bottom > div:nth-child(1) > a:hover {
+            background-color: #4a7ec780;
+        }
+        .footer_bottom > div:nth-child(3) > a {
+            color: white;
+            margin: 0 0.5%;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 15px 10px;
+        }
+        #footer_lists {
+            margin: 0 12%;
+            display: flex;
+        }
+        #footer_lists > div {
+            flex: 1;
+        }
+        #footer_lists > div > ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+        #footer_lists a {
+            text-decoration: none;
+            color: #0071c2;
+        }
+        #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+            color: rgb(221, 103, 19);
+        }
+        .footer_quote, .footer_copyright, .footer_priceline_title {
+            margin: 0 15%;
+            font-size: 12px!important;
+        }
+        .footer_quote a {
+            color: #0071c2;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .footer_login {
+            text-align: center;
+        }
+        .footer_login > a {
+            text-decoration: none;
+            color: #333;
+            opacity: 80%;
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+        .footer_priceline_title {
+            text-align: center;
+        }
+        .footer_priceline_images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5em;
+        }
+        .footer_priceline_images > div {
+            margin-right: 2.5em;
+        }
 
+        /* Footer Media queries */
+        @media only screen and (max-width: 800px) {
+            body {
+                margin: 0;
+            }
+            #footer {
+                width: 100%;
+                height: 16em;
+                text-align: center;
+                line-height: 10px;
+                margin-top: 200px;
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-size: 14px;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                width: 50%;
+                font-size: 10px;
+                display: flex;
+            }
+            .footer_checkbox > input {
+                width: 0.8em;
+                height: 0.8em;
+            }
+            .subscription_form {
+                width: 50%;
+                height: 2.5em;
+                margin-left: 10em;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 60%;
+                height: 86%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 13px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 35%;
+                height: 95%;
+                margin-left: 0.25em;
+                font-size: 13px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                font-size: 8px;
+                font-weight: bold;
+                padding: 0;
+            }
+            #footer_lists {
+                margin: 2% 0 0;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                padding-left: 10px;
+                font-size: 8px;
+                line-height: 1.8em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote {
+                margin: 0 3%;
+                font-size: 11px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_copyright {
+                font-size: 6px!important;
+            }
+            .footer_copyright p {
+                margin-left: -18%;
+            }
+            .footer_priceline_title {
+                text-align: center;
+                width: 100%;
+                margin-left: 0;
+            }
+            .footer_priceline_title > div {
+                font-size: 12px;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin: 0 0 0 3%;
+            }
+            .footer_priceline_images img {
+                width: 70%;
+            }
+            .footer_quote+p, .footer_login+p {
+                display: none;
+            }
+        }
 
     </style>
 </head>
@@ -796,47 +849,61 @@ body{
             <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
             <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
             <a href=""><p><button id="t_btn1">List your property</button></p></a>
-            <a href=""><p><button id="t_btn2">Register</button></p></a>
-            <a href=""><p><button id="t_btn3">Sign in</button></p></a>
+            <a href="../Booking sign.html"><p><button id="t_btn2">Register</button></p></a>
+            <a href="../Booking sign.html"><p><button id="t_btn3">Sign in</button></p></a>
 
         </div>
         <div id="t_stay">
-            <a href=""><p> <i class="fa fa-hotel"> Stays </i></p></a>
+            <a href="./mainLandingPage.html"><p> <i class="fa fa-hotel"> Stays </i></p></a>
             <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
             <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
-            <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
+            <a href="../carRental/carRental.html"><p><i class="fa fa-bus"> Car rentals </i></p></a>
             <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
-            <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+            <a href="../AirPort_Taxi/book_airport_taxi.html"><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
            
         </div>
        
     </div>
 
-
-<div style='height: 100px;'></div>
-
-    <div id="t_searchBar">
-        <h1>Find deals on hotels, homes, and much more...</h1>
-        <p>From cozy country homes to funky city apartments</p>
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
-        <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
-        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
-        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
-        <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
-        <button id="t_sear_btn" onclick="citySearch()">Search</button>  
-       
+    <!---------------------------------------------------------------------------------- Landing Page covid info ---------------------------------------------------------------->
+    
+    <div class="landing_covidInfo">
+        <div>
+            <div class="landing_covidInfo_list">
+                <button class="landing_covidInfo_accordion">
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/1/1176.svg?token=exp=1615451895~hmac=7b1448372d94a11260bc4e6935ede1d8);"></div>
+                    <h3 style="margin-top: 0;">Coronavirus (COVID-19) Support</h3>
+                </button>
+                <div class="landing_covidInfo_panel">
+                    <p style="margin: 0 15% 0 1%;">Please check for travel restrictions. Travel may be permitted only for certain purposes and in particular, touristic travel may not be allowed.</p>
+                    <a href=""><h4 style="margin-left: 1%;">Read more</h4></a>
+                </div>
+            </div>  
+        </div>
     </div>
-    <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
-   
 
-
-
+    <!----------------------------------------------------------------------------------- Landing Page search info --------------------------------------------------------------->
+    <div id="findDeals">
+        <div id="t_searchBar">
+            <h1>Find deals on hotels, homes, and much more...</h1>
+            <p>From cozy country homes to funky city apartments</p>
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
+            <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+            <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+            <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
+            <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
+            <button id="t_sear_btn" onclick="citySearch()">Search</button>  
+        
+        </div>
+        <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
+    </div>
+    <!--------------------------------------------------------------------------- Connect Travelers ------------------------------------------------------------------------------->
 
     <div id="connect_travelers">
-        <h2 class="heading">Connect with other travelers</h2>
+        <h2 id="heading">Connect with other travelers</h2>
         <div class="travelers_block">
             <a href="#">
                 <div class="travel_community_img">
@@ -872,11 +939,10 @@ body{
         </div>
     </div>
 
-
-
+    <!------------------------------------------------------------------------------ Browse  by property type ----------------------------------------------------------------------->
 
     <h2 class="heading">Browse by property type</h2>
-    <div style=" margin-left:70px;">
+    <div style=" margin-left:11.5%; margin-bottom: 3em; margin-top: 0;">
         <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":1 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
             <li>
                 <div>
@@ -1204,13 +1270,71 @@ body{
 
 
 
+    <div id="Mumbai_Delhi_Chennai">
+        <div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/971345.webp?k=9bf85dfa10a224e2855ca2f8ca3fcd96916a962d87cdfcc48d6d57c09bef3c65&o=);">
+                <div>
+                    <h1>Mumbai</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>1,673 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,974</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 2,610</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684764.webp?k=6c3c9e920a39ca4f9eddcdfaa916999ea5d2765844610dd59349f4271f7596b3&o=); margin: 0 2%;">
+                <div>
+                    <h1>New Delhi</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>2,912 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,067</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 1,831</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+            <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684727.webp?k=a6fd59b0c31df52ae2a907dcf2441c7842bb56e2e68d89bffd2398024c0812d3&o=)">
+                <div>
+                    <h1>Chennai</h1>
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                </div>
+                <p>1,416 properties</p>
+                <div>
+                    <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                        <h5>Deals start at</h5>
+                        <h3>&#8377 1,536</h3>
+                    </div>
+                    <div style="background-color: #333; z-index: 1; position: absolute">
+                        <h5>Average price</h5>
+                        <h3>&#8377 2,026</h3>
+                    </div>
+                </div>
+                <div class="MDC_pointer"></div>
+            </div>
+        </div>
+    </div>
 
+    <!----------------------------------------------------------------------------------- Landing Inspiration trip -------------------------------------------------------------------------------------------->
 
-
-    <div id="inspiration_trip">
+    <div id="inspiration_trip" >
         <h1>Get inspiration for your next trip</h1>
         <div class="inspiration_blocks">
-            <a href="./loveLetters.html" style="color: white;">
+            <a href="../Inspiration/a-collection-of-love-letters-to-america.html" style="color: white;">
                 <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/110465249.webp?k=4429b31459fed3b7551f5a4d4912d8afe1dc4e2e388cd34a3364c906db94afac&o=);">
                     <div class="inspiration_text">
                         <h2>A collection of love letters to America</h2>
@@ -1218,7 +1342,7 @@ body{
                     </div>
                 </div>
             </a>
-            <a href="./americaForEveryone.html" style="color: white;">
+            <a href="../Inspiration/america-is-for-everyone.html" style="color: white;">
                 <div style="background-image: url(https://t-cf.bstatic.com/xdata/images/xphoto/540x405/104028063.webp?k=c22f340e36295722da6b9f0d75ce4a649e39eb220d17aec38df30f5a36ae2684&o=);">
                     <div class="inspiration_text">
                         <h2>America is for everyone</h2>
@@ -1255,6 +1379,7 @@ body{
         </div>
     </div>
 
+    <!------------------------------------------------------------------------------------------- Landing Page Explore Inida ------------------------------------------------------------------------>
 
     <div id="ExploreIndia">
         <h2 id="exploreheading">Explore India</h2>
@@ -1403,20 +1528,16 @@ body{
                             <p>705 properties</p>
                         </div>
                     </a>
-                    
                 </li>
-        
+            </ul>
+        </div>
     </div>
 
      
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    
 
-
-
-    <div id="lastsection" style="margin-left: 10px;">
+    <div id="lastsection">
         <ul class="carousel" data-flickity='{"wrapAround":true, "autoplay":false, "groupCells":2 ,"pageDots": false ,"freeScroll":true}'  style="list-style-type:none;">
             <li>
                  <div class="outerblock">
@@ -1623,14 +1744,10 @@ body{
     <!-- <a href="https://www.booking.com/destination.en-gb.html?aid=304142;label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Ap7QnoIGwAIB0gIkMzJiM2UyMmEtYjU5My00NjQ3LWJhNTctMDU1MjI5NGNkYWYy2AIE4AIB;sid=648c7473a53326b2fa42f17fef4f330b;srpvid=61bd4734307500a3&" style="margin-left: 1340px;">More destinations>></a> -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-
-
-
 
     
     <div>
-        <h2 id="t_dis" style="margin-left: 100px;">Discover</h2>
+        <h2 id="t_dis" style="margin-left: 8.5%;">Discover</h2>
         <div id="t_dis_btn">
             <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn1()">1</button>
             <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn2()">2</button>
@@ -1644,7 +1761,7 @@ body{
             <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn6()">10</button>
 
         </div>
-        <div id="t_dis_usa" style="margin-left: 50px;">
+        <div id="t_dis_usa" style="margin-left: 8em;">
             <div id="t_dis_usa1">
                 <div id="t_usa_hov1">You'll love relaxation,<br>
                     restaurants and shopping<br>during your next trip to United<br>States of America!</div>
@@ -1687,15 +1804,12 @@ body{
 
     </div>
 
+    <div style="height: 500px;"></div>
 
-
-
-
-<div style="height: 500px;"></div>
-
+    <!-------------------------------------------------------------------------------------------------------- Footer ------------------------------------------------------------------------------------------------------------>
 
     <div id="footer">
-        <div>
+        <div id="footer_top">
             <div>
                 <h2>Save time, save money!</h2>
                 <h3>Sign up and we'll send the best deals to you</h3>
@@ -1704,7 +1818,7 @@ body{
                 <div>
                     <input type="email" placeholder="Your email">
                 </div>
-                <button>Subscribe</button>
+                <button onclick="subscribe()">Subscribe</button>
             </div>
             <label class="footer_checkbox">
                 <input type="checkbox">
@@ -1840,12 +1954,27 @@ body{
            // window.location.href="./loveLetters"  // Ravi_Booking.com/Booking sign.html    ../main page/Booking sign.html
         }
         function citySearch() {
-        var data=document.querySelector("#t_sear1").value
-        window.location.href=`${data}.html`
-}
+            var data=document.querySelector("#t_sear1").value
+            window.location.href=`${data}.html`
+        }
 
+        
+        const landing_accordion = document.getElementsByClassName("landing_covidInfo_accordion");
 
-function countryBtn1() {
+        for (let i = 0; i < landing_accordion.length; i++) {
+            landing_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("landing_covidInfo_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } 
+                else {
+                panel.style.display = "block";
+                }
+            });
+        }
+
+        function countryBtn1() {
             var usa_img1 = document.querySelector('#t_dis_usa1')
             var country_name1 = document.querySelector('#t_country_name1')
             var usa_text1 = document.querySelector('#t_usa_hov1')
@@ -2145,7 +2274,13 @@ function countryBtn1() {
 
         }
 
+        let subscribe = () => {
+            let footer_top = document.getElementById("footer_top")
+            footer_top.style.display = "none"
 
+            let footer_lists = document.getElementById("footer_lists")
+            footer_lists.style.marginTop = "-15%"
+        }
 
     </script>
 </body>

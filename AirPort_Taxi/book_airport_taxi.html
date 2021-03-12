@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Airport taxis | Book your airport taxi online | Booking.com</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+
+            /*----------------------------------------------------------------------------------------- Header CSS -------------------------------------------------------------------------------------*/
+
+            
+            #t_nav{
+                width: 100%;
+                padding-top: 1em;
+                height: 130px;
+                background-color: #0f3079;
+                margin-top: -20px;
+            }
+            #t_book,#t_com{
+                font-size: x-large;
+                float: left;
+                margin-top: 35px;
+            }
+            #t_book{
+                color: white;             
+                padding-left: 200px;      
+            }
+            #t_com{
+                color: rgb(79, 149, 230);            
+            }
+            #t_stay{            
+                display: flex;
+                height: 30px;
+                margin: 0 14%;
+            }
+            #t_stay > a {
+                flex: 1;
+                margin-left: -10%;
+            }
+            #t_stay>a>p,#t_ind>a>p{
+                color: white;
+                float: left;
+                margin: 10px 20px;
+            }
+            #t_ind{
+                display: flex;            
+                padding-left: 500px;
+                margin-top: 20px;
+            }
+            #t_btn1{
+                color: white;
+                background-color: unset;
+                border: 1px solid white;
+                height: 33px;
+            }
+            #t_btn2, #t_btn3{
+                height: 33px;
+                color: rgb(17, 117, 184);
+            }
+            #t_btn{
+                background-color: unset;
+                color: white;
+                border: 2px solid rgb(37, 96, 185);
+                height: 50px;
+            }
+
+            /*----------------------------------------------------------------------------------------- Airport Taxi CSS --------------------------------------------------------------------------------*/
+
+            .airportTaxi_covidInfo, .airportTaxi_covidInfo_list_active {
+                background-color: #ffe08a30;
+            }
+            .airportTaxi_covidInfo > div {
+                margin: 0 14%;
+                height: 100%;
+            }
+            .airportTaxi_covidInfo_list {
+                width: 100%;
+                height: 100%;
+            }
+            .airportTaxi_covidInfo_accordion > div {
+                width: 1.5em;
+                height: 1.5em;
+                margin: 0 1%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .airportTaxi_covidInfo_accordion {
+                padding: 10px 18px 0 0;
+                width: 100%;
+                font-size: 15px!important;
+                font-weight: 700;
+                transition: 0.4s;
+                display: flex;
+                border: 1px solid whitesmoke;
+                text-align: left;
+                outline: none;
+                color: #444;
+                cursor: pointer;
+                background-color: transparent;
+            }
+            .airportTaxi_covidInfo_accordion:hover {
+                background-color: white;
+            }
+            .airportTaxi_covidInfo_panel {
+                width: 100%;
+                font-size: 15px!important;
+                display: none;
+                overflow: hidden;
+            }
+            .airportTaxi_covidInfo_panel > a {
+                text-decoration: none;
+                color: #0071c2;
+                font-weight: 900;
+            }
+            .airportTaxi_covidInfo_panel > a:hover {
+                text-decoration: underline;
+            }
+            .airportTaxi_booking {
+                height: 65vh;
+                background-image: url('https://t-cf.bstatic.com/xdata/images/xphoto/1680x1120/54218898.webp?k=fce0235d7e117b085ac5ea58b09801fbba23801e9d91e433027f1c20a365975a&o=');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+            .airportTaxi_booking_content {
+                position: absolute;
+                top: 40%;
+                margin: 0 14%;
+                z-index: 2;
+                transform: translateY(-50%);
+            }
+            .airportTaxi_booking_overlay {
+                background-color: #00358095;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            .airportTaxi_booking_seachbar {
+                width: 100%;
+                height: 3.5em;
+                border-radius: 5px;
+                padding: 0.4%;
+                background-color: rgb(255, 204, 95);
+                box-shadow: 1px 1px 10px;
+                display: flex;
+            }
+            .airportTaxi_booking_seachbar > div {
+                flex: 1;
+                display: flex;
+                margin-right: 0.3em;
+                border-radius: 3px;
+                background: white;
+            }
+            .airportTaxi_booking_seachbar input {
+                width: 15em;
+                border-radius: 3px;
+                border: none;
+            }
+            .airportTaxi_booking_seachbar select {
+                width: 5em;
+                border-radius: 3px;
+                border: none;
+            }
+            .airportTaxi_booking_seachbar button {
+                width: 8em;
+                border-radius: 3px;
+                color: white;
+                font-size: 18px;
+                background-color: #0071c2;
+                border: none;
+            }
+            .airportTaxi_booking_seachbar > div > div {
+                width: 1em;
+                height: 1em;
+                opacity: 40%;
+                margin: 1em;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .airportTaxi_booking_content form {
+                color: white;
+                font-size: 17px;
+                margin: 2em 0;
+            }
+            .airportTaxi_booking_content form > input {
+                width: 1.2em;
+                height: 1.2em;
+            }
+            .airportTaxi_booking_content > h1 {
+                color: white;
+                margin-top: 2em;
+                margin-bottom: 0;
+                font-weight: 600;
+            }
+            .airportTaxi_booking_content > p {
+                color: white;
+                margin-top: 0;
+                font-weight: 600;
+            }
+            .airportTaxi_info {
+                height: 5em;
+                padding-top: 1%;
+                background: whitesmoke;
+            }
+            .airportTaxi_info > div {
+                height: 100%;
+                margin: 0 14%;
+                display: flex;
+            }
+            .airportTaxi_FOT {
+                flex: 1;
+                display: flex;
+            }
+            .airportTaxi_FOT > div:nth-child(1) {
+                width: 1.5em;
+                height: 1.5em;
+                margin: 0.5em;
+                padding: 1em;
+                background: #e7fde9;
+                border-radius: 50px;
+            }
+            .airportTaxi_FOT > div > div:nth-child(1) {
+                width: 1.5em;
+                height: 1.5em;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .airportTaxi_FOT > div:nth-child(2) {
+                padding: 0 0.5em;
+            }
+            .airportTaxi_FOT > div:nth-child(2) > h2 {
+                margin: 0.5em 0 0;
+                font-size: 16px;
+                font-weight: 700;
+                color: #333;
+            }
+            .airportTaxi_FOT > div:nth-child(2) > h4 {
+                margin: 0.1em 0 0;
+                padding-right: 0.5em;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: small;
+                color: #6b6b6b;
+            }
+            .airportTaxi_easyTransfer {
+                height: 80vh;
+                margin-top: 2%;
+            }
+            .airportTaxi_easyTransfer > div {
+                margin: 0 14%;
+                height: 100%;
+            }
+            .airportTaxi_easyTransfer_heading {
+                text-align: center;
+                margin-top: 3em;
+                font-size: 16px;
+            }
+            .airportTaxi_easyTransfer_working {
+                width: 100%;
+                height: 80%;
+                display: flex;
+            }
+            .airportTaxi_easyTransfer_working > div {
+                flex: 1;
+            }
+            .airportTaxi_easyTransfer_working > div:nth-child(1) {
+                margin-right: 3em;
+                margin-top: 3em;
+            }
+            .airportTaxi_easyTransfer_working_icons {
+                height: 20%;
+                display: flex;
+                padding-top: 2em;
+            }
+            .airportTaxi_easyTransfer_working_icons > div:nth-child(1) {
+                width: 4.5em;
+                height: 4.5em;
+                padding: 0.5em;
+                border-radius: 100px;
+            }
+            .airportTaxi_easyTransfer_working_icons > div > div {
+                width: 4.5em;
+                height: 4.5em;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .airportTaxi_easyTransfer_working_icons > div:nth-child(2) > h2 {
+                font-weight: 600;
+                margin: 1% 2% 0;
+                color: #333;
+            }
+            .airportTaxi_easyTransfer_working_icons > div:nth-child(2) > h4 {
+                font-size: 14px;
+                font-weight: 400;
+                margin: 3% 1% 0;
+                color: #6b6b6b;
+            }
+            .airportTaxi_easyTransfer_working > div:nth-child(2) {
+                padding: 4%;
+            }
+            .airportTaxi_easyTransfer_working > div:nth-child(2) > div {
+                width: 100%;
+                height: 100%;
+            }
+            .airportTaxi_easyTransfer_working > div:nth-child(2) span {
+                font-size: small;
+            }
+            .airportTaxi_FAQs {
+                margin: 2% 14%;
+                display: flex;
+            }
+            .airportTaxi_FAQs > div:nth-child(1) {
+                width: 50%;
+                padding: 1% 2%;
+                font-size: 19px;
+                font-weight: 500;
+                color: #333;
+                box-sizing: border-box;
+                background-color: whitesmoke;
+            }
+            .airportTaxi_FAQs > div:nth-child(1) p{
+                font-size: 15px;
+                margin-top: 0;
+            }
+            .airportTaxi_FAQs > div:nth-child(1) a {
+                color: #0071c2;
+                font-weight: bold;
+            }
+            .airportTaxi_FAQs > div:nth-child(1) a:hover {
+              color: rgb(221, 103, 19);
+            }
+            .airportTaxi_FAQs_list {
+                width: 100%;
+                height: 100%;
+            }
+            .airportTaxi_FAQs_list_accordion {
+                padding: 18px;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 700;
+                transition: 0.4s;
+                border: 1px solid whitesmoke;
+                text-align: left;
+                outline: none;
+                color: #444;
+                cursor: pointer;
+                background-color: #fff;
+            }
+
+            .airportTaxi_FAQs_list_active, .airportTaxi_FAQs_list_accordion:hover {
+                background-color: #ccc; 
+            }
+            .airportTaxi_FAQs_list_panel {
+                padding: 0 18px;
+                font-size: 12px!important;
+                display: none;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            /*----------------------------------------------------------------------------------- Footer CSS ------------------------------------------------------------------------------------------------- */
+            
+            #footer {
+                margin-top: 3em;
+                height: 20em;
+                text-align: center;
+                line-height: 10px;
+            }
+            #footer > div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+            #footer > div:nth-child(1) > div {
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            #footer > div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+            .footer_checkbox {
+                display: flex;
+                margin: 0.4% 30.5% 0;
+            }
+            .footer_checkbox > input {
+                margin-top: -0.1em;
+            }
+            .subscription_form {
+                height: 3em;
+                margin: 2% 30% 0;
+                display: flex;
+            }
+            .subscription_form > div {
+                width: 70%;
+                height: 86%;
+                padding: 0 1.5%;
+            }
+            .subscription_form > div > input {
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            .subscription_form > button {
+                width: 25%;
+                height: 95%;
+                font-size: 20px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+            .footer_bottom {
+                height: 20%;
+                padding: 1em 0;
+                background-color: #003580;
+            }
+            .footer_bottom > div:nth-child(1) {
+                padding: 6px 0 10px;
+            }
+            .footer_bottom >div:nth-child(1) > a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .footer_bottom > div:nth-child(1) > a:hover {
+                background-color: #4a7ec780;
+            }
+            .footer_bottom > div:nth-child(3) > a {
+                color: white;
+                margin: 0 0.5%;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 15px 10px;
+            }
+            #footer_lists {
+                margin: 0 12%;
+                display: flex;
+            }
+            #footer_lists > div {
+                flex: 1;
+            }
+            #footer_lists > div > ul {
+                list-style: none;
+                font-size: 14px;
+                line-height: 1.6em;
+            }
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+            #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+            .footer_quote, .footer_copyright, .footer_priceline_title {
+                margin: 0 15%;
+                font-size: 12px!important;
+                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            }
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .footer_login {
+                text-align: center;
+            }
+            .footer_login > a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+            .footer_priceline_title {
+                text-align: center;
+            }
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+            .footer_priceline_images > div {
+                margin-right: 2.5em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!------------------------------------------------------------------------------------- Header HTML ---------------------------------------------------------------------------------------------------->
+
+        <header>
+            <nav>
+                <div id="t_nav">
+                    <p  id ="t_book">Booking</p><p id="t_com">.com</p>
+            
+                    <div id="t_ind">
+                        <a href=""><p><button id="t_btn">INR</button></p></a>
+                        <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
+                        <a href=""><p ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
+                        <a href=""><p><button id="t_btn1">List your property</button></p></a>
+                        <a href=""><p><button id="t_btn2">Register</button></p></a>
+                        <a href=""><p><button id="t_btn2">Sign in</button></p></a>
+            
+                    </div>
+                    <div id="t_stay">
+                        <a href="../main page/mainLandingPage.html"><p> <i class="fa fa-hotel"> Stays </i></p></a>
+                        <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
+                        <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
+                        <a href="../carRental/carRental.html"><p><i class="fa fa-bus"> Car rentals </i></p></a>
+                        <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
+                        <a href="./book_airport_taxi.html"><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+                    </div>
+                   
+                </div>
+            </nav>
+        </header>
+
+        <!------------------------------------------------------------------------------------- Airport HTML --------------------------------------------------------------------------------------------------->
+        <div class="airportTaxi_covidInfo">
+            <div>
+                <div class="airportTaxi_covidInfo_list">
+                    <button class="airportTaxi_covidInfo_accordion">
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/1/1176.svg?token=exp=1615451895~hmac=7b1448372d94a11260bc4e6935ede1d8);"></div>
+                        <h3 style="margin-top: 0;">Protecting you during COVID-19</h3>
+                    </button>
+                    <div class="airportTaxi_covidInfo_panel">
+                        <p style="margin: 0 15% 0 1%;">Your safety matters. From July 2020, we’re asking all customers to wear a face covering when travelling with us. If you don’t wear a face covering,
+                        your driver may not be able to start your journey. Where Coronavirus may affect your plans, here’s what you need to know about booking with us at this time.
+                        </p>
+                        <a href=""><h4 style="margin-left: 1%;">Read more</h4></a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="airportTaxi_booking">
+            <div class="airportTaxi_booking_content">
+                <h1>Book your airport taxi</h1>
+                <p>Easy airport transfers to and from your accommodation</p>
+                <div>
+                    <div>
+                        <form for="location">
+                            <input type="radio" name="location" value="true" checked id="carRenatl_sameLocation" onclick="check()"> One-way
+                            <input type="radio" name="location" value="fase" id="carRenatl_differentLocation" onclick="check()" style="margin-left: 2em;"> Return
+                        </form>
+                    </div>
+                    <div class="airportTaxi_booking_seachbar">
+                        <div>
+                            <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/484/484167.svg?token=exp=1615466193~hmac=5559b3e7256889c6dcc32aba46e59705);"></div>
+                            <input type="text" placeholder="Enter pick-up location" id="pickup">
+                        </div>
+                        <div>
+                            <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/484/484167.svg?token=exp=1615466193~hmac=5559b3e7256889c6dcc32aba46e59705);"></div>
+                            <input type="text" placeholder="Enter destination" id="destination">
+                        </div>
+                        <div>
+                            <input type="date" value="2021-03-13" id="date">
+                        </div>
+                        <div>
+                            <input type="time" value="17:57" id="time">
+                        </div>
+                        <div>
+                            <select name="" id="persons">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="bookTaxi()">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="airportTaxi_booking_overlay"></div>  
+        </div>
+        <div class="airportTaxi_info">
+            <div>
+                <div class="airportTaxi_FOT">
+                    <div>
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/31/31069.svg?token=exp=1615456245~hmac=44cb738f5982de5353c7e4ca0c552908);"></div>
+                    </div>
+                    <div>
+                        <h2>Flight tracking</h2>
+                        <h4>Your driver tracks your flight and waits for you if it's delayed</h4>
+                    </div>
+                </div>
+                <div class="airportTaxi_FOT">
+                    <div style="background: #fff0e0;">
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/747/747396.svg?token=exp=1615457123~hmac=c70f06065e094ff32849800bc41fcbed);"></div>
+                    </div>
+                    <div>
+                        <h2>One clear price</h2>
+                        <h4>Your price is confirmed upfront - no extra costs no cash required</h4>
+                    </div>
+                </div>
+                <div class="airportTaxi_FOT">
+                    <div style="background: #ebf3ff;">
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/63/63144.svg?token=exp=1615457230~hmac=85c58185d619871a44a50dd020254fb1);"></div>
+                    </div>
+                    <div>
+                        <h2>Tried and trusted</h2>
+                        <h4>We work with professional drivers and have 24/7 customer care</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="airportTaxi_easyTransfer">
+            <div>
+                <div class="airportTaxi_easyTransfer_heading">
+                    <h1 style="font-weight: 500;">Airport transfers made easy</h1>
+                </div>
+                <div class="airportTaxi_easyTransfer_working">
+                    <div>
+                        <div class="airportTaxi_easyTransfer_working_icons">
+                            <div>
+                                <div style="background-image: url(https://t-cf.bstatic.com/static/img/taxi-book-taxi/72b2754b7952cf88eb5752336a0b28aa108c192b.svg);"></div>
+                            </div>
+                            <div>
+                                <h2>Booking your airport taxi</h2>
+                                <h4>Confirmation is immediate. If your plans change, you can cancel for free up to 24 hours before your scheduled pick-up time</h4>
+                            </div>
+                        </div>
+                        <div class="airportTaxi_easyTransfer_working_icons">
+                            <div>
+                                <div style="background-image: url(https://t-cf.bstatic.com/static/img/taxi-meet-driver/80b8363402262d17552ebd80ecd51b6ddbe3c7f6.svg);"></div>
+                            </div>
+                            <div>
+                                <h2>Meeting your driver</h2>
+                                <h4>You'll be met on arrival and taken to your vehicle. Your driver will track your flight, so they'll wait for you even if it's delayed</h4>
+                            </div>
+                        </div>
+                        <div class="airportTaxi_easyTransfer_working_icons">
+                            <div>
+                                <div style="background-image: url(https://t-cf.bstatic.com/static/img/taxi-arrive-at-destination/75cc4d191f8e30821c73817602a4e160955fe653.svg);"></div>
+                            </div>
+                            <div>
+                                <h2>Arriving at your destination</h2>
+                                <h4>Get to your destination quickly and safely – no waiting in line for a taxi, no figuring out public transport</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>How it works?</span>
+                            <img src="https://t-cf.bstatic.com/static/img/taxi-how-it-works/79d898d0e29dd469799e76b6d4bb71b5b0f03707.svg" alt="How it works?" width="95%">
+                            <span>Enjoy your trip!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="airportTaxi_FAQs">
+            <div>
+                <h3>Find out more about our airport taxi service</h3>
+                <p>See more FAQs on our <a href="">help page</a></p>
+            </div>
+            <div class="airportTaxi_FAQs_list">
+                <button class="airportTaxi_FAQs_list_accordion">What happens if my flight is early or delayed?</button>
+                <div class="airportTaxi_FAQs_list_panel">
+                    <p>Our Meet & Greet service means that if you provide your flight number when you're booking your airport taxi, we'll be able to track your flight
+                        and adjust your pick-up time automatically according to your actual arrival time. Once your flight has landed, your driver will wait for 45 minutes. 
+                        This should give you plenty of time to pass through security, claim your baggage and head through to arrivals to meet your driver.
+                    </p>                  
+                </div>
+
+                <button class="airportTaxi_FAQs_list_accordion">What's included in the price?</button>
+                <div class="airportTaxi_FAQs_list_panel">
+                    <p>Our prices include all taxes, fees, gratuity and toll road charges. If you book an airport pick-up, prices also include Meet & Greet as standard,
+                        which means we'll track your flight and wait for 45 minutes from the time your flight arrives. If you book a return taxi to the airport – or any other 
+                        non-airport pick-up – your driver will wait for 15 minutes after the scheduled pick-up time. Please note that you may have to pay an additional cost for 
+                        certain special requests or any amendments you want to make to your journey.
+                    </p>
+                </div>
+              
+                <button class="airportTaxi_FAQs_list_accordion">How do I pay?</button>
+                <div class="airportTaxi_FAQs_list_panel">
+                    <p>You pay for your airport taxi when you complete your booking online. This means that everything is confirmed and taken care of in advance so you don't
+                        need to worry about any unpleasant surprises or having cash on you when you arrive. Currently, we accept Visa, American Express and Mastercard, as well 
+                        as most major debit cards. We also accept payment via PayPal.
+                    </p>
+                </div>
+              
+                <button class="airportTaxi_FAQs_list_accordion">Can I cancel my booking?</button>
+                <div class="airportTaxi_FAQs_list_panel">
+                    <p>Yes. You can always cancel your booking for free up to 24 hours prior to your scheduled pick-up time. Some of our partners allow a shorter window for free cancellation. 
+                    Check your booking confirmation for more information.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------------------------------------------------------------------------------- Footer HTML ------------------------------------------------------------------------------------------>
+
+        <div id="footer">
+            <div>
+                <div>
+                    <h2>Save time, save money!</h2>
+                    <h3>Sign up and we'll send the best deals to you</h3>
+                </div>
+                <div class="subscription_form">
+                    <div>
+                        <input type="email" placeholder="Your email">
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+                <label class="footer_checkbox">
+                    <input type="checkbox">
+                    Send me a link to get the FREE Booking.com app!
+                </label>
+            </div>
+            <div class="footer_bottom">
+                <div>
+                    <a href="#">List your property</a>
+                </div>
+                <div style="height: 0.01em; background:white; margin: 0.8em 0;"></div>
+                <div>
+                    <a href="#">Mobile version</a>
+                    <a href="#">Your account</a>
+                    <a href="#">Make changes online to your booking</a>
+                    <a href="#" title='Your Reference ID is "C5DA764"'>Contact Customer Service</a>
+                    <a href="#" title="Become an affiliate">Become an affiliate</a>
+                    <a href="#">Booking.com for Business</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer_lists">
+            <div>
+                <ul>
+                    <li><a href="#">Countries</a></li>
+                    <li><a href="#">Regions</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><a href="#">Districts</a></li>
+                    <li><a href="#">Airports</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Places of interest</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Homes</a></li>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Resorts</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Hostels</a></li>
+                    <li><a href="#">B&Bs</a></li>
+                    <li><a href="#">Guest houses</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Unique places to stay</a></li>
+                    <li><a href="#">All destinations</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Upacked: Travel articles</a></li>
+                    <li><a href="#">Travel communities</a></li>
+                    <li><a href="#">Seasonal and holiday deals</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Car rental</a></li>
+                    <li><a href="#">Flight finder</a></li>
+                    <li><a href="#">Restaurant reservations</a></li>
+                    <li><a href="#">Booking.com for Travel Agents</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+                    <li><a href="#">About Booking.com</a></li>
+                    <li><a href="#">Contact Customer Service</a></li>
+                    <li><a href="#">Partner help</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press center</a></li>
+                    <li><a href="#">Safety Resource Center</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Partner dispute</a></li>
+                    <li><a href="#">Privacy and cookie statement</a></li>
+                    <li><a href="#">Corporate contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_quote">
+            <div>
+                <p>
+                    Whoever you are, whatever you're looking for, we have the perfect place for you. Our 28,085,332 listings
+                    include 6,457,264 listings of homes, apartments, and other unique places to stay,
+                    and are located in 153,842 destinations 
+                    in 225 countries and territories. 
+                    Booking.com B.V. is based in Amsterdam, the Netherlands and is supported internationally by <a href="#">198 offices in 70 countries.</a>
+                </p>
+            </div>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_login">
+            <a href="">Extranet login</a>
+        </div>
+        <p>&#8203</p>
+        <div class="footer_copyright">
+            <div>
+                <p>Copyright &#169 1996-2021 Booking.com&#8482. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_title">
+            <div>
+                <p>Booking.com is part of Booking Holidings Inc., the world leader in online travel and related services.</p>
+            </div>
+        </div>
+        <div class="footer_priceline_images">
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="">
+            </div>
+            <div>
+                <img src="https://t-cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="">
+            </div>
+        </div>
+
+    </body>
+    <script>
+        const airPort_accordion = document.getElementsByClassName("airportTaxi_covidInfo_accordion");
+
+        for (let i = 0; i < airPort_accordion.length; i++) {
+            airPort_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("airportTaxi_covidInfo_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } 
+                else {
+                panel.style.display = "block";
+                }
+            });
+        }
+
+        const airportTaxi_FAQs_accordion = document.getElementsByClassName("airportTaxi_FAQs_list_accordion")
+
+        for( let i=0; i<airportTaxi_FAQs_accordion.length; i++) {
+            airportTaxi_FAQs_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("airportTaxi_FAQs_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none"
+                }
+                else {
+                panel.style.display = "block"
+                }
+            })
+        }
+
+        let bookTaxi = () => {
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+            let pickup = document.getElementById("pickup").value;
+            let destination = document.getElementById("destination").value;
+            let persons = document.getElementById("persons").value;
+            console.log(persons);
+
+            if(pickup == "" || destination == "" ) {
+                alert(`Enter all required details to fulfill your need.`)
+            }
+            else{
+                if(pickup == destination){
+                    alert(`Pickup and Destination are same, You don't need car for that.`)
+                }
+                else{
+                    alert(`Pick-up Location: ${pickup}\nDestination: ${destination}\nPick-up Date: ${date}\nPick-up Time: ${time}\n\nDetails have been mailed to your email id.`)
+
+                    setTimeout( function() {
+                        window.location.href = "../main page/mainLandingPage.html"
+                    }, 0)
+                }
+            }
+        }
+    </script>
+</html>
