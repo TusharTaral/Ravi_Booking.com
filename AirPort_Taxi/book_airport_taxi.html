@@ -13,60 +13,60 @@
 
             /*----------------------------------------------------------------------------------------- Header CSS -------------------------------------------------------------------------------------*/
 
-            header {
-                margin-top: -1.5em;
-                height: 8em;
-                background-color: #0f3079;
-            }
-            header > nav {
-                height: 100%;
-                margin: 0 14%;
-            }
-            #t_nav {
+            
+            #t_nav{
                 width: 100%;
-                height: 100%;
+                padding-top: 1em;
+                height: 130px;
+                background-color: #0f3079;
+                margin-top: -20px;
             }
-            #t_book, #t_com {
+            #t_book,#t_com{
                 font-size: x-large;
                 float: left;
                 margin-top: 35px;
             }
-            #t_book {
-                color: white;          
+            #t_book{
+                color: white;             
+                padding-left: 200px;      
             }
-            #t_com {
+            #t_com{
                 color: rgb(79, 149, 230);            
             }
-            #t_stay {            
-            display: flex;
-            width: 100%;
-            height: 30px;
+            #t_stay{            
+                display: flex;
+                height: 30px;
+                margin: 0 14%;
             }
-            #t_stay > a > p, #t_ind > a > p{
+            #t_stay > a {
+                flex: 1;
+                margin-left: -10%;
+            }
+            #t_stay>a>p,#t_ind>a>p{
                 color: white;
                 float: left;
                 margin: 10px 20px;
             }
-            #t_ind {
+            #t_ind{
                 display: flex;            
                 padding-left: 500px;
                 margin-top: 20px;
             }
-            #t_btn1 {
+            #t_btn1{
                 color: white;
                 background-color: unset;
                 border: 1px solid white;
                 height: 33px;
             }
-            #t_btn2 {
+            #t_btn2, #t_btn3{
                 height: 33px;
                 color: rgb(17, 117, 184);
             }
-            #t_btn {
+            #t_btn{
                 background-color: unset;
                 color: white;
                 border: 2px solid rgb(37, 96, 185);
-                height: 40px;
+                height: 50px;
             }
 
             /*----------------------------------------------------------------------------------------- Airport Taxi CSS --------------------------------------------------------------------------------*/
@@ -171,8 +171,10 @@
                 border: none;
             }
             .airportTaxi_booking_seachbar button {
-                width: 10em;
+                width: 8em;
                 border-radius: 3px;
+                color: white;
+                font-size: 18px;
                 background-color: #0071c2;
                 border: none;
             }
@@ -513,7 +515,7 @@
                         <a href=""><p ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
                         <a href=""><p><button id="t_btn1">List your property</button></p></a>
                         <a href=""><p><button id="t_btn2">Register</button></p></a>
-                        <a href=""><p><button id="t_btn2">Sing in</button></p></a>
+                        <a href=""><p><button id="t_btn2">Sign in</button></p></a>
             
                     </div>
                     <div id="t_stay">
@@ -560,40 +562,28 @@
                     <div class="airportTaxi_booking_seachbar">
                         <div>
                             <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/484/484167.svg?token=exp=1615466193~hmac=5559b3e7256889c6dcc32aba46e59705);"></div>
-                            <input type="text" placeholder="Enter pick-up location">
+                            <input type="text" placeholder="Enter pick-up location" id="pickup">
                         </div>
                         <div>
                             <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/484/484167.svg?token=exp=1615466193~hmac=5559b3e7256889c6dcc32aba46e59705);"></div>
-                            <input type="text" id="" placeholder="Enter destination">
+                            <input type="text" placeholder="Enter destination" id="destination">
                         </div>
                         <div>
-                            <input type="date" value="2021-03-13" id="date-time-checkout">
+                            <input type="date" value="2021-03-13" id="date">
                         </div>
                         <div>
-                            <input type="time" value="17:57" id="">
+                            <input type="time" value="17:57" id="time">
                         </div>
                         <div>
-                            <select name="" id="">
+                            <select name="" id="persons">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
                             </select>
                         </div>
                         <div>
-                            <button>Search</button>
+                            <button onclick="bookTaxi()">Book</button>
                         </div>
                     </div>
                 </div>
@@ -876,16 +866,41 @@
         const airportTaxi_FAQs_accordion = document.getElementsByClassName("airportTaxi_FAQs_list_accordion")
 
         for( let i=0; i<airportTaxi_FAQs_accordion.length; i++) {
-        airportTaxi_FAQs_accordion[i].addEventListener("click", function() {
-            this.classList.toggle("airportTaxi_FAQs_list_active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none"
+            airportTaxi_FAQs_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("airportTaxi_FAQs_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none"
+                }
+                else {
+                panel.style.display = "block"
+                }
+            })
+        }
+
+        let bookTaxi = () => {
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+            let pickup = document.getElementById("pickup").value;
+            let destination = document.getElementById("destination").value;
+            let persons = document.getElementById("persons").value;
+            console.log(persons);
+
+            if(pickup == "" || destination == "" ) {
+                alert(`Enter all required details to fulfill your need.`)
             }
-            else {
-            panel.style.display = "block"
+            else{
+                if(pickup == destination){
+                    alert(`Pickup and Destination are same, You don't need car for that.`)
+                }
+                else{
+                    alert(`Pick-up Location: ${pickup}\nDestination: ${destination}\nPick-up Date: ${date}\nPick-up Time: ${time}\n\nDetails have been mailed to your email id.`)
+
+                    setTimeout( function() {
+                        window.location.href = "../main page/mainLandingPage.html"
+                    }, 0)
+                }
             }
-        })
         }
     </script>
 </html>
