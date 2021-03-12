@@ -18,7 +18,7 @@
         body{
             margin: 0;
             font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            background-color: whitesmoke;
+            background-color: white;
         }
         
         /*------------------------------------------------------------------------------------------- Navbar ----------------------------------------------------------------------------*/
@@ -131,7 +131,11 @@
         }
 
         /*----------------------------------------------------------------------------- Landing search bar -------------------------------------------------------------------*/
-        
+        #findDeals {
+            padding: 1.5% 0;
+            background-color: whitesmoke;
+            border-bottom: 2px solid whitesmoke;
+        }
         #ss{
             font-size: 14px;
             line-height: 20px;
@@ -849,7 +853,7 @@
             <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
             <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
             <a href=""><p><button id="t_btn1">List your property</button></p></a>
-            <a href="../Booking pass.html"><p><button id="t_btn2">Register</button></p></a>
+            <a href="../Booking sign.html"><p><button id="t_btn2">Register</button></p></a>
             <a href="../Booking sign.html"><p><button id="t_btn3">Sign in</button></p></a>
 
         </div>
@@ -885,23 +889,23 @@
     </div>
 
     <!----------------------------------------------------------------------------------- Landing Page search info --------------------------------------------------------------->
-    
-    <div id="t_searchBar">
-        <h1>Find deals on hotels, homes, and much more...</h1>
-        <p>From cozy country homes to funky city apartments</p>
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
-        <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
-        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
-        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
-        <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
-        <button id="t_sear_btn" onclick="citySearch()">Search</button>  
-       
+    <div id="findDeals">
+        <div id="t_searchBar">
+            <h1>Find deals on hotels, homes, and much more...</h1>
+            <p>From cozy country homes to funky city apartments</p>
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
+            <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+            <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+            <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
+            <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
+            <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
+            <button id="t_sear_btn" onclick="citySearch()">Search</button>  
+        
+        </div>
+        <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
     </div>
-    <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
-
     <!--------------------------------------------------------------------------- Connect Travelers ------------------------------------------------------------------------------->
 
     <div id="connect_travelers">
