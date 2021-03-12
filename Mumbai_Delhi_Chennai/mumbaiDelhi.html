@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mumbai Delhi Chennai</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+            }
+            #Mumbai_Delhi_Chennai {
+                height: 40vh;
+            }
+            #Mumbai_Delhi_Chennai > div {
+                height: 100%;
+                margin: 2% 14%;
+                display: flex;
+            }
+            .MDC_properties {
+                flex: 1;
+                color: #fff;
+                cursor: pointer;
+                position: relative;
+                text-shadow: 1px 1px black;
+                background-repeat: no-repeat;
+                background-position: center center; 
+                background-size: cover;
+            }
+            .MDC_properties > div:nth-child(1) { 
+                display: flex;
+                padding-left: 1em;
+                height: 15%;
+                z-index: 1;
+                position: absolute;
+            }
+            .MDC_properties > div:nth-child(1) > div {
+                width: 0.1em;
+                height: 0.1em;
+                margin: 1.9em 1em;
+                padding: 0.8em;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .MDC_properties > p {
+                margin: 17% 4%;
+                font-size: 18px;
+                font-weight: 700;
+                z-index: 1;
+                position: absolute;
+            }
+            .MDC_properties > div:nth-child(3) {
+                margin-top: 55%;
+            }
+            .MDC_properties > div:nth-child(3) > div {
+                text-align: right;
+                width: 23%;
+                margin-left: 73%;
+                padding: 0.1em;
+                margin-bottom: 0.5em;
+                line-height: 0;
+                color: white;
+                border-radius: 3px;
+            }
+            .MDC_properties h5 {
+                font-size: 13px;
+                margin-top: 1em;
+            }
+            .MDC_properties h3 {
+                margin-top: 0;
+                margin-bottom: 0.7em;
+            }
+            .MDC_pointer {
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                top: 0;
+                opacity: 0.3;
+                position: absolute;
+                background: linear-gradient(to top, #000 0%, #fff 40%, #000 100%);
+            }
+            .MDC_pointer:hover {
+                border: 0.3px solid #ff8000;
+                background: linear-gradient(to bottom, #000 100%, #fff 100%)
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Mumbai_Delhi_Chennai">
+            <div>
+                <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/971345.webp?k=9bf85dfa10a224e2855ca2f8ca3fcd96916a962d87cdfcc48d6d57c09bef3c65&o=);">
+                    <div>
+                        <h1>Mumbai</h1>
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                    </div>
+                    <p>1,673 properties</p>
+                    <div>
+                        <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                            <h5>Deals start at</h5>
+                            <h3>&#8377 1,974</h3>
+                        </div>
+                        <div style="background-color: #333; z-index: 1; position: absolute">
+                            <h5>Average price</h5>
+                            <h3>&#8377 2,610</h3>
+                        </div>
+                    </div>
+                    <div class="MDC_pointer"></div>
+                </div>
+                <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684764.webp?k=6c3c9e920a39ca4f9eddcdfaa916999ea5d2765844610dd59349f4271f7596b3&o=); margin: 0 2%;">
+                    <div>
+                        <h1>New Delhi</h1>
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                    </div>
+                    <p>2,912 properties</p>
+                    <div>
+                        <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                            <h5>Deals start at</h5>
+                            <h3>&#8377 1,067</h3>
+                        </div>
+                        <div style="background-color: #333; z-index: 1; position: absolute">
+                            <h5>Average price</h5>
+                            <h3>&#8377 1,831</h3>
+                        </div>
+                    </div>
+                    <div class="MDC_pointer"></div>
+                </div>
+                <div class="MDC_properties" style="background-image: url(https://t-cf.bstatic.com/xdata/images/city/540x270/684727.webp?k=a6fd59b0c31df52ae2a907dcf2441c7842bb56e2e68d89bffd2398024c0812d3&o=)">
+                    <div>
+                        <h1>Chennai</h1>
+                        <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/330/330439.svg?token=exp=1615476519~hmac=116fac4c367bc1c2ef7f20715536629f);"></div>
+                    </div>
+                    <p>1,416 properties</p>
+                    <div>
+                        <div style="background-color: #ff8000; z-index: 1; position: relative;">
+                            <h5>Deals start at</h5>
+                            <h3>&#8377 1,536</h3>
+                        </div>
+                        <div style="background-color: #333; z-index: 1; position: absolute">
+                            <h5>Average price</h5>
+                            <h3>&#8377 2,026</h3>
+                        </div>
+                    </div>
+                    <div class="MDC_pointer"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

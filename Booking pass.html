@@ -19,7 +19,10 @@
 
             }
             #signcont>div input{
-                border: 0.5px solid rgb(173, 173, 173);    
+                border: 0.5px solid rgb(173, 173, 173);  
+                width:90%; 
+                height: 36px;
+                border-radius: 2px;  
             } 
             #signcont>div input:hover{
                 border: 1.25px solid #0071c2;
@@ -45,6 +48,9 @@
                 width:75px;
                 border-color: 1px solid gray;
                 cursor: pointer;
+            }
+            #signcont p{
+                font-size: 14px;
             }
             #signLogos{
                 display: flex;
@@ -106,8 +112,14 @@
                 top:15px;
                 cursor: pointer;
             }
-
-
+            /* #signNav img:hover{
+                cursor: pointer;
+            } */
+            #signcont strong{
+                font-size: 14px;
+                margin-left: 6px;
+                font-weight: 500;
+            }
         </style>
     </head>
     <body>
@@ -116,28 +128,22 @@
             <div><img  src="./reasons-to-avoid-hamburger-icon-368x246.jpg"></div>
         </nav>
         <div id="signcont">
-            <div><h1>Sign in or create an account</h1></div>
-            <div><label style="font-size: 14px;">Email address</label></div>
-           <div> <div><input type="email" style="width:90%; height: 36px; border-radius: 2px;"/></div></div>
-            <div> <button style="font-size: 16px; border-radius: 2px;">Continue with email</button></div>
-            <div class="signTextCentre signTextFont">
-                or use one of these options
-            </div>
-           
-            
+            <div><h1>Create password</h1></div>
+            <div><label style="font-size: 14px;">Use a minimum of 10 characters, including uppercasee letters, lowercase letters and numbers.</label></div>
+            <strong>Password</strong>
+           <div> <div><input type="password" /></div></div>
             <br>
-            <div id="signLogos" >
-                <div><img src="https://i.pinimg.com/originals/b3/26/b5/b326b5f8d23cd1e0f18df4c9265416f7.png"></div>
-                <div><img src="http://expresswriters.com/wp-content/uploads/2015/09/google-new-logo-450x450.jpg"></div>
-                <div><img src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"></div>
-            </div>
-            <br>
+           <strong>Confirm password</strong>
+           <div> <div><input type="password" /></div></div>
+           <br>
+            <div> <button style="font-size: 16px; border-radius: 2px;">Create account</button></div>
+           <br>
            <hr></hr>
            
            <p>By signing in or creating an account, you agree with our <a href="#">Terms & conditions</a> and  <a href="#">Privacy statement</a></p>
             <hr>
             <div class="signTextCentre">All rights resrved.</div>
-            <div class="signTextCentre" >Copyright(2006-2021) - Booking.com</div>
+            <div class="signTextCentre" >Copyright (2006-2021) - Booking.com</div>
         </div>
         <script>
             // async function flights(){
@@ -153,13 +159,15 @@
             //    }
             // }
             // flights()
-               
+                var ip=document.getElementsByTagName("input");
                 var btn=document.querySelector("button");
                 btn.addEventListener("click",sign);
                 function sign(){
-                    var ip=document.querySelector("input").value;
-                    localStorage.setItem("Email",ip);
-                    window.location.href="./Booking pass.html";
+                    if(ip[0].value==ip[1].value){
+                        localStorage.setItem("password",ip[0].value);
+                   window.location.href="./main page/mainLandingPage.html";
+                    }
+                    
                 }
         </script>
     </body>

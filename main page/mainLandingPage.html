@@ -63,7 +63,7 @@ body{
             border: 1px solid white;
             height: 33px;
         }
-        #t_btn2{
+        #t_btn2, #t_btn3{
             height: 33px;
             color: rgb(17, 117, 184);
         }
@@ -797,7 +797,7 @@ body{
             <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
             <a href=""><p><button id="t_btn1">List your property</button></p></a>
             <a href=""><p><button id="t_btn2">Register</button></p></a>
-            <a href=""><p><button id="t_btn2">Sing in</button></p></a>
+            <a href=""><p><button id="t_btn3">Sign in</button></p></a>
 
         </div>
         <div id="t_stay">
@@ -1833,7 +1833,12 @@ body{
     </div>
 
     <script>
-        
+        var bregister=document.getElementById("t_btn2");
+        bregister.addEventListener("click",loginPage);
+        function loginPage(){
+            cosole.log("m")
+           // window.location.href="./loveLetters"  // Ravi_Booking.com/Booking sign.html    ../main page/Booking sign.html
+        }
         function citySearch() {
         var data=document.querySelector("#t_sear1").value
         window.location.href=`${data}.html`
