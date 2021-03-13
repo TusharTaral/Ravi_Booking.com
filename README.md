@@ -15,7 +15,7 @@
 *  *You can search by ratings and reviews and if you find any interesting place to stay, you can book it here.*
 
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/goa.png" width="400" align="left"><img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/mumbai.png" width="400"  align="right">
-
+<br>
 #### Articles by Travellers
 
 
