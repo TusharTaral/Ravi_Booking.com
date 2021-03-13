@@ -57,6 +57,9 @@ body{
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
+
+
+
     list-style: 24px;
 
 }
@@ -148,6 +151,7 @@ body{
     font-weight: 700;
     line-height: 24px;
     padding-right: 32px;
+    color:#262626
     
 }
 #signinblock>p{
@@ -162,13 +166,96 @@ body{
     width: 70%;
 }
 
+#covered > header >h2{
+    color: #262626;
+    font-weight: 500;
+    margin-left: 2.0%;
+
+}
+.exptopattractions>div:nth-child(2),.exptopattractions>div:nth-child(3){
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color:#262626;
+}
+.exptopattractions>div:nth-child(3){
+    font-weight: 400;
+}
+#covered > div>ul{
+    display: flex;
+    gap: 30px;
+}
+#covered{
+    margin-left: 18%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#findthings>div:nth-child(1){
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+}
+#findthings>div:nth-child(2){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+#findthings{
+    margin-left: 20%;
+}
 
 
+.img-hover-zoom {
+    height: 300px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+    
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.5);
+  }
+  #images{
+      width: 274px;
+  }
+  .img-hover-zoom{
+      float: left;
+      margin-right: 30px;
+  }
+  .card_header >p{
+    margin-top: -15px;
+}
+.card_title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: white;
+}
+.card_subtitle{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+
+}
+#EuropeSection,#NorthAmerica{
+    margin-left: 20%;
+    
+}
 
 
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
 
-
-
-
-
-
+  }
+  .selected{
+      line-height: 20px;
+      font-weight: 500;
+      font-size: 14px;
+  }

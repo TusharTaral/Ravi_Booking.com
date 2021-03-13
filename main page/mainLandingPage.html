@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking.com</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-    integrity="sha384- 
-     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
-      crossorigin="anonymous">
-
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Booking.com</title>
     <style>
         body{
             margin: 0;
@@ -46,10 +42,10 @@
             height: 30px;
             margin: 0px;
         }
-        /* #t_stay > a {
+        #t_stay > a {
             flex: 1;
             margin-left: -10%;
-        } */
+        }
         #t_stay>a>p,#t_ind>a>p{
             color: white;
             float: left;
@@ -841,6 +837,43 @@
                 display: none;
             }
         }
+        
+        .bg-modal{
+                width:100%;
+                height:100%;
+                background-color: rgba(0,0,0, 0.7);
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+            }
+            .modal-content{
+                width:300px;
+                height: 350px;
+                background-color: white;
+                border-radius: 4px;
+                text-align: center;
+                padding: 20px;
+                position: relative;
+            }
+            .modal-content h2{
+                color: #004586;
+            }
+            .bg-modal input{
+                display: block;
+                width: 40%;
+                margin: 20px auto;
+            }
+            .close{
+                position: absolute;
+                top: 0;
+                right: 18px;
+                font-size: 20px;
+                transform: rotate(45deg);
+                cursor: pointer;
+            }
 
     </style>
 </head>
@@ -853,9 +886,9 @@
             <a href=""><p><img style="border-radius: 15px; height: 30px;width: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lg2a4Ybaz-QLxvyQ4Kkf6_1qW-1IJiQw_A&usqp=CAU"/></p></a>
             <a href=""><p > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzASc53BkgBk3ortSJQOdwZkgvB68N3N6A&usqp=CAU" style="border: 1px solid white;border-radius: 20px; height: 30px; width: 30px;  "/> </p></a>
             <a href=""><p><button id="t_btn1">List your property</button></p></a>
-            <a href="../Booking sign.html"><p><button id="t_btn2">Register</button></p></a>
-            <a href="../Booking sign.html"><p><button id="t_btn3">Sign in</button></p></a>
-
+            <a href="../Booking sign.html" id="removeRegister"><p><button id="t_btn2">Register</button></p></a>
+            <a href="../Booking sign.html" id="removeSignIn"><p><button id="t_btn3">Sign in</button></p></a>
+            <a><p id="logName"></p></a>
         </div>
         <div id="t_stay">
             <a href="./mainLandingPage.html"><p> <i class="fa fa-hotel"> Stays </i></p></a>
@@ -1950,6 +1983,24 @@
         </div>
     </div>
 
+<!-- added modal to landing page -->
+
+<div class="bg-modal">
+    <div class="modal-content">
+        
+        <div class="close">+</div>
+        <img src="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg" style="width: 80px; margin-bottom: 50px;" alt="">
+        <h2>Welcome to Booking.com</h2>
+        <form action="">
+            <input type="text" id="fName" placeholder="First Name">
+            
+            <input type="text" placeholder="Last Name">
+            
+            <button id="dispName">Continue</button>
+        </form>
+    </div>
+</div>
+
     <script>
         var bregister=document.getElementById("t_btn2");
         bregister.addEventListener("click",loginPage);
@@ -2285,7 +2336,68 @@
             let footer_lists = document.getElementById("footer_lists")
             footer_lists.style.marginTop = "-15%"
         }
+//display name using modal
+                document.getElementById("")
+                function addName(){
 
+                    document.querySelector(".bg-modal").style.display="flex";   
+                
+                }
+                if(localStorage.getItem("name")==undefined){
+                    addName();
+                }
+
+                var rmReg=document.getElementById("removeRegister");
+                var rmSign=document.getElementById("removeSignIn")
+
+                document.querySelector(".close").addEventListener("click",
+                function(){
+                    document.querySelector(".bg-modal").style.display="none"
+                })
+                document.querySelector("#dispName").addEventListener("click",
+                function(){
+                    var nam=document.getElementById("fName").value//JSON.stringify()
+                    localStorage.setItem("name",nam);
+                    document.querySelector(".bg-modal").style.display="none";
+
+                    document.getElementById("t_btn2").remove();
+                    document.getElementById("t_btn3").remove();
+                    rmSign.remove();
+                    rmReg.remove();
+
+                    document.getElementById("logName").textContent=""
+                    var logName=document.createElement("div");
+                    logName.textContent=localStorage.getItem("name")
+                    logName.style.color="white"
+                    document.getElementById("logName").appendChild(logName)
+                  
+                  
+                })
+                if(localStorage.getItem("name")!=undefined){
+                    document.getElementById("t_btn2").remove();
+                    document.getElementById("t_btn3").remove();
+                    rmSign.remove();
+                    rmReg.remove();
+
+                    document.getElementById("logName").textContent=""
+
+                    var img= document.createElement("img");
+                   img.src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bsn.eu%2Fwp-content%2Fuploads%2F2016%2F12%2Fuser-icon-image-placeholder-300-grey.jpg&f=1&nofb=1";
+                   img.style.width="30px";
+                   img.style.borderRadius="15px"
+                   document.getElementById("logName").appendChild(img)
+
+
+                    
+                    var logName=document.createElement("div");
+                    logName.textContent=localStorage.getItem("name")
+                    logName.style.color="white";
+                    logName.style.fontWeight="600";
+                    document.getElementById("logName").appendChild(logName)
+                    
+                    
+                }
+               ;
     </script>
 </body>
 </html>
