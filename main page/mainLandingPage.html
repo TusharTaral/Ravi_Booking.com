@@ -40,7 +40,7 @@
         #t_stay{            
             display: flex;
             height: 30px;
-            margin: 0 14%;
+            margin: 0px;
         }
         #t_stay > a {
             flex: 1;
@@ -471,13 +471,13 @@
             float: right;
             width: 100vw;
             text-align: right;
-            margin-right: 200px;
+            margin-right: 130px;
         }
 
         #t_dis_btn0 {
             margin: 4px;
             height: 25px;
-            width: 20px;    
+            width: 25px;    
             color: white;
             border: unset;
             background-color: grey;
@@ -553,7 +553,7 @@
 
         #t_dis_usa {
             float: left;
-            margin: 20px;
+            margin: 10px;
         }
 
         #t_country_name {
@@ -1798,7 +1798,7 @@
             <button id="t_dis_btn0" class="t_dis_btn1" onclick="countryBtn6()">10</button>
 
         </div>
-        <div id="t_dis_usa" style="margin-left: 8em;">
+        <div id="t_dis_usa" style="margin-left: 5em;">
             <div id="t_dis_usa1">
                 <div id="t_usa_hov1">You'll love relaxation,<br>
                     restaurants and shopping<br>during your next trip to United<br>States of America!</div>
@@ -2010,6 +2010,8 @@
         }
         function citySearch() {
             var data=document.querySelector("#t_sear1").value
+            var data= data.toLowerCase()
+            
             window.location.href=`${data}.html`
         }
 
