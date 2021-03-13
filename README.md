@@ -30,17 +30,13 @@
 
 ### Car rentals
 
-#### 
-
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
 
 * *Easy booking any where around the world in one step. Just specify pickup place and time. Your car is on your door steps!*
 
 ### Airpot Taxi
 
-####
-
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
 
-* *h *
+* * *
 
