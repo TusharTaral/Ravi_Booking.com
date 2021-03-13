@@ -18,7 +18,7 @@
 
 #### Articles by Travellers
 
-//create gif here
+
 
 #### Discover by Country
 
