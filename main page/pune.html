@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg">
     <link rel="stylesheet" 
 href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
 integrity="sha384- 
@@ -563,7 +564,7 @@ integrity="sha384-
     <div id="t_goa_sea">
         <h3>Search</h3><p>Destination/property name:</p>
         <span style="position: absolute;margin-left: 5px;margin-top: 5px;"><i class="fa fa-search"></i></span>
-        <input type="text"  placeholder="Pune"style="height:29px;border:none;text-align:center" id="t_goa55">
+        <input type="text"  placeholder="Search City"style="height:29px;border:none;text-align:center" id="t_goa55">
         <p>Check-in date</p>
         <input type="datetime-local"style="height:29px;border:none">
         <p>Check-out date</p>
@@ -888,6 +889,7 @@ integrity="sha384-
 
         function search() {
             var data=document.querySelector("#t_goa55").value
+            var data= data.toLowerCase()
             window.location.href=`${data}.html`
         }
         
