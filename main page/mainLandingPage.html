@@ -838,7 +838,7 @@
             }
         }
         
-        .bg-modal{
+        .bg-modal,.bg-modal2{
                 width:100%;
                 height:100%;
                 background-color: rgba(0,0,0, 0.7);
@@ -849,7 +849,7 @@
                 align-items: center;
                 display: none;
             }
-            .modal-content{
+            .modal-content, .modal-content2{
                 width:300px;
                 height: 350px;
                 background-color: white;
@@ -858,15 +858,15 @@
                 padding: 20px;
                 position: relative;
             }
-            .modal-content h2{
+            .modal-content h2, .modal-content2 h2{
                 color: #004586;
             }
-            .bg-modal input{
+            .bg-modal input,.bg-modal2 img{
                 display: block;
                 width: 40%;
                 margin: 20px auto;
             }
-            .close{
+            .close,.close2{
                 position: absolute;
                 top: 0;
                 right: 18px;
@@ -2000,6 +2000,16 @@
         </form>
     </div>
 </div>
+<div class="bg-modal2">
+    <div class="modal-content2">
+        
+        <div class="close2">+</div>
+        <h2>Select any image</h2>
+        <img id="manLogo" src="https://www.pikpng.com/pngl/m/154-1540426_png-file-svg-business-man-logo-png-clipart.png" style="width: 80px; margin-bottom: 50px;" alt="man">
+        <img id="womanLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd0ejTB6Nyzu-SEHPr-HgCLjnyGl98k8Un8Q&usqp=CAU" style="width: 80px; margin-bottom: 50px;" alt="woman">
+        
+    </div>
+</div>
 
     <script>
         var bregister=document.getElementById("t_btn2");
@@ -2345,7 +2355,7 @@
                     document.querySelector(".bg-modal").style.display="flex";   
                 
                 }
-                if(localStorage.getItem("name")==undefined){
+                if(localStorage.getItem("name")==undefined&&localStorage.getItem("Email")!=undefined){
                     addName();
                 }
 
@@ -2399,6 +2409,22 @@
                     
                     
                 }
+                img.addEventListener("click", ()=>{
+                    console.log("something")
+                  document.querySelector(".bg-modal2").style.display="flex";
+                  document.querySelector("#manLogo").addEventListener("click",()=>{
+                      img.src= document.querySelector("#manLogo").src;
+                      document.querySelector(".bg-modal2").style.display="none";
+                  })
+                  document.querySelector("#womanLogo").addEventListener("click",()=>{
+                      img.src= document.querySelector("#womanLogo").src;
+                      document.querySelector(".bg-modal2").style.display="none";
+                  })
+
+                })
+                document.querySelector(".close2").addEventListener("click",()=>{
+                    document.querySelector(".bg-modal2").style.display="none";
+                })
                ;
     </script>
 </body>
