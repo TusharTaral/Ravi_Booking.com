@@ -473,7 +473,7 @@ body {
 <div id="t_goa_sea">
     <h3>Search</h3><p>Destination</p>
     <span style="position: absolute;margin-left: 5px;margin-top: 5px;"><i class="fa fa-search"></i></span>
-    <input type="text"  placeholder="Bangalore"style="height:29px;border:none;text-align:center" id="t_goa55">
+    <input type="text"  placeholder="Search City"style="height:29px;border:none;text-align:center" id="t_goa55">
 <p>check in Date</p>
     <input type="datetime-local"style="height:29px;border:none">
     <p>check out Date</p>
@@ -781,6 +781,7 @@ body {
     <script>
 function search() {
         var data=document.querySelector("#t_goa55").value
+        var data= data.toLowerCase()
         window.location.href=`${data}.html`
 }
 
