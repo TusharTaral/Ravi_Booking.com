@@ -21,7 +21,7 @@
 
 #### Articles by Travellers
 
-
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/blog.gif">
 
 #### Discover by Country
 
