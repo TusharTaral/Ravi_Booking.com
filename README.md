@@ -41,6 +41,7 @@
 
 * *Easy booking any where around the world in one step.*
 * *You are asked to provide a pickup location, date and time. Your vehicle will be available at the specified location, date  and time.*
+*  *Various popular car rental companies like Europcar, Enterprise, Sixt are partnered with us.
 
 ### Airpot Taxi
 
