@@ -31,20 +31,20 @@
 
 #### Discover by Country
 
-<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/discover%20screenshot.png" width="400" align="left">
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/discover%20screenshot.png"  >
 
 * *On hovering the image you'll get the brief intro about the  country.*
 
 ### Car rentals
 
-<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Car_rentals.png" width="400" align="left">
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Car_rentals.png" width="400" >
 
 * *Easy booking any where around the world in one step.*
 * *You are asked to provide a pickup location, date and time. Your vehicle will be available at the specified location, date  and time.*
 
 ### Airpot Taxi
 
-<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" >
 
 * *Cancel free booking.*
 * *Our drivers follow safety measures.*
