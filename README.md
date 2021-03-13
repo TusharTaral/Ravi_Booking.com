@@ -9,6 +9,13 @@
 
 * *The moment you get on to this page you can view different Travel Locations, Blogs which are written by Travellers in which they share their experiences, adventurous photos. These blogs guide you through their imagination in showing the culture of that place.*
 
+
+### Register & Sign in
+
+
+
+* *Register account for personalized content. By clicking on register you are asked to enter email-id and password. On signing in your account is created in Booking.com and your credentials are visible on website.*
+
 #### Find Deals on hotels, homes and much more...
 
 *  *You can search hotels by entering a city name and can view all the hotels available.*
@@ -20,7 +27,7 @@
 
 #### Articles by Travellers
 
-//gif
+
 
 #### Discover by Country
 
@@ -30,13 +37,19 @@
 
 ### Car rentals
 
-<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Car_rentals.png" width="400" align="left">
 
-* *Easy booking any where around the world in one step. Just specify pickup place and time. Your car is on your door steps!*
+* *Easy booking any where around the world in one step.*
+* *You are asked to provide a pickup location, date and time. Your vehicle will be available at the specified location, date  and time.*
 
 ### Airpot Taxi
 
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
 
-* * *
+* *Cancel free booking.*
+* *Our drivers follow safety measures.*
+* *Your driver tracks your flight and waits for you if it's delayed.*
+
+
+
 
