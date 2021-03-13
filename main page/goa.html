@@ -10,18 +10,19 @@ integrity="sha384-
    
    <style>
         body{
-           margin: 0px;
+            margin: 0px;
+            font-family: "BlinkMacSystemFont",-apple-system,"Segoe UI","Roboto","Helvetica","Arial",sans-serif;
          
            
        }
       
-        #t_nav{   
-            position: absolute;         
-            width: 110%;
-            height: 135px;
+      /*------------------------------------------------------------------------------------------- Header ---------------------------------------------------------------------------------------*/
+       #t_nav{
+            width: 100%;
+            padding-top: 1em;
+            height: 130px;
             background-color: #0f3079;
             margin-top: -20px;
-            margin-left: -100px;
         }
         #t_book,#t_com{
             font-size: x-large;
@@ -30,17 +31,19 @@ integrity="sha384-
         }
         #t_book{
             color: white;             
-            margin-left: 200px;          
+            padding-left: 200px;      
         }
         #t_com{
             color: rgb(79, 149, 230);            
         }
         #t_stay{            
-         display: flex;
-        padding-left: 85px;
-         width: 100vw;
-         height: 30px;
-         margin-left: 100px;
+            display: flex;
+            height: 30px;
+            margin: 0 14%;
+        }
+        #t_stay > a {
+            flex: 1;
+            margin-left: -10%;
         }
         #t_stay>a>p,#t_ind>a>p{
             color: white;
@@ -52,16 +55,13 @@ integrity="sha384-
             padding-left: 500px;
             margin-top: 20px;
         }
-        #t_ind>a>p{
-     
-        }
         #t_btn1{
             color: white;
             background-color: unset;
             border: 1px solid white;
             height: 33px;
         }
-        #t_btn2{
+        #t_btn2, #t_btn3{
             height: 33px;
             color: rgb(17, 117, 184);
         }
@@ -72,101 +72,297 @@ integrity="sha384-
             height: 50px;
         }
 
+        /*--------------------------------------------------------------------------- Landing Page covid info, CSS ----------------------------------------------------------------------*/
+
+        .landing_covidInfo, .landing_covidInfo_list_active {
+            background-color: #ffe08a30;
+        }
+        .landing_covidInfo > div {
+            margin: 0 14%;
+            height: 100%;
+        }
+        .landing_covidInfo_list {
+            width: 100%;
+            height: 100%;
+        }
+        .landing_covidInfo_accordion > div {
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 1%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .landing_covidInfo_accordion {
+            padding: 10px 18px 0 0;
+            width: 100%;
+            font-size: 15px!important;
+            font-weight: 700;
+            transition: 0.4s;
+            display: flex;
+            border: 1px solid whitesmoke;
+            text-align: left;
+            outline: none;
+            color: #444;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .landing_covidInfo_accordion:hover {
+            background-color: white;
+        }
+        .landing_covidInfo_panel {
+            width: 100%;
+            font-size: 15px!important;
+            display: none;
+            overflow: hidden;
+        }
+        .landing_covidInfo_panel > a {
+            text-decoration: none;
+            color: #0071c2;
+            font-weight: 900;
+        }
+        .landing_covidInfo_panel > a:hover {
+            text-decoration: underline;
+        }
  
+        /*---------------------------------------------------------------------- Goa Properties, CSS -----------------------------------------------------------------------------*/
 
-
-
-
-
-       #t_goa_float{
-           float: left;
-       }
-#t_goa_top{
-    display: flex;
-    margin: 20px;
-      
-}
-.goaTop{
-    border: 1px solid rgb(9, 71, 243);
-    border-top: 8px solid rgb(9, 71, 243);
-    height: 20px;
-    padding: 7px;
-    width: 170px;
-    
-    font-size: 13px;
-    text-align: center;
-    color: rgb(10, 51, 230);
-}
-#t_goa_itc1{
-    float: left; 
-    margin: 20px;
-}
-#t_goa_itc_img{
-    float: left;
-    margin: 20px
-}
-#t_goa_good{    
-    padding: 20px;
-}
-#t_goa_good1{
-    height: 30px;
-    background-color:rgb(9, 71, 243) ;
-    color: white;
-    border: unset;
-}
-#t_goa_itc{
-    margin: 20px 20px; 
-    width: 940px;
-    height: 250px;
-    border: 1px solid#c6c6c6;
-}
-#t_goa_itc1>h2{
-    color: rgb(9, 71, 243);
-}
-.fa-star,.fa-thumbs-up{
-    color: yellow;
-}
-#t_goa_good>button{
-    height: 25px;
-    margin-top: 20px;
-    margin-bottom: -40px;
-    border: unset;
-    color: white;
-  background-color: rgb(8, 58, 223);
-}
-#t_goa_top1{
-    background-color: rgb(4, 117, 4);
-    color: white;    
-}
-#t_goa_book{
-    color: rgb(240, 11, 11);
-}
-#t_goa_sea{
-    float: left;
-    width: 200px;
-    height: 80vh;
-    background-color: rgb(252, 195, 8);
-    margin-top: 160px;
-    margin-left: 100px;
-    padding: 20px;
-}
-#t_goa>h1{
-    margin: 20px;
-}
-#t_goa_good>button{
-           border-bottom-right-radius: 8px;
+        #t_goa_float{
+            margin-top: -8%;
+            float: left;
+        }
+        #t_goa_top{
+            display: flex;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .goaTop{
+            border: 1px solid #0071c2;
+            height: 20px;
+            padding: 7px;
+            flex: 1;
+            font-size: 13px;
+            text-align: center;
+            color: #0071c2;
+        }
+        #t_goa_itc1{
+            float: left; 
+            margin: 20px;
+        }
+        #t_goa_itc_img{
+            float: left;
+            margin: 20px
+        }
+        #t_goa_good{    
+            padding: 20px;
+        }
+        #t_goa_good1{
+            height: 30px;
+            background-color:rgb(9, 71, 243) ;
+            color: white;
+            border: unset;
+        }
+        #t_goa_itc{
+            margin: 20px 20px; 
+            width: 940px;
+            height: 250px;
+            border: 1px solid#c6c6c6;
+        }
+        #t_goa_itc1>h2{
+            color: #0071c2;
+        }
+        .fa-star,.fa-thumbs-up{
+            color: yellow;
+        }
+        #t_goa_good>button{
+            height: 25px;
+            margin-top: 20px;
+            margin-bottom: -40px;
+            border: unset;
+            color: white;
+            background-color: rgb(8, 58, 223);
+        }
+        #t_goa_top1{
+            background-color: rgb(4, 117, 4);
+            color: white;    
+        }
+        #t_goa_book{
+            color: rgb(240, 11, 11);
+        }
+        #t_goa_sea{
+            float: left;
+            width: 200px;
+            border-radius: 5px;
+            color: #333;
+            background-color: rgb(252, 195, 8);
+            margin-top: -6%;
+            margin-left: 11%;
+            padding: 20px;
+            line-height: 0;
+        }
+        #t_goa_sea p {
+            font-size: 13px;
+        }
+        #t_goa_sea input {
+            width: 100%;
+            border-radius: 3px;
+        }
+        #t_goa_sea button {
+            width: 100%;
+            height: 45px;
+            font-size: 17px;
+            border-radius: 3px;
+            color:white;
+            border: unset;  
+            cursor: pointer;
+            background-color: #0071c2;
+        }
+        #t_goa_sea button:hover {
+            background-color: #0f3079;
+        }
+        #t_goa>h1{
+            margin: 20px;
+        }
+        #t_goa_good>button{
+            border-bottom-right-radius: 8px;
             border-top-right-radius: 8px;
             border-top-left-radius: 8px;
-}
+        }
 
+        /*------------------------------------------------------------------------------------------ Footer, CSS ----------------------------------------------------------------------------------------*/
 
+        #footer {
+            height: 20em;
+            text-align: center;
+            line-height: 10px;
+        }
+        #footer > div:nth-child(1) {
+            height: 60%;
+            padding: 2% 0 0;
+            color: white;
+            background-color: #00224f;
+        }
+        #footer > div:nth-child(1) h3 {
+            color: #bdbdbd;
+        }
+        .footer_checkbox {
+            display: flex;
+            margin: 0.4% 30.5% 0;
+        }
+        .footer_checkbox > input {
+            margin-top: -0.1em;
+        }
+        .subscription_form {
+            height: 3em;
+            margin: 2% 30% 0;
+            display: flex;
+        }
+        .subscription_form > div {
+            width: 70%;
+            height: 86%;
+            padding: 0 1.5%;
+        }
+        .subscription_form > div > input {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+        .subscription_form > button {
+            width: 25%;
+            height: 95%;
+            font-size: 20px;
+            font-weight: 100;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            background-color: #0071c2;
+        }
+        .footer_bottom {
+            height: 20%;
+            padding: 1em 0;
+            background-color: #003580;
+        }
+        .footer_bottom > div:nth-child(1) {
+            padding: 6px 0 10px;
+        }
+        .footer_bottom >div:nth-child(1) > a {
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .footer_bottom > div:nth-child(1) > a:hover {
+            background-color: #4a7ec780;
+        }
+        .footer_bottom > div:nth-child(3) > a {
+            color: white;
+            margin: 0 0.5%;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 15px 10px;
+        }
+        #footer_lists {
+            margin: 0 12%;
+            display: flex;
+        }
+        #footer_lists > div {
+            flex: 1;
+        }
+        #footer_lists > div > ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+        #footer_lists a {
+            text-decoration: none;
+            color: #0071c2;
+        }
+        #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
+            color: rgb(221, 103, 19);
+        }
+        .footer_quote, .footer_copyright, .footer_priceline_title {
+            margin: 0 15%;
+            font-size: 12px!important;
+            font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        }
+        .footer_quote a {
+            color: #0071c2;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .footer_login {
+            text-align: center;
+        }
+        .footer_login > a {
+            text-decoration: none;
+            color: #333;
+            opacity: 80%;
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+        .footer_priceline_title {
+            text-align: center;
+        }
+        .footer_priceline_images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5em;
+        }
+        .footer_priceline_images > div {
+            margin-right: 2.5em;
+        }
 
-body {
+        /* Footer Media queries */
+        @media only screen and (max-width: 800px) {
+            body {
                 margin: 0;
-                font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             }
             #footer {
-                height: 20em;
+                width: 100%;
+                height: 16em;
                 text-align: center;
                 line-height: 10px;
             }
@@ -177,52 +373,48 @@ body {
                 background-color: #00224f;
             }
             #footer > div:nth-child(1) > div {
+                font-size: 14px;
                 font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             }
             #footer > div:nth-child(1) h3 {
                 color: #bdbdbd;
             }
             .footer_checkbox {
+                width: 50%;
+                font-size: 10px;
                 display: flex;
-                margin: 0.4% 30.5% 0;
             }
             .footer_checkbox > input {
-                margin-top: -0.1em;
+                width: 0.8em;
+                height: 0.8em;
             }
             .subscription_form {
-                height: 3em;
-                margin: 2% 30% 0;
+                width: 50%;
+                height: 2.5em;
+                margin-left: 10em;
                 display: flex;
             }
             .subscription_form > div {
-                width: 70%;
+                width: 60%;
                 height: 86%;
-                padding: 0 1.5%;
             }
             .subscription_form > div > input {
                 width: 100%;
                 height: 100%;
-                font-size: 20px;
+                font-size: 13px;
                 border-radius: 4px;
                 border: 1px solid black;
             }
             .subscription_form > button {
-                width: 25%;
+                width: 35%;
                 height: 95%;
-                font-size: 20px;
+                margin-left: 0.25em;
+                font-size: 13px;
                 font-weight: 100;
                 color: white;
                 border: none;
                 border-radius: 4px;
                 background-color: #0071c2;
-            }
-            .footer_bottom {
-                height: 20%;
-                padding: 1em 0;
-                background-color: #003580;
-            }
-            .footer_bottom > div:nth-child(1) {
-                padding: 6px 0 10px;
             }
             .footer_bottom >div:nth-child(1) > a {
                 border: 1px solid white;
@@ -236,13 +428,12 @@ body {
             }
             .footer_bottom > div:nth-child(3) > a {
                 color: white;
-                margin: 0 0.5%;
-                font-size: 13px;
+                font-size: 8px;
                 font-weight: bold;
-                padding: 15px 10px;
+                padding: 0;
             }
             #footer_lists {
-                margin: 0 12%;
+                margin: 2% 0 0;
                 display: flex;
             }
             #footer_lists > div {
@@ -250,8 +441,9 @@ body {
             }
             #footer_lists > div > ul {
                 list-style: none;
-                font-size: 14px;
-                line-height: 1.6em;
+                padding-left: 10px;
+                font-size: 8px;
+                line-height: 1.8em;
             }
             #footer_lists a {
                 text-decoration: none;
@@ -260,9 +452,9 @@ body {
             #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
                 color: rgb(221, 103, 19);
             }
-            .footer_quote, .footer_copyright, .footer_priceline_title {
-                margin: 0 15%;
-                font-size: 12px!important;
+            .footer_quote {
+                margin: 0 3%;
+                font-size: 11px!important;
                 font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             }
             .footer_quote a {
@@ -280,8 +472,19 @@ body {
                 font-size: 14.5px;
                 font-weight: 700;
             }
+            .footer_copyright {
+                font-size: 6px!important;
+            }
+            .footer_copyright p {
+                margin-left: -18%;
+            }
             .footer_priceline_title {
                 text-align: center;
+                width: 100%;
+                margin-left: 0;
+            }
+            .footer_priceline_title > div {
+                font-size: 12px;
             }
             .footer_priceline_images {
                 display: flex;
@@ -289,155 +492,15 @@ body {
                 margin-bottom: 1.5em;
             }
             .footer_priceline_images > div {
-                margin-right: 2.5em;
+                margin: 0 0 0 3%;
             }
-
-            /* Footer Media queries */
-            @media only screen and (max-width: 800px) {
-                body {
-                    margin: 0;
-                }
-                #footer {
-                    width: 100%;
-                    height: 16em;
-                    text-align: center;
-                    line-height: 10px;
-                }
-                #footer > div:nth-child(1) {
-                    height: 60%;
-                    padding: 2% 0 0;
-                    color: white;
-                    background-color: #00224f;
-                }
-                #footer > div:nth-child(1) > div {
-                    font-size: 14px;
-                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                }
-                #footer > div:nth-child(1) h3 {
-                    color: #bdbdbd;
-                }
-                .footer_checkbox {
-                    width: 50%;
-                    font-size: 10px;
-                    display: flex;
-                }
-                .footer_checkbox > input {
-                    width: 0.8em;
-                    height: 0.8em;
-                }
-                .subscription_form {
-                    width: 50%;
-                    height: 2.5em;
-                    margin-left: 10em;
-                    display: flex;
-                }
-                .subscription_form > div {
-                    width: 60%;
-                    height: 86%;
-                }
-                .subscription_form > div > input {
-                    width: 100%;
-                    height: 100%;
-                    font-size: 13px;
-                    border-radius: 4px;
-                    border: 1px solid black;
-                }
-                .subscription_form > button {
-                    width: 35%;
-                    height: 95%;
-                    margin-left: 0.25em;
-                    font-size: 13px;
-                    font-weight: 100;
-                    color: white;
-                    border: none;
-                    border-radius: 4px;
-                    background-color: #0071c2;
-                }
-                .footer_bottom >div:nth-child(1) > a {
-                    border: 1px solid white;
-                    color: white;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    text-decoration: none;
-                }
-                .footer_bottom > div:nth-child(1) > a:hover {
-                    background-color: #4a7ec780;
-                }
-                .footer_bottom > div:nth-child(3) > a {
-                    color: white;
-                    font-size: 8px;
-                    font-weight: bold;
-                    padding: 0;
-                }
-                #footer_lists {
-                    margin: 2% 0 0;
-                    display: flex;
-                }
-                #footer_lists > div {
-                    flex: 1;
-                }
-                #footer_lists > div > ul {
-                    list-style: none;
-                    padding-left: 10px;
-                    font-size: 8px;
-                    line-height: 1.8em;
-                }
-                #footer_lists a {
-                    text-decoration: none;
-                    color: #0071c2;
-                }
-                #footer_lists a:hover, .footer_quote a:hover, .footer_login a:hover {
-                    color: rgb(221, 103, 19);
-                }
-                .footer_quote {
-                    margin: 0 3%;
-                    font-size: 11px!important;
-                    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                }
-                .footer_quote a {
-                    color: #0071c2;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-                .footer_login {
-                    text-align: center;
-                }
-                .footer_login > a {
-                    text-decoration: none;
-                    color: #333;
-                    opacity: 80%;
-                    font-size: 14.5px;
-                    font-weight: 700;
-                }
-                .footer_copyright {
-                    font-size: 6px!important;
-                }
-                .footer_copyright p {
-                    margin-left: -18%;
-                }
-                .footer_priceline_title {
-                    text-align: center;
-                    width: 100%;
-                    margin-left: 0;
-                }
-                .footer_priceline_title > div {
-                    font-size: 12px;
-                }
-                .footer_priceline_images {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 1.5em;
-                }
-                .footer_priceline_images > div {
-                    margin: 0 0 0 3%;
-                }
-                .footer_priceline_images img {
-                    width: 70%;
-                }
-                .footer_quote+p, .footer_login+p {
-                    display: none;
-                }
+            .footer_priceline_images img {
+                width: 70%;
             }
+            .footer_quote+p, .footer_login+p {
+                display: none;
+            }
+        }
    </style>
 </head>
 <body>
@@ -456,17 +519,33 @@ body {
         </div>
         <div id="t_stay">
             <a href="./mainLandingPage.html"><p> <i class="fa fa-hotel"> Stays </i></p></a>
-            <a href=""><p> <i class="fa fa-plane"> Flight </i> </p></a>
+            <a href=""><p> <i class="fa fa-plane"> Flights </i> </p></a>
             <a href=""><p> <i class="fa fa-hotel"> Flight+Hotel </i></p></a>
-            <a href=""><p><i class="fa fa-bus"> Car rentals </i></p></a>
+            <a href="../carRental/carRental.html"><p><i class="fa fa-bus"> Car rentals </i></p></a>
             <a href=""><p> <i class="fa fa-map"> Attractions </i></p></a>
-            <a href=""><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
+            <a href="../AirPort_Taxi/book_airport_taxi.html"><p> <i class="fa fa-taxi"> Airport taxis </i></p></a>
            
         </div>
        
     </div>
 
 
+    <!---------------------------------------------------------------------------------- Landing Page covid info ---------------------------------------------------------------->
+    
+    <div class="landing_covidInfo">
+        <div>
+            <div class="landing_covidInfo_list">
+                <button class="landing_covidInfo_accordion">
+                    <div style="background-image: url(https://www.flaticon.com/svg/vstatic/svg/1/1176.svg?token=exp=1615451895~hmac=7b1448372d94a11260bc4e6935ede1d8);"></div>
+                    <h3 style="margin-top: 0;">Coronavirus (COVID-19) Support</h3>
+                </button>
+                <div class="landing_covidInfo_panel">
+                    <p style="margin: 0 15% 0 1%;">Please check for travel restrictions. Travel may be permitted only for certain purposes and in particular, touristic travel may not be allowed.</p>
+                    <a href=""><h4 style="margin-left: 1%;">Read more</h4></a>
+                </div>
+            </div>  
+        </div>
+    </div>
 
 <div style="height: 100px;">
   <div id="t_goa_input">
@@ -476,12 +555,12 @@ body {
 
 
     <div id="t_goa_sea">
-        <h3>Search</h3><p>Destination</p>
+        <h3>Search</h3><p>Destination/property name:</p>
         <span style="position: absolute;margin-left: 5px;margin-top: 5px;"><i class="fa fa-search"></i></span>
         <input type="text"  placeholder="Goa"style="height:29px;border:none;text-align:center" id="t_goa55">
-    <p>check in Date</p>
+        <p>Check-in date</p>
         <input type="datetime-local"style="height:29px;border:none">
-        <p>check out Date</p>
+        <p>Check-out date</p>
         <input type="datetime-local"style="height:29px;border:none">
         <p></p>
         <input type="number" placeholder="2 adult" style="height:29px;border:none">
@@ -489,14 +568,14 @@ body {
         <input type="number" placeholder="No children" style="height:29px;border:none;width: 80px;">
         
         <input type="number" placeholder="1 room" style="height:29px;border:none;width: 80px;">
-<p></p>
-<button style="height: 45px;color:white;border: unset;  background-color: blue;width: 170px;" onclick="search()">Search</button>
+        <p></p>
+        <button onclick="search()">Search</button>
     </div>
     <div id="t_goa_float">
-    <div id="t_goa"  ><h1>Goa: 2,544 properties found </h1></div>
+    <div id="t_goa" style="color: #333;" ><h1>Goa: 2,570 properties found </h1></div>
      <div id="t_goa_top" >
-        <div id="t_goa_top1" class="goaTop" >Our Top Picks</div>
-        <div id="t_goa_top2" class="goaTop">Entire Home </div>
+        <div id="t_goa_top1" class="goaTop" style="background: #0071c2;" >Top picks for solo travellers</div>
+        <div id="t_goa_top2" class="goaTop">Entire homes & apartments </div>
         <div style="cursor: pointer;" id="t_goa_top3" class="goaTop" onclick="highest()">Stars (highest first)</div>
         <div style="cursor: pointer;"  id="t_goa_top4" class="goaTop" onclick="lowest()">Stars (lowest first)</div>
         <div style="cursor: pointer;"  id="t_goa_top5" class="goaTop" onclick="reviews()">Top Reviewed</div>
@@ -786,11 +865,25 @@ body {
 
     <script>
 
+        const landing_accordion = document.getElementsByClassName("landing_covidInfo_accordion");
 
-function search() {
-        var data=document.querySelector("#t_goa55").value
-        window.location.href=`${data}.html`
-}
+        for (let i = 0; i < landing_accordion.length; i++) {
+            landing_accordion[i].addEventListener("click", function() {
+                this.classList.toggle("landing_covidInfo_list_active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } 
+                else {
+                panel.style.display = "block";
+                }
+            });
+        }
+
+        function search() {
+            var data=document.querySelector("#t_goa55").value
+            window.location.href=`${data}.html`
+        }
         
     //  <div id="t_goa_itc">
     //      <img id="t_goa_itc_img" src="https://t-cf.bstatic.com/xdata/images/hotel/square200/163940147.webp?k=a645641232f44cefc2265b0f65215a4ed4a73aafb3e860fac39b54f6a17a8369&o="/>
