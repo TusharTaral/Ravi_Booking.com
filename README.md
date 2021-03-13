@@ -14,13 +14,13 @@
 *  *You can search hotels by entering a city name and can view all the hotels available.*
 *  *You can search by ratings and reviews and if you find any interesting place to stay, you can book it here.*
 
-<p align="left">Goa</p>  <p align="right">Mumbai</p>
+
 
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/goa.png" width="500" > <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/mumbai.png" width="500" >
 
 #### Articles by Travellers
 
-
+//gif
 
 #### Discover by Country
 
@@ -28,5 +28,19 @@
 
 * *On hovering the image you'll get the brief intro about the  country.*
 
+### Car rentals
 
+#### 
+
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
+
+* *Easy booking any where around the world in one step. Just specify pickup place and time. Your car is on your door steps!*
+
+### Airpot Taxi
+
+####
+
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/Airport_Taxi.png" width="400" align="left">
+
+* *h *
 
