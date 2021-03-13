@@ -14,8 +14,8 @@
 *  *You can search hotels by entering a city name and can view all the hotels available.*
 *  *You can search by ratings and reviews and if you find any interesting place to stay, you can book it here.*
 
-<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/goa.png" width="400" align="left"><img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/mumbai.png" width="400"  align="right">
-<br></br>
+<img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/goa.png" width="500" > <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/mumbai.png" width="500" >
+
 #### Articles by Travellers
 
 
