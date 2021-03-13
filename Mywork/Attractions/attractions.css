@@ -243,3 +243,19 @@ body{
     color: white;
 
 }
+#EuropeSection,#NorthAmerica{
+    margin-left: 20%;
+    
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+
+  }
+  .selected{
+      line-height: 20px;
+      font-weight: 500;
+      font-size: 14px;
+  }
