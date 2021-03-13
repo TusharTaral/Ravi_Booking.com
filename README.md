@@ -1,7 +1,7 @@
 # Clone_Booking.com
 
 ## Introduction
-*Booking.com is like a final destination for Travel Lovers. This site provides with flight bookings, car rentals,*
+*Booking.com is like a final destination for Travel Lovers. This site provides with flight bookings, car rentals.*
 
 ### Booking.com Landing Page
 
@@ -15,7 +15,8 @@
 #### Register
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/sign.gif">
 
-####Sign in
+
+#### Sign in
 <img src="https://github.com/TusharTaral/Ravi_Booking.com/blob/master/register.gif">
 
 * *Register account for personalized content. By clicking on register you are asked to enter email-id and password. On signing in your account is created in Booking.com and your credentials are visible on website.*
