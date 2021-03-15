@@ -1,7 +1,7 @@
 # Clone_Booking.com
 
 ## Introduction
-*Booking.com is like a final destination for Travel Lovers. This site provides with flight bookings, car rentals.*
+*Booking.com is like a final destination for Travel Lovers. This is a full fledged travel booking site, Not only made for booking hotels but also you can book air tickets, Rent a car, Book taxi if you want to.*
 
 ### Booking.com Landing Page
 
