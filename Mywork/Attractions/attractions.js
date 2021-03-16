@@ -5,22 +5,52 @@ function Getdata(e){
 
     e.preventDefault()
     if(search == 'london'){
-        window.location.href = '/Attractions/london.html'
+        window.location.href = './london.html'
 
     }
 }
 
-document.getElementById('searchbutton').addEventListener('click',Getdata)
+// document.getElementById('searchbutton').addEventListener('click',Getdata)
 
+let country = document.getElementById('CountrySection')
+
+
+
+let but = document.getElementById('buttonselected')
 
 let europe = document.getElementById('E')
+let northAmerica = document.getElementById('NA')
+
+but.addEventListener("click", doSomething)
+function doSomething(e){
+    if(e.target.id == "E"){
+
+        europe.addEventListener('click',Europe)
+    }else if(e.target.id == "NA"){
+        northAmerica.addEventListener('click',North)
+        
+    }
+}
 let Europesection = document.getElementById("EuropeSection")
 
-europe.addEventListener('click',Europe)
+let middleEast = document.getElementById('ME')
+middleEast.addEventListener('click',MiddleEast)
+
+let asia = document.getElementById('AS')
+asia.addEventListener('click',Asia)
+
+
+let africa = document.getElementById('AF')
+africa.addEventListener('click',Africa)
+
+
+let oceania = document.getElementById('OC')
+oceania.addEventListener('click',Oceania)
+
+
 let NA = document.getElementById('NorthAmerica')
 
 function Europe(){
-    // NA.innerHTML = ''
     europe.style.color = '#0071c2';
     europe.style.borderBottomColor='#0071c2'
 
@@ -682,11 +712,570 @@ function Europe(){
         details.append(div)
     }
 
+}
 
+
+
+function North(){
+    northAmerica.style.color = '#0071c2';
+    northAmerica.style.borderBottomColor='#0071c2'
+
+    let urls1 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/856744.jpg?k=8e88f1d59ccc1b8e88bfdacac7c4b59fb1c3402a6a1aae8e3f43a50beae1bee9&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/349730.jpg?k=1682bc9fb350fe5b1a79e8a12946edc27374fd0ad711f8730747c5af8fa0e9f1&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689611.jpg?k=fd3461d7228fb7154a9bdf78fd3f4c73c2bed5039c8ed25f0e92dbc17c713f12&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689380.jpg?k=e15e4f2427e10bf430a027bf93b5aed0913dd06f82c886292f937f8db226b2a0&o="]
+    
+    let card_values1 = ["NewYork 30 things to do","LasVegas 61 things to do","KeyWest 12 things to do","SanDiego 5 things to do",]
+    for(let i = 0 ; i < urls1.length ; i++){
+       
+            let div = document.createElement('div')
+            let img = document.createElement('img') 
+            img.src = urls1[i]
+            img.setAttribute('id','images');
+            div.setAttribute('class','img-hover-zoom');
+            let details = document.getElementById('pd1');
+            
+            let header = document.createElement('header');
+            header.setAttribute('class','card_header');
+            let h3 = document.createElement('h3');
+            let p = document.createElement('p');
+    
+            h3.setAttribute('class', 'card_title')
+            
+            p.setAttribute('class', 'card_subtitle')
+
+            let input = card_values1[i].split(' ')
+            let county = input[0]
+            let secondstr = ''
+            for(let j = 1 ; j <= 4 ; j++){
+                secondstr += input[j]+' '
+            }
+            h3.innerHTML = county;
+            p.innerHTML = secondstr
+            header.append(h3,p)
+            div.append(img,header)
+            details.append(div)
+        } 
+     
+
+    let urls2 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/689595.jpg?k=66491bf6461716a3a2fa3229b7870d68ed5774b387df269ed5502452b1f00950&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/972687.jpg?k=2bd248c0feee859c13709ba7409a2dc9e8e0ef615d2674dc5c1d42cff8a79744&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/620112.jpg?k=4783925a4e7befc535e70c48ad3b5fa9f6943b873414f3b8a889b8c1933d5da6&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689807.jpg?k=5e6553c46af3a9fc7904db903ee21dd595cb6039e9448ccf6b1e36fdc72553bf&o="]  ;
+
+    let card_values2 = ["Miami 18 things to do","New Orleans 12 things to do","Orlando 23 things to do","Boston 4 things to do",]
+    
+    for(let i = 0 ; i < urls2.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls2[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd2')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values2[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+
+        
+    }    
+    let urls3 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/689415.jpg?k=088ca4b6b3bb3c5ce681f328627db3289fc671dd47a851ea6fded39bff01a3ad&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/653291.jpg?k=4c1b15e11a80bbdf5459cacf4668679c25c676be9729483b4c0c3164da1643f1&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689226.jpg?k=9c2b1d23c0890973ed48244a3d3ce1914ea1a292e1513f4e95ac8f5b5a5c007b&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689541.jpg?k=2b21ebf3961203c96f51c03ac67058e55ed2b9ac41c00ad6a5cb00461e69886f&o="]
+    let card_values3 = ["SanFrancisco 12 things to do","Vancouver 5 things to do","Phoenix 5 things to do","FortLauderdale 5 things to do"]
+
+    for(let i = 0 ; i < urls3.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls3[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd3')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values3[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+    }
+    let urls4 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/620045.jpg?k=cefbedaa88e5d90ccb295bcdabe36939e7b82509dc75ed5541fb67bc7fa47504&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682566.jpg?k=7b013ecf3ba8ad26ed1a66680eb1ac41df934d7a4145652c034c5c57d11e5d25&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682799.jpg?k=8253b5e9434eaf9e82565f27f7ce1ba5a60c1d64ff8965904ec5dbce0fe14c75&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/689661.jpg?k=fe01188e46fb0c47739ee638d5578989dcabb80639f5117bf6c28fb871322eaa&o="]
+    let card_values4 = ["LosAngeles 9 things to do","Cancun 13 things to do","Tulum 7 things to do","ST.Augustine 6 things to do",]
+
+    for(let i = 0 ; i < urls4.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls4[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd4')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values4[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+    }
+    let urls5 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/689218.jpg?k=34b2e4e22c3f126dca249a5111d21dd3f3bd44b5c671a97f42c31acf7cf2d4f6&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/690130.jpg?k=2cb077e0b1f555429e1dbf720deaada304a6521b3408e811193e70339b213a16&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/690212.jpg?k=f65a0d12ea6938e9bc0ab8ada240c67dc50f342c42e5485e3b182005186fdd14&o="]
+    let card_values5 = ["Sedona 11 things to do","Portland 5 things to do","Philadelphia 4 things to do"]
+
+    for(let i = 0 ; i < urls5.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls5[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd5')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values5[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+    }
 }
 
 
 
 
+
+
+function MiddleEast(){
+    middleEast.style.color = '#0071c2';
+    middleEast.style.borderBottomColor='#0071c2'
+
+    let urls1 = ["https://q-xx.bstatic.com/xdata/images/xphoto/720x405/72203688.jpg?k=882dfd9985340ffb2a8553b56580d2139455c38e310899b3949b6dff9a8590df&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/349044.jpg?k=eeb53144ff0177dabb100a1ae707a052509ee11c53bbaec84f8de9847e1a78e3&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/690896.jpg?k=a4b4b9214c36a73705db04b45c12e69a5a044c7e39bb9b0725d8bf70557f8e3c&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/664068.jpg?k=3c02e2a7be3d091d160ce6df71241bc662a78b09bfd5a30fd1e61ead72367469&o="]
+    
+    let card_values1 = ["DUbai 97 things to do","AbuDhabi 97 things to do","Jerusalem 30 things to do","Amman 9 things to do",]
+    for(let i = 0 ; i < urls1.length ; i++){
+       
+            let div = document.createElement('div')
+            let img = document.createElement('img') 
+            img.src = urls1[i]
+            img.setAttribute('id','images');
+            div.setAttribute('class','img-hover-zoom');
+            let details = document.getElementById('pd1');
+            
+            let header = document.createElement('header');
+            header.setAttribute('class','card_header');
+            let h3 = document.createElement('h3');
+            let p = document.createElement('p');
+    
+            h3.setAttribute('class', 'card_title')
+            
+            p.setAttribute('class', 'card_subtitle')
+
+            let input = card_values1[i].split(' ')
+            let county = input[0]
+            let secondstr = ''
+            for(let j = 1 ; j <= 4 ; j++){
+                secondstr += input[j]+' '
+            }
+            h3.innerHTML = county;
+            p.innerHTML = secondstr
+            header.append(h3,p)
+            div.append(img,header)
+            details.append(div)
+        } 
+     
+
+    let urls2 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/654905.jpg?k=77c1977744c45383796dcc5373683baa8e28a191b3febb9cf6c918038ce2aff7&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/654898.jpg?k=db9d267ced21fd1e3818fdb6de18e791c828612c54262197ca89a5203c1c057b&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/654849.jpg?k=b1f39043b80dafdaaa7ae91c45d93e0610b6e30c23bc6607cf51a33b076baca6&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/688587.jpg?k=79c3ebc14cf7f591352a47705ef34b0f23336c0aeda5e3694cd0ad33e64469d6&o="]  ;
+
+    let card_values2 = ["Muscat 21 things to do","Doha 22 things to do","TelAviv 12 things to do","Jeddah 5 things to do",]
+    
+    for(let i = 0 ; i < urls2.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls2[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd2')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values2[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+
+        
+    }    
+    let urls3 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/654934.jpg?k=68923ac181e4d41ec757c6bec5e33e38fb384e3a17b9ddb3188d1a56c8910754&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/664006.jpg?k=30bdd3178604275cc18405e504e92c78567c4e6a307b42979d9465b994a8f164&o="]
+    let card_values3 = ["Salalah 4 things to do","Aqaba 10 things to do"]
+
+    for(let i = 0 ; i < urls3.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls3[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd3')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values3[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+    }
+}
+
+
+
+
+
+function Asia(){
+
+    asia.style.color = "#0071c2"
+    let urls1 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/685560.jpg?k=f21648aa2f4e412c9950c9d683deb21dd7e69fecdcd1bf6717d4d5fa8520dc7e&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/688058.jpg?k=cfccb18a3a547d883cdce149ec955392ea4e4ad5bef313d70322e788956f7549&o=","https://q-xx.bstatic.com/xdata/images/country/1680x560/85.jpg?k=b6ed58da55452ccf0c979cc0df75ce57c6dd985d58abcc6beb4efa2187b2b235&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/664686.jpg?k=b97d7cae11fb6a494b16c656fe8350be53363382a1ff91d350b9bd047eccf689&o="]
+       
+    let card_values1 = ["KualaLumpur 4 things to do","Jakarta 13 things to do","Balian 9 things to do","SiemReap 7 things to do",]
+    for(let i = 0 ; i < urls1.length ; i++){
+       
+            let div = document.createElement('div')
+            let img = document.createElement('img') 
+            img.src = urls1[i]
+            img.setAttribute('id','images');
+            div.setAttribute('class','img-hover-zoom');
+            let details = document.getElementById('pd1');
+            
+            let header = document.createElement('header');
+            header.setAttribute('class','card_header');
+            let h3 = document.createElement('h3');
+            let p = document.createElement('p');
+    
+            h3.setAttribute('class', 'card_title')
+            
+            p.setAttribute('class', 'card_subtitle')
+   
+            let input = card_values1[i].split(' ')
+            let county = input[0]
+            let secondstr = ''
+            for(let j = 1 ; j <= 4 ; j++){
+                secondstr += input[j]+' '
+            }
+            h3.innerHTML = county;
+            p.innerHTML = secondstr
+            header.append(h3,p)
+            div.append(img,header)
+            details.append(div)
+        } 
+     
+   
+    let urls2 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/620039.jpg?k=2382747eb502e907930246aa3225de83a7ab9d3dc9821c9b27feec09e8cd77fa&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/688194.jpg?k=32095065be0a75b3b1e868b31766d89e748c6070025d215400ca8a2c89609541&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/688876.jpg?k=01ff1efe767df1d042647ab8ec14a6df69c2a87fe7a843f4c3b17010fe9cd02d&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/688673.jpg?k=c1e9cdd5a6bc7ae6475ae8a47cc7ecb1bf3ff08a316cfbc3b6dfec01e5a5166f&o="]  ;
+   
+    let card_values2 = ["Bangkok 10 things to do","Yogyakarta 14 things to do","HoiAn 6 things to do","ChiangMai 5 things to do",]
+    
+    for(let i = 0 ; i < urls2.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls2[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd2')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+   
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+   
+        let input = card_values2[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+   
+        
+    }
+   }
+
+
+
+
+
+
+
+
+   function Africa(){
+    africa.style.color = '#0071c2';
+    africa.style.borderBottomColor='#0071c2'
+
+    let urls1 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/674552.jpg?k=d6b82405173e3e4fd614a5c11cbd4539375edf8f22550d260a941d050d60fac6&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/579743.jpg?k=4757ea973e597d2b1642c02c88ff31aa0b8366f5f118f0326f06ddd3cde8d87c&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/674558.jpg?k=0914a40c80396670eeb7c90a927e7dce37266b6f7dfa3a204d141223dd292752&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/674660.jpg?k=3c0ae7a875ccef7507a175d958fdd5dfd4b6fc632007164512244800a8de43ec&o="]
+    
+    let card_values1 = ["CapeTown 24 things to do","Marrakech 35 things to do","Durban 5 things to do","Johanesburg 12 things to do",]
+    for(let i = 0 ; i < urls1.length ; i++){
+       
+            let div = document.createElement('div')
+            let img = document.createElement('img') 
+            img.src = urls1[i]
+            img.setAttribute('id','images');
+            div.setAttribute('class','img-hover-zoom');
+            let details = document.getElementById('pd1');
+            
+            let header = document.createElement('header');
+            header.setAttribute('class','card_header');
+            let h3 = document.createElement('h3');
+            let p = document.createElement('p');
+    
+            h3.setAttribute('class', 'card_title')
+            
+            p.setAttribute('class', 'card_subtitle')
+
+            let input = card_values1[i].split(' ')
+            let county = input[0]
+            let secondstr = ''
+            for(let j = 1 ; j <= 4 ; j++){
+                secondstr += input[j]+' '
+            }
+            h3.innerHTML = county;
+            p.innerHTML = secondstr
+            header.append(h3,p)
+            div.append(img,header)
+            details.append(div)
+        } 
+     
+
+    let urls2 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/635817.jpg?k=4d72265863d181e8fe2b987bcb0c057c888f9a712f6c5d523f28f28f501d2e6d&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/635824.jpg?k=49bd8dd633f681be6e7f06f044454a7a4a5e0e40a8cb1ebfcc331ef202a0a1f8&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/635838.jpg?k=a29c29a0f6a02a15913d1ef90437fcc9f85c9d106f9c907290fd0f23c3762498&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/644370.jpg?k=1841f303e9bda7d0e316e0402af01ba0dcb2a08161bbb9ab5dabf50d6a33c139&o="]  ;
+
+    let card_values2 = ["Casablanca 10 things to do","Agadir 9 things to do","Essaouira 5 things to do","Alexandra 6 things to do",]
+    
+    for(let i = 0 ; i < urls2.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls2[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd2')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values2[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+
+        
+    }    
+    let urls3 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/644384.jpg?k=838b212563ff2ca74e66a10d4546636422f72234b753878283e10ebb67c38392&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/644643.jpg?k=f16350941f4a015b0551a87f61c5c675509f2bf19499258a71f20845bcb86b6f&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/637118.jpg?k=6eaa091ec59f196f23a8921ea8fd264a92a77ba166dda20a22906b2ed017590a&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/644351.jpg?k=1cf0db07ccc853b019d811770ee3003d893b2e744154032e7b49dd0796643e2c&o="]
+    let card_values3 = ["Cairo 7 things to do","SharmEISheikh 6 things to do","Fes 10 things to do","Hurghada 5 things to do"]
+
+    for(let i = 0 ; i < urls3.length ; i++){
+        let div = document.createElement('div')
+        let img = document.createElement('img') 
+        img.src = urls3[i]
+        img.setAttribute('id','images')
+        div.setAttribute('class','img-hover-zoom')
+        let details = document.getElementById('pd3')
+        
+        let header = document.createElement('header');
+        header.setAttribute('class','card_header');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.setAttribute('class', 'card_title')
+        
+        p.setAttribute('class', 'card_subtitle')
+
+        let input = card_values3[i].split(' ')
+        let county = input[0]
+        let secondstr = ''
+        for(let j = 1 ; j <= 4 ; j++){
+            secondstr += input[j]+' '
+        }
+        h3.innerHTML = county;
+        p.innerHTML = secondstr
+        header.append(h3,p)
+        div.append(img,header)
+        details.append(div)
+    }
+}
+
+
+
+
+
+
+
+
+
+function Oceania(){
+
+    oceania.style.color = "#0071c2"
+ let urls1 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/971406.jpg?k=b2f2045c0da2dbe4f94fcb0619a3ce00f002ad4e8eea927adfa404a3b1b04b7a&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682193.jpg?k=98c95f614e901f685c378016a7cec05b198f23452928ddc27dd03354ea8d2706&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682568.jpg?k=9a30be5fc1531b4e26b451c4a03d782455f4583fc12ba0b925517007620f3082&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/967882.jpg?k=1973e7c47ac58d7adf6f43add201283189fe3509fdd527bd2406e628e017c0db&o="]
+    
+ let card_values1 = ["GoldCoast 16 things to do","Cairms 6 things to do","Sydney 6 things to do","Melbourne  things to do",]
+ for(let i = 0 ; i < urls1.length ; i++){
+    
+         let div = document.createElement('div')
+         let img = document.createElement('img') 
+         img.src = urls1[i]
+         img.setAttribute('id','images');
+         div.setAttribute('class','img-hover-zoom');
+         let details = document.getElementById('pd1');
+         
+         let header = document.createElement('header');
+         header.setAttribute('class','card_header');
+         let h3 = document.createElement('h3');
+         let p = document.createElement('p');
+ 
+         h3.setAttribute('class', 'card_title')
+         
+         p.setAttribute('class', 'card_subtitle')
+
+         let input = card_values1[i].split(' ')
+         let county = input[0]
+         let secondstr = ''
+         for(let j = 1 ; j <= 4 ; j++){
+             secondstr += input[j]+' '
+         }
+         h3.innerHTML = county;
+         p.innerHTML = secondstr
+         header.append(h3,p)
+         div.append(img,header)
+         details.append(div)
+     } 
+  
+
+ let urls2 = ["https://q-xx.bstatic.com/xdata/images/city/720x405/682186.jpg?k=c44d0765b9982235a22c5ad4795aae57ac0055f8ac4e41e062b5f2b93cf5429c&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682260.jpg?k=fb4a02025eb11ec3bdd8617b35258434926cec9dee9a9439ea5cb661f458dd72&o=","https://q-xx.bstatic.com/xdata/images/city/720x405/682138.jpg?k=6c1332617fa37b5cf30710f56f98929f8cb0f522b80517fb9cdc6d914d41f804&o="]  ;
+
+ let card_values2 = ["Adelaide 13 things to do","Perth 4 things to do","Auckland 8 things to do","ChiangMai 5 things to do",]
+ 
+ for(let i = 0 ; i < urls2.length ; i++){
+     let div = document.createElement('div')
+     let img = document.createElement('img') 
+     img.src = urls2[i]
+     img.setAttribute('id','images')
+     div.setAttribute('class','img-hover-zoom')
+     let details = document.getElementById('pd2')
+     
+     let header = document.createElement('header');
+     header.setAttribute('class','card_header');
+     let h3 = document.createElement('h3');
+     let p = document.createElement('p');
+
+     h3.setAttribute('class', 'card_title')
+     
+     p.setAttribute('class', 'card_subtitle')
+
+     let input = card_values2[i].split(' ')
+     let county = input[0]
+     let secondstr = ''
+     for(let j = 1 ; j <= 4 ; j++){
+         secondstr += input[j]+' '
+     }
+     h3.innerHTML = county;
+     p.innerHTML = secondstr
+     header.append(h3,p)
+     div.append(img,header)
+     details.append(div)
+    
+     
+ }
+}
 
 
