@@ -59,6 +59,9 @@ integrity="sha384-
     width: 25px;
    
 }
+#t_sear2{
+    width: 100px;
+}
 
     </style>
 </head>
@@ -68,8 +71,10 @@ integrity="sha384-
         <p>From cozy country homes to funky city apartments</p>
         <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-hotel"></i></span>
         <input type="search"  class="t_search_lo" id="t_sear1" placeholder= ' Where are you going? '>
-        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-calendar"></i></span>
-        <input style="height: 45px;" type="date" class="t_search_lo" id="t_sear2" placeholder="check in - check out">
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder="check in ">
+        <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-"></i></span>
+        <input style="height: 45px;" type="datetime-local" class="t_search_lo" id="t_sear2" placeholder=" check out">
         <span style="position: absolute; margin-left: 5px; margin-top: 20px;"><i class="fa fa-child"></i></span>
         <input type="search" class="t_search_lo" id="t_sear3" placeholder="adult children room">
         <button id="t_sear_btn" onclick="citySearch()">Search</button>  
@@ -77,9 +82,19 @@ integrity="sha384-
     </div>
     <input type="checkbox" id="t_sear_che"><label id="t_sear_label" for="t_sear_che">I'm traveling for work</label>
     <script>
+        //var aa=document.querySelector('#t_sear3').textContent
+        
         function citySearch() {
+            var aa=document.getElementById('t_sear3').value
+            console.log(aa,"aaaa")
+            if(aa==""){
+           alert("please enter valid details")
+        }else{
         var data=document.querySelector("#t_sear1").value
+       var data= data.toLowerCase()
+        console.log(data)
        // window.location.href=`${data}.html`
+}
 }
 
     </script>

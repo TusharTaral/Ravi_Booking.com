@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- <form id="homeBookForm">
+        <div class="inner-addon right-addon">
+            <i class="fa fa-calendar" aria-hidden="true" id="checkInIcon"></i>
+            <input type="text" class="form-control checkIn" 
+            placeholder="Check-In">
+        </div>
+        <div class="inner-addon right-addon">
+            <i class="fa fa-calendar" aria-hidden="true" id="checkOutIcon"></i>
+            <input type="text" class="form-control checkOut" placeholder="Check-Out">
+        </div>
+        <button>Book Now</button>
+    </form>
+    <script>
+var date = new Date();
+$('.checkIn').datepicker({
+    format:'yyyy-mm-dd',
+    todayBtn:true,
+    autoclose:true,
+    startDate:date
+}).on('blur',function(){
+    $('.checkOut').focus();
+});
+$('.checkOut').datepicker({
+    format:'yyyy-mm-dd',
+    todayBtn:true,
+    autoclose:true,
+    startDate:$('.checkIn').val()
+}); -->
+
+<script>
+fetch("https://flight-data4.p.rapidapi.com/get_flight_info?flight=SQ655", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "fe7d776a5amsh063df5e6cfc9227p15a159jsn3cd8bac35481",
+		"x-rapidapi-host": "flight-data4.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+    </script>
+</body>
+</html>
